@@ -1,0 +1,2624 @@
+[
+  {
+    "id": "ahmednagar",
+    "en": "Ahilyanagar (Ahmednagar)",
+    "mr": "अहिल्यानगर (अहमदनगर)",
+    "division": {
+      "en": "Nashik",
+      "mr": "नाशिक"
+    },
+    "talukaCount": 14,
+    "villageCount": 1584,
+    "talukas": [
+      {
+        "id": "akola",
+        "en": "Akola",
+        "mr": "अकोला",
+        "villageCount": 191
+      },
+      {
+        "id": "jamkhed",
+        "en": "Jamkhed",
+        "mr": "जामखेड",
+        "villageCount": 86
+      },
+      {
+        "id": "karjat",
+        "en": "Karjat",
+        "mr": "कर्जत",
+        "villageCount": 121
+      },
+      {
+        "id": "kopargaon",
+        "en": "Kopargaon",
+        "mr": "कोपरगाव",
+        "villageCount": 80
+      },
+      {
+        "id": "nagar",
+        "en": "Nagar",
+        "mr": "नगर",
+        "villageCount": 111
+      },
+      {
+        "id": "nevasa",
+        "en": "Nevasa",
+        "mr": "नेवासा",
+        "villageCount": 128
+      },
+      {
+        "id": "parner",
+        "en": "Parner",
+        "mr": "पारनेर",
+        "villageCount": 131
+      },
+      {
+        "id": "pathardi",
+        "en": "Pathardi",
+        "mr": "पाथर्डी",
+        "villageCount": 132
+      },
+      {
+        "id": "rahta",
+        "en": "Rahta",
+        "mr": "राहाता",
+        "villageCount": 58
+      },
+      {
+        "id": "rahuri",
+        "en": "Rahuri",
+        "mr": "राहुरी",
+        "villageCount": 96
+      },
+      {
+        "id": "sangamner",
+        "en": "Sangamner",
+        "mr": "संगमनेर",
+        "villageCount": 170
+      },
+      {
+        "id": "shevgaon",
+        "en": "Shevgaon",
+        "mr": "शेवगाव",
+        "villageCount": 112
+      },
+      {
+        "id": "shrigonda",
+        "en": "Shrigonda",
+        "mr": "श्रीगोंदा",
+        "villageCount": 112
+      },
+      {
+        "id": "shrirampur",
+        "en": "Shrirampur",
+        "mr": "श्रीरामपूर",
+        "villageCount": 56
+      }
+    ]
+  },
+  {
+    "id": "akola",
+    "en": "Akola",
+    "mr": "अकोला",
+    "division": {
+      "en": "Amravati",
+      "mr": "अमरावती"
+    },
+    "talukaCount": 7,
+    "villageCount": 972,
+    "talukas": [
+      {
+        "id": "akola",
+        "en": "Akola",
+        "mr": "अकोला",
+        "villageCount": 190
+      },
+      {
+        "id": "akot",
+        "en": "Akot",
+        "mr": "अकोट",
+        "villageCount": 177
+      },
+      {
+        "id": "balapur",
+        "en": "Balapur",
+        "mr": "बाळापूर",
+        "villageCount": 98
+      },
+      {
+        "id": "barshitakli",
+        "en": "Barshitakli",
+        "mr": "बार्शीटाकळी",
+        "villageCount": 153
+      },
+      {
+        "id": "murtijapur",
+        "en": "Murtijapur",
+        "mr": "मुर्तिजापूर",
+        "villageCount": 158
+      },
+      {
+        "id": "patur",
+        "en": "Patur",
+        "mr": "पातूर",
+        "villageCount": 95
+      },
+      {
+        "id": "telhara",
+        "en": "Telhara",
+        "mr": "तेल्हारा",
+        "villageCount": 101
+      }
+    ]
+  },
+  {
+    "id": "amravati",
+    "en": "Amravati",
+    "mr": "अमरावती",
+    "division": {
+      "en": "Amravati",
+      "mr": "अमरावती"
+    },
+    "talukaCount": 14,
+    "villageCount": 1941,
+    "talukas": [
+      {
+        "id": "achalpur",
+        "en": "Achalpur",
+        "mr": "Achalpur",
+        "villageCount": 167
+      },
+      {
+        "id": "amravati",
+        "en": "Amravati",
+        "mr": "अमरावती",
+        "villageCount": 123
+      },
+      {
+        "id": "anjangaon_surji",
+        "en": "Anjangaon Surji",
+        "mr": "Anjangaon Surji",
+        "villageCount": 123
+      },
+      {
+        "id": "bhatkuli",
+        "en": "Bhatkuli",
+        "mr": "भातकुली",
+        "villageCount": 134
+      },
+      {
+        "id": "chandur_railway",
+        "en": "Chandur Railway",
+        "mr": "Chandur Railway",
+        "villageCount": 90
+      },
+      {
+        "id": "chandurbazar",
+        "en": "Chandurbazar",
+        "mr": "चांदूर बाजार",
+        "villageCount": 162
+      },
+      {
+        "id": "chikhaldara",
+        "en": "Chikhaldara",
+        "mr": "चिखलदरा",
+        "villageCount": 185
+      },
+      {
+        "id": "daryapur",
+        "en": "Daryapur",
+        "mr": "दर्यापूर",
+        "villageCount": 147
+      },
+      {
+        "id": "dhamangaon_railway",
+        "en": "Dhamangaon Railway",
+        "mr": "धामणगाव रेल्वे",
+        "villageCount": 109
+      },
+      {
+        "id": "dharni",
+        "en": "Dharni",
+        "mr": "धारणी",
+        "villageCount": 156
+      },
+      {
+        "id": "morshi",
+        "en": "Morshi",
+        "mr": "मोर्शी",
+        "villageCount": 158
+      },
+      {
+        "id": "nandgaon_khandeshwar",
+        "en": "Nandgaon Khandeshwar",
+        "mr": "नांदगाव खंडेश्वर",
+        "villageCount": 159
+      },
+      {
+        "id": "teosa",
+        "en": "Teosa",
+        "mr": "तिवसा",
+        "villageCount": 92
+      },
+      {
+        "id": "warud",
+        "en": "Warud",
+        "mr": "वरुड",
+        "villageCount": 136
+      }
+    ]
+  },
+  {
+    "id": "beed",
+    "en": "Beed",
+    "mr": "बीड",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 11,
+    "villageCount": 1343,
+    "talukas": [
+      {
+        "id": "ambejogai",
+        "en": "Ambejogai",
+        "mr": "Ambejogai",
+        "villageCount": 103
+      },
+      {
+        "id": "ashti",
+        "en": "Ashti",
+        "mr": "आष्टी",
+        "villageCount": 170
+      },
+      {
+        "id": "bid",
+        "en": "Bid",
+        "mr": "Bid",
+        "villageCount": 219
+      },
+      {
+        "id": "dharur",
+        "en": "Dharur",
+        "mr": "धारूर",
+        "villageCount": 68
+      },
+      {
+        "id": "georai",
+        "en": "Georai",
+        "mr": "गेवराई",
+        "villageCount": 195
+      },
+      {
+        "id": "kaij",
+        "en": "Kaij",
+        "mr": "केज",
+        "villageCount": 121
+      },
+      {
+        "id": "manjlegaon",
+        "en": "Manjlegaon",
+        "mr": "Manjlegaon",
+        "villageCount": 123
+      },
+      {
+        "id": "parli",
+        "en": "Parli",
+        "mr": "परळी (वैजनाथ)",
+        "villageCount": 105
+      },
+      {
+        "id": "patoda",
+        "en": "Patoda",
+        "mr": "पाटोदा",
+        "villageCount": 102
+      },
+      {
+        "id": "shirur",
+        "en": "Shirur",
+        "mr": "शिरूर",
+        "villageCount": 92
+      },
+      {
+        "id": "wadwani",
+        "en": "Wadwani",
+        "mr": "वडवणी",
+        "villageCount": 45
+      }
+    ]
+  },
+  {
+    "id": "bhandara",
+    "en": "Bhandara",
+    "mr": "भंडारा",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 7,
+    "villageCount": 813,
+    "talukas": [
+      {
+        "id": "bhandara",
+        "en": "Bhandara",
+        "mr": "भंडारा",
+        "villageCount": 156
+      },
+      {
+        "id": "lakhandur",
+        "en": "Lakhandur",
+        "mr": "लाखांदूर",
+        "villageCount": 86
+      },
+      {
+        "id": "lakhani",
+        "en": "Lakhani",
+        "mr": "लाखनी",
+        "villageCount": 92
+      },
+      {
+        "id": "mohadi",
+        "en": "Mohadi",
+        "mr": "Mohadi",
+        "villageCount": 102
+      },
+      {
+        "id": "pauni",
+        "en": "Pauni",
+        "mr": "पवनी",
+        "villageCount": 145
+      },
+      {
+        "id": "sakoli",
+        "en": "Sakoli",
+        "mr": "साकोली",
+        "villageCount": 94
+      },
+      {
+        "id": "tumsar",
+        "en": "Tumsar",
+        "mr": "तुमसर",
+        "villageCount": 138
+      }
+    ]
+  },
+  {
+    "id": "buldhana",
+    "en": "Buldhana",
+    "mr": "बुलढाणा",
+    "division": {
+      "en": "Amravati",
+      "mr": "अमरावती"
+    },
+    "talukaCount": 13,
+    "villageCount": 1428,
+    "talukas": [
+      {
+        "id": "buldana",
+        "en": "Buldana",
+        "mr": "बुलढाणा",
+        "villageCount": 95
+      },
+      {
+        "id": "chikhli",
+        "en": "Chikhli",
+        "mr": "चिखली",
+        "villageCount": 143
+      },
+      {
+        "id": "deolgaon_raja",
+        "en": "Deolgaon Raja",
+        "mr": "Deolgaon Raja",
+        "villageCount": 64
+      },
+      {
+        "id": "jalgaon",
+        "en": "Jalgaon",
+        "mr": "जळगाव",
+        "villageCount": 124
+      },
+      {
+        "id": "khamgaon",
+        "en": "Khamgaon",
+        "mr": "खामगाव",
+        "villageCount": 145
+      },
+      {
+        "id": "lonar",
+        "en": "Lonar",
+        "mr": "लोणार",
+        "villageCount": 90
+      },
+      {
+        "id": "malkapur",
+        "en": "Malkapur",
+        "mr": "मलकापूर",
+        "villageCount": 73
+      },
+      {
+        "id": "mehkar",
+        "en": "Mehkar",
+        "mr": "मेहकर",
+        "villageCount": 157
+      },
+      {
+        "id": "motala",
+        "en": "Motala",
+        "mr": "मोताळा",
+        "villageCount": 122
+      },
+      {
+        "id": "nandura",
+        "en": "Nandura",
+        "mr": "नांदुरा",
+        "villageCount": 112
+      },
+      {
+        "id": "sangrampur",
+        "en": "Sangrampur",
+        "mr": "संग्रामपूर",
+        "villageCount": 122
+      },
+      {
+        "id": "shegaon",
+        "en": "Shegaon",
+        "mr": "शेगाव",
+        "villageCount": 73
+      },
+      {
+        "id": "sindkhed_raja",
+        "en": "Sindkhed Raja",
+        "mr": "सिंदखेड राजा",
+        "villageCount": 108
+      }
+    ]
+  },
+  {
+    "id": "chandrapur",
+    "en": "Chandrapur",
+    "mr": "चंद्रपूर",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 15,
+    "villageCount": 1768,
+    "talukas": [
+      {
+        "id": "ballarpur",
+        "en": "Ballarpur",
+        "mr": "बल्लारपूर",
+        "villageCount": 33
+      },
+      {
+        "id": "bhadravati",
+        "en": "Bhadravati",
+        "mr": "भद्रावती",
+        "villageCount": 154
+      },
+      {
+        "id": "brahmapuri",
+        "en": "Brahmapuri",
+        "mr": "Brahmapuri",
+        "villageCount": 136
+      },
+      {
+        "id": "chandrapur",
+        "en": "Chandrapur",
+        "mr": "चंद्रपूर",
+        "villageCount": 97
+      },
+      {
+        "id": "chimur",
+        "en": "Chimur",
+        "mr": "चिमूर",
+        "villageCount": 238
+      },
+      {
+        "id": "gondpipri",
+        "en": "Gondpipri",
+        "mr": "गोंडपिपरी",
+        "villageCount": 97
+      },
+      {
+        "id": "jiwati",
+        "en": "Jiwati",
+        "mr": "जिवती",
+        "villageCount": 82
+      },
+      {
+        "id": "korpana",
+        "en": "Korpana",
+        "mr": "कोरपना",
+        "villageCount": 109
+      },
+      {
+        "id": "mul",
+        "en": "Mul",
+        "mr": "मूल",
+        "villageCount": 105
+      },
+      {
+        "id": "nagbhir",
+        "en": "Nagbhir",
+        "mr": "नागभीड",
+        "villageCount": 134
+      },
+      {
+        "id": "pombhurna",
+        "en": "Pombhurna",
+        "mr": "Pombhurna",
+        "villageCount": 71
+      },
+      {
+        "id": "rajura",
+        "en": "Rajura",
+        "mr": "राजुरा",
+        "villageCount": 108
+      },
+      {
+        "id": "sawali",
+        "en": "Sawali",
+        "mr": "सावली",
+        "villageCount": 111
+      },
+      {
+        "id": "sindewahi",
+        "en": "Sindewahi",
+        "mr": "सिंदेवाही",
+        "villageCount": 114
+      },
+      {
+        "id": "warora",
+        "en": "Warora",
+        "mr": "वरोरा",
+        "villageCount": 179
+      }
+    ]
+  },
+  {
+    "id": "chhatrapati_sambhajinagar",
+    "en": "Chhatrapati Sambhajinagar (Aurangabad)",
+    "mr": "छत्रपती संभाजीनगर (औरंगाबाद)",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 9,
+    "villageCount": 1342,
+    "talukas": [
+      {
+        "id": "aurangabad",
+        "en": "Aurangabad",
+        "mr": "छत्रपती संभाजीनगर",
+        "villageCount": 187
+      },
+      {
+        "id": "gangapur",
+        "en": "Gangapur",
+        "mr": "गंगापूर",
+        "villageCount": 217
+      },
+      {
+        "id": "kannad",
+        "en": "Kannad",
+        "mr": "कन्नड",
+        "villageCount": 204
+      },
+      {
+        "id": "khuldabad",
+        "en": "Khuldabad",
+        "mr": "खुलताबाद",
+        "villageCount": 76
+      },
+      {
+        "id": "paithan",
+        "en": "Paithan",
+        "mr": "पैठण",
+        "villageCount": 189
+      },
+      {
+        "id": "phulambri",
+        "en": "Phulambri",
+        "mr": "फुलंब्री",
+        "villageCount": 91
+      },
+      {
+        "id": "sillod",
+        "en": "Sillod",
+        "mr": "सिल्लोड",
+        "villageCount": 130
+      },
+      {
+        "id": "soegaon",
+        "en": "Soegaon",
+        "mr": "सोयगाव",
+        "villageCount": 82
+      },
+      {
+        "id": "vaijapur",
+        "en": "Vaijapur",
+        "mr": "वैजापूर",
+        "villageCount": 166
+      }
+    ]
+  },
+  {
+    "id": "dharashiv",
+    "en": "Dharashiv (Osmanabad)",
+    "mr": "धाराशिव (उस्मानाबाद)",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 8,
+    "villageCount": 720,
+    "talukas": [
+      {
+        "id": "bhum",
+        "en": "Bhum",
+        "mr": "भूम",
+        "villageCount": 94
+      },
+      {
+        "id": "kalamb",
+        "en": "Kalamb",
+        "mr": "कळंब",
+        "villageCount": 92
+      },
+      {
+        "id": "lohara",
+        "en": "Lohara",
+        "mr": "लोहारा",
+        "villageCount": 47
+      },
+      {
+        "id": "osmanabad",
+        "en": "Osmanabad",
+        "mr": "धाराशिव",
+        "villageCount": 126
+      },
+      {
+        "id": "paranda",
+        "en": "Paranda",
+        "mr": "परांडा",
+        "villageCount": 95
+      },
+      {
+        "id": "tuljapur",
+        "en": "Tuljapur",
+        "mr": "तुळजापूर",
+        "villageCount": 120
+      },
+      {
+        "id": "umarga",
+        "en": "Umarga",
+        "mr": "Umarga",
+        "villageCount": 94
+      },
+      {
+        "id": "washi",
+        "en": "Washi",
+        "mr": "वाशी",
+        "villageCount": 52
+      }
+    ]
+  },
+  {
+    "id": "dhule",
+    "en": "Dhule",
+    "mr": "धुळे",
+    "division": {
+      "en": "Nashik",
+      "mr": "नाशिक"
+    },
+    "talukaCount": 4,
+    "villageCount": 672,
+    "talukas": [
+      {
+        "id": "dhule",
+        "en": "Dhule",
+        "mr": "धुळे",
+        "villageCount": 166
+      },
+      {
+        "id": "sakri",
+        "en": "Sakri",
+        "mr": "साक्री",
+        "villageCount": 220
+      },
+      {
+        "id": "shirpur",
+        "en": "Shirpur",
+        "mr": "शिरपूर",
+        "villageCount": 146
+      },
+      {
+        "id": "sindkhede",
+        "en": "Sindkhede",
+        "mr": "शिंदखेडा",
+        "villageCount": 140
+      }
+    ]
+  },
+  {
+    "id": "gadchiroli",
+    "en": "Gadchiroli",
+    "mr": "गडचिरोली",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 12,
+    "villageCount": 1626,
+    "talukas": [
+      {
+        "id": "aheri",
+        "en": "Aheri",
+        "mr": "अहेरी",
+        "villageCount": 180
+      },
+      {
+        "id": "armori",
+        "en": "Armori",
+        "mr": "आरमोरी",
+        "villageCount": 101
+      },
+      {
+        "id": "bhamragad",
+        "en": "Bhamragad",
+        "mr": "भामरागड",
+        "villageCount": 125
+      },
+      {
+        "id": "chamorshi",
+        "en": "Chamorshi",
+        "mr": "चामोर्शी",
+        "villageCount": 201
+      },
+      {
+        "id": "desaiganj",
+        "en": "Desaiganj",
+        "mr": "Desaiganj",
+        "villageCount": 36
+      },
+      {
+        "id": "dhanora",
+        "en": "Dhanora",
+        "mr": "धानोरा",
+        "villageCount": 212
+      },
+      {
+        "id": "etapalli",
+        "en": "Etapalli",
+        "mr": "एटापल्ली",
+        "villageCount": 180
+      },
+      {
+        "id": "gadchiroli",
+        "en": "Gadchiroli",
+        "mr": "गडचिरोली",
+        "villageCount": 122
+      },
+      {
+        "id": "korchi",
+        "en": "Korchi",
+        "mr": "कोरची",
+        "villageCount": 129
+      },
+      {
+        "id": "kurkheda",
+        "en": "Kurkheda",
+        "mr": "कुरखेडा",
+        "villageCount": 124
+      },
+      {
+        "id": "mulchera",
+        "en": "Mulchera",
+        "mr": "मुलचेरा",
+        "villageCount": 68
+      },
+      {
+        "id": "sironcha",
+        "en": "Sironcha",
+        "mr": "सिरोंचा",
+        "villageCount": 148
+      }
+    ]
+  },
+  {
+    "id": "gondia",
+    "en": "Gondia",
+    "mr": "गोंदिया",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 8,
+    "villageCount": 896,
+    "talukas": [
+      {
+        "id": "amgaon",
+        "en": "Amgaon",
+        "mr": "आमगाव",
+        "villageCount": 82
+      },
+      {
+        "id": "arjuni_morgaon",
+        "en": "Arjuni Morgaon",
+        "mr": "अर्जुनी मोरगाव",
+        "villageCount": 139
+      },
+      {
+        "id": "deori",
+        "en": "Deori",
+        "mr": "देवरी",
+        "villageCount": 124
+      },
+      {
+        "id": "gondiya",
+        "en": "Gondiya",
+        "mr": "गोंदिया",
+        "villageCount": 141
+      },
+      {
+        "id": "goregaon",
+        "en": "Goregaon",
+        "mr": "गोरेगाव",
+        "villageCount": 98
+      },
+      {
+        "id": "sadak_arjuni",
+        "en": "Sadak Arjuni",
+        "mr": "Sadak Arjuni",
+        "villageCount": 99
+      },
+      {
+        "id": "salekasa",
+        "en": "Salekasa",
+        "mr": "सालेकसा",
+        "villageCount": 91
+      },
+      {
+        "id": "tirora",
+        "en": "Tirora",
+        "mr": "तिरोडा",
+        "villageCount": 122
+      }
+    ]
+  },
+  {
+    "id": "hingoli",
+    "en": "Hingoli",
+    "mr": "हिंगोली",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 5,
+    "villageCount": 708,
+    "talukas": [
+      {
+        "id": "aundha",
+        "en": "Aundha",
+        "mr": "Aundha",
+        "villageCount": 122
+      },
+      {
+        "id": "basmath",
+        "en": "Basmath",
+        "mr": "वसमत",
+        "villageCount": 152
+      },
+      {
+        "id": "hingoli",
+        "en": "Hingoli",
+        "mr": "हिंगोली",
+        "villageCount": 153
+      },
+      {
+        "id": "kalamnuri",
+        "en": "Kalamnuri",
+        "mr": "कलमनुरी",
+        "villageCount": 150
+      },
+      {
+        "id": "sengaon",
+        "en": "Sengaon",
+        "mr": "Sengaon",
+        "villageCount": 131
+      }
+    ]
+  },
+  {
+    "id": "jalgaon",
+    "en": "Jalgaon",
+    "mr": "जळगाव",
+    "division": {
+      "en": "Nashik",
+      "mr": "नाशिक"
+    },
+    "talukaCount": 15,
+    "villageCount": 1514,
+    "talukas": [
+      {
+        "id": "amalner",
+        "en": "Amalner",
+        "mr": "अमळनेर",
+        "villageCount": 154
+      },
+      {
+        "id": "bhadgaon",
+        "en": "Bhadgaon",
+        "mr": "भडगाव",
+        "villageCount": 59
+      },
+      {
+        "id": "bhusawal",
+        "en": "Bhusawal",
+        "mr": "भुसावळ",
+        "villageCount": 53
+      },
+      {
+        "id": "bodvad",
+        "en": "Bodvad",
+        "mr": "Bodvad",
+        "villageCount": 53
+      },
+      {
+        "id": "chalisgaon",
+        "en": "Chalisgaon",
+        "mr": "चाळीसगाव",
+        "villageCount": 143
+      },
+      {
+        "id": "chopda",
+        "en": "Chopda",
+        "mr": "चोपडा",
+        "villageCount": 117
+      },
+      {
+        "id": "dharangaon",
+        "en": "Dharangaon",
+        "mr": "धरणगाव",
+        "villageCount": 89
+      },
+      {
+        "id": "erandol",
+        "en": "Erandol",
+        "mr": "एरंडोल",
+        "villageCount": 65
+      },
+      {
+        "id": "jalgaon",
+        "en": "Jalgaon",
+        "mr": "जळगाव",
+        "villageCount": 87
+      },
+      {
+        "id": "jamner",
+        "en": "Jamner",
+        "mr": "जामनेर",
+        "villageCount": 158
+      },
+      {
+        "id": "muktainagar",
+        "en": "Muktainagar",
+        "mr": "मुक्ताईनगर (एदलाबाद)",
+        "villageCount": 85
+      },
+      {
+        "id": "pachora",
+        "en": "Pachora",
+        "mr": "पाचोरा",
+        "villageCount": 128
+      },
+      {
+        "id": "parola",
+        "en": "Parola",
+        "mr": "पारोळा",
+        "villageCount": 116
+      },
+      {
+        "id": "raver",
+        "en": "Raver",
+        "mr": "रावेर",
+        "villageCount": 116
+      },
+      {
+        "id": "yawal",
+        "en": "Yawal",
+        "mr": "यावल",
+        "villageCount": 91
+      }
+    ]
+  },
+  {
+    "id": "jalna",
+    "en": "Jalna",
+    "mr": "जालना",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 8,
+    "villageCount": 959,
+    "talukas": [
+      {
+        "id": "ambad",
+        "en": "Ambad",
+        "mr": "अंबड",
+        "villageCount": 137
+      },
+      {
+        "id": "badnapur",
+        "en": "Badnapur",
+        "mr": "बदनपूर",
+        "villageCount": 90
+      },
+      {
+        "id": "bhokardan",
+        "en": "Bhokardan",
+        "mr": "भोकरदन",
+        "villageCount": 156
+      },
+      {
+        "id": "ghansawangi",
+        "en": "Ghansawangi",
+        "mr": "घनसावंगी",
+        "villageCount": 117
+      },
+      {
+        "id": "jafferabad",
+        "en": "Jafferabad",
+        "mr": "Jafferabad",
+        "villageCount": 101
+      },
+      {
+        "id": "jalna",
+        "en": "Jalna",
+        "mr": "जालना",
+        "villageCount": 144
+      },
+      {
+        "id": "mantha",
+        "en": "Mantha",
+        "mr": "मंठा",
+        "villageCount": 117
+      },
+      {
+        "id": "partur",
+        "en": "Partur",
+        "mr": "परतूर",
+        "villageCount": 97
+      }
+    ]
+  },
+  {
+    "id": "kolhapur",
+    "en": "Kolhapur",
+    "mr": "कोल्हापूर",
+    "division": {
+      "en": "Pune",
+      "mr": "पुणे"
+    },
+    "talukaCount": 12,
+    "villageCount": 1226,
+    "talukas": [
+      {
+        "id": "ajra",
+        "en": "Ajra",
+        "mr": "आजरा",
+        "villageCount": 100
+      },
+      {
+        "id": "bavda",
+        "en": "Bavda",
+        "mr": "Bavda",
+        "villageCount": 45
+      },
+      {
+        "id": "bhudargad",
+        "en": "Bhudargad",
+        "mr": "भुदरगड",
+        "villageCount": 117
+      },
+      {
+        "id": "chandgad",
+        "en": "Chandgad",
+        "mr": "चंदगड",
+        "villageCount": 157
+      },
+      {
+        "id": "gadhinglaj",
+        "en": "Gadhinglaj",
+        "mr": "गडहिंग्लज",
+        "villageCount": 93
+      },
+      {
+        "id": "hatkanangle",
+        "en": "Hatkanangle",
+        "mr": "हातकणंगले",
+        "villageCount": 61
+      },
+      {
+        "id": "kagal",
+        "en": "Kagal",
+        "mr": "कागल",
+        "villageCount": 84
+      },
+      {
+        "id": "karvir",
+        "en": "Karvir",
+        "mr": "करवीर",
+        "villageCount": 129
+      },
+      {
+        "id": "panhala",
+        "en": "Panhala",
+        "mr": "पन्हाळा",
+        "villageCount": 128
+      },
+      {
+        "id": "radhanagari",
+        "en": "Radhanagari",
+        "mr": "राधानगरी",
+        "villageCount": 113
+      },
+      {
+        "id": "shahuwadi",
+        "en": "Shahuwadi",
+        "mr": "शाहूवाडी",
+        "villageCount": 145
+      },
+      {
+        "id": "shirol",
+        "en": "Shirol",
+        "mr": "शिरोळ",
+        "villageCount": 54
+      }
+    ]
+  },
+  {
+    "id": "latur",
+    "en": "Latur",
+    "mr": "लातूर",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 10,
+    "villageCount": 935,
+    "talukas": [
+      {
+        "id": "ahmadpur",
+        "en": "Ahmadpur",
+        "mr": "अहमदपूर",
+        "villageCount": 120
+      },
+      {
+        "id": "ausa",
+        "en": "Ausa",
+        "mr": "औसा",
+        "villageCount": 130
+      },
+      {
+        "id": "chakur",
+        "en": "Chakur",
+        "mr": "चाकूर",
+        "villageCount": 84
+      },
+      {
+        "id": "deoni",
+        "en": "Deoni",
+        "mr": "देवणी",
+        "villageCount": 54
+      },
+      {
+        "id": "jalkot",
+        "en": "Jalkot",
+        "mr": "जळकोट",
+        "villageCount": 47
+      },
+      {
+        "id": "latur",
+        "en": "Latur",
+        "mr": "लातूर",
+        "villageCount": 123
+      },
+      {
+        "id": "nilanga",
+        "en": "Nilanga",
+        "mr": "निलंगा",
+        "villageCount": 154
+      },
+      {
+        "id": "renapur",
+        "en": "Renapur",
+        "mr": "रेणापूर",
+        "villageCount": 78
+      },
+      {
+        "id": "shirur_anantpal",
+        "en": "Shirur Anantpal",
+        "mr": "शिरूर अनंतपाळ",
+        "villageCount": 47
+      },
+      {
+        "id": "udgir",
+        "en": "Udgir",
+        "mr": "उदगीर",
+        "villageCount": 98
+      }
+    ]
+  },
+  {
+    "id": "mumbai_city",
+    "en": "Mumbai City",
+    "mr": "मुंबई शहर",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 1,
+    "villageCount": 14,
+    "talukas": [
+      {
+        "id": "mumbai_city",
+        "en": "Mumbai City",
+        "mr": "Mumbai City",
+        "villageCount": 14
+      }
+    ]
+  },
+  {
+    "id": "mumbai_suburban",
+    "en": "Mumbai Suburban",
+    "mr": "मुंबई उपनगर",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 3,
+    "villageCount": 24,
+    "talukas": [
+      {
+        "id": "andheri",
+        "en": "Andheri",
+        "mr": "Andheri",
+        "villageCount": 8
+      },
+      {
+        "id": "borivali",
+        "en": "Borivali",
+        "mr": "Borivali",
+        "villageCount": 7
+      },
+      {
+        "id": "kurla",
+        "en": "Kurla",
+        "mr": "Kurla",
+        "villageCount": 9
+      }
+    ]
+  },
+  {
+    "id": "nagpur",
+    "en": "Nagpur",
+    "mr": "नागपूर",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 14,
+    "villageCount": 1717,
+    "talukas": [
+      {
+        "id": "bhiwapur",
+        "en": "Bhiwapur",
+        "mr": "भिवापूर",
+        "villageCount": 123
+      },
+      {
+        "id": "hingna",
+        "en": "Hingna",
+        "mr": "हिंगणा",
+        "villageCount": 132
+      },
+      {
+        "id": "kalameshwar",
+        "en": "Kalameshwar",
+        "mr": "कलमेश्वर",
+        "villageCount": 96
+      },
+      {
+        "id": "kamptee",
+        "en": "Kamptee",
+        "mr": "कामठी",
+        "villageCount": 77
+      },
+      {
+        "id": "katol",
+        "en": "Katol",
+        "mr": "काटोल",
+        "villageCount": 165
+      },
+      {
+        "id": "kuhi",
+        "en": "Kuhi",
+        "mr": "कुही",
+        "villageCount": 169
+      },
+      {
+        "id": "mauda",
+        "en": "Mauda",
+        "mr": "Mauda",
+        "villageCount": 114
+      },
+      {
+        "id": "nagpur_rural",
+        "en": "Nagpur Rural",
+        "mr": "Nagpur Rural",
+        "villageCount": 150
+      },
+      {
+        "id": "nagpur_urban",
+        "en": "Nagpur Urban",
+        "mr": "Nagpur Urban",
+        "villageCount": 0
+      },
+      {
+        "id": "narkhed",
+        "en": "Narkhed",
+        "mr": "नरखेड",
+        "villageCount": 143
+      },
+      {
+        "id": "parseoni",
+        "en": "Parseoni",
+        "mr": "Parseoni",
+        "villageCount": 110
+      },
+      {
+        "id": "ramtek",
+        "en": "Ramtek",
+        "mr": "रामटेक",
+        "villageCount": 138
+      },
+      {
+        "id": "savner",
+        "en": "Savner",
+        "mr": "सावनेर",
+        "villageCount": 128
+      },
+      {
+        "id": "umred",
+        "en": "Umred",
+        "mr": "उमरेड",
+        "villageCount": 172
+      }
+    ]
+  },
+  {
+    "id": "nanded",
+    "en": "Nanded",
+    "mr": "नांदेड",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 16,
+    "villageCount": 1581,
+    "talukas": [
+      {
+        "id": "ardhapur",
+        "en": "Ardhapur",
+        "mr": "अर्धापूर",
+        "villageCount": 55
+      },
+      {
+        "id": "bhokar",
+        "en": "Bhokar",
+        "mr": "भोकर",
+        "villageCount": 81
+      },
+      {
+        "id": "biloli",
+        "en": "Biloli",
+        "mr": "बिलोली",
+        "villageCount": 89
+      },
+      {
+        "id": "deglur",
+        "en": "Deglur",
+        "mr": "देगलूर",
+        "villageCount": 115
+      },
+      {
+        "id": "dharmabad",
+        "en": "Dharmabad",
+        "mr": "धर्माबाद",
+        "villageCount": 54
+      },
+      {
+        "id": "hadgaon",
+        "en": "Hadgaon",
+        "mr": "हदगाव",
+        "villageCount": 146
+      },
+      {
+        "id": "himayatnagar",
+        "en": "Himayatnagar",
+        "mr": "हिमायतनगर",
+        "villageCount": 69
+      },
+      {
+        "id": "kandhar",
+        "en": "Kandhar",
+        "mr": "कंधार",
+        "villageCount": 127
+      },
+      {
+        "id": "kinwat",
+        "en": "Kinwat",
+        "mr": "किनवट",
+        "villageCount": 182
+      },
+      {
+        "id": "loha",
+        "en": "Loha",
+        "mr": "लोहा",
+        "villageCount": 125
+      },
+      {
+        "id": "mahoor",
+        "en": "Mahoor",
+        "mr": "Mahoor",
+        "villageCount": 92
+      },
+      {
+        "id": "mudkhed",
+        "en": "Mudkhed",
+        "mr": "मुदखेड",
+        "villageCount": 53
+      },
+      {
+        "id": "mukhed",
+        "en": "Mukhed",
+        "mr": "मुखेड",
+        "villageCount": 150
+      },
+      {
+        "id": "naigaon",
+        "en": "Naigaon",
+        "mr": "नायगाव",
+        "villageCount": 90
+      },
+      {
+        "id": "nanded",
+        "en": "Nanded",
+        "mr": "नांदेड",
+        "villageCount": 88
+      },
+      {
+        "id": "umri",
+        "en": "Umri",
+        "mr": "उमरी",
+        "villageCount": 65
+      }
+    ]
+  },
+  {
+    "id": "nandurbar",
+    "en": "Nandurbar",
+    "mr": "नंदुरबार",
+    "division": {
+      "en": "Nashik",
+      "mr": "नाशिक"
+    },
+    "talukaCount": 6,
+    "villageCount": 936,
+    "talukas": [
+      {
+        "id": "akkalkuwa",
+        "en": "Akkalkuwa",
+        "mr": "अक्कलकुवा",
+        "villageCount": 189
+      },
+      {
+        "id": "akrani",
+        "en": "Akrani",
+        "mr": "Akrani",
+        "villageCount": 161
+      },
+      {
+        "id": "nandurbar",
+        "en": "Nandurbar",
+        "mr": "नंदुरबार",
+        "villageCount": 153
+      },
+      {
+        "id": "nawapur",
+        "en": "Nawapur",
+        "mr": "Nawapur",
+        "villageCount": 159
+      },
+      {
+        "id": "shahade",
+        "en": "Shahade",
+        "mr": "शहादा",
+        "villageCount": 183
+      },
+      {
+        "id": "talode",
+        "en": "Talode",
+        "mr": "तळोदा",
+        "villageCount": 91
+      }
+    ]
+  },
+  {
+    "id": "nashik",
+    "en": "Nashik",
+    "mr": "नाशिक",
+    "division": {
+      "en": "Nashik",
+      "mr": "नाशिक"
+    },
+    "talukaCount": 15,
+    "villageCount": 1923,
+    "talukas": [
+      {
+        "id": "baglan",
+        "en": "Baglan",
+        "mr": "बागलाण (सटाणा)",
+        "villageCount": 169
+      },
+      {
+        "id": "chandvad",
+        "en": "Chandvad",
+        "mr": "चांदवड",
+        "villageCount": 112
+      },
+      {
+        "id": "deola",
+        "en": "Deola",
+        "mr": "देवळा",
+        "villageCount": 50
+      },
+      {
+        "id": "dindori",
+        "en": "Dindori",
+        "mr": "दिंडोरी",
+        "villageCount": 158
+      },
+      {
+        "id": "igatpuri",
+        "en": "Igatpuri",
+        "mr": "इगतपुरी",
+        "villageCount": 118
+      },
+      {
+        "id": "kalwan",
+        "en": "Kalwan",
+        "mr": "कलवण",
+        "villageCount": 152
+      },
+      {
+        "id": "malegaon",
+        "en": "Malegaon",
+        "mr": "मालेगाव",
+        "villageCount": 147
+      },
+      {
+        "id": "nandgaon",
+        "en": "Nandgaon",
+        "mr": "नांदगाव",
+        "villageCount": 100
+      },
+      {
+        "id": "nashik",
+        "en": "Nashik",
+        "mr": "नाशिक",
+        "villageCount": 77
+      },
+      {
+        "id": "niphad",
+        "en": "Niphad",
+        "mr": "निफाड",
+        "villageCount": 136
+      },
+      {
+        "id": "peint",
+        "en": "Peint",
+        "mr": "Peint",
+        "villageCount": 142
+      },
+      {
+        "id": "sinnar",
+        "en": "Sinnar",
+        "mr": "सिन्नर",
+        "villageCount": 129
+      },
+      {
+        "id": "surgana",
+        "en": "Surgana",
+        "mr": "सुरगाणा",
+        "villageCount": 186
+      },
+      {
+        "id": "trimbakeshwar",
+        "en": "Trimbakeshwar",
+        "mr": "त्र्यंबकेश्वर",
+        "villageCount": 123
+      },
+      {
+        "id": "yevla",
+        "en": "Yevla",
+        "mr": "Yevla",
+        "villageCount": 124
+      }
+    ]
+  },
+  {
+    "id": "palghar",
+    "en": "Palghar",
+    "mr": "पालघर",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 8,
+    "villageCount": 906,
+    "talukas": [
+      {
+        "id": "dahanu",
+        "en": "Dahanu",
+        "mr": "डहाणू",
+        "villageCount": 172
+      },
+      {
+        "id": "jawhar",
+        "en": "Jawhar",
+        "mr": "जव्हार",
+        "villageCount": 106
+      },
+      {
+        "id": "mokhada",
+        "en": "Mokhada",
+        "mr": "मोखाडा",
+        "villageCount": 59
+      },
+      {
+        "id": "palghar",
+        "en": "Palghar",
+        "mr": "पालघर",
+        "villageCount": 212
+      },
+      {
+        "id": "talasari",
+        "en": "Talasari",
+        "mr": "तलासरी",
+        "villageCount": 43
+      },
+      {
+        "id": "vada",
+        "en": "Vada",
+        "mr": "वाडा",
+        "villageCount": 170
+      },
+      {
+        "id": "vasai",
+        "en": "Vasai",
+        "mr": "वसई",
+        "villageCount": 51
+      },
+      {
+        "id": "vikramgad",
+        "en": "Vikramgad",
+        "mr": "विक्रमगड",
+        "villageCount": 93
+      }
+    ]
+  },
+  {
+    "id": "parbhani",
+    "en": "Parbhani",
+    "mr": "परभणी",
+    "division": {
+      "en": "Chhatrapati Sambhajinagar",
+      "mr": "छत्रपती संभाजीनगर"
+    },
+    "talukaCount": 9,
+    "villageCount": 836,
+    "talukas": [
+      {
+        "id": "gangakhed",
+        "en": "Gangakhed",
+        "mr": "गंगाखेड",
+        "villageCount": 104
+      },
+      {
+        "id": "jintur",
+        "en": "Jintur",
+        "mr": "जिंतूर",
+        "villageCount": 168
+      },
+      {
+        "id": "manwath",
+        "en": "Manwath",
+        "mr": "मानवत",
+        "villageCount": 54
+      },
+      {
+        "id": "palam",
+        "en": "Palam",
+        "mr": "पालम",
+        "villageCount": 82
+      },
+      {
+        "id": "parbhani",
+        "en": "Parbhani",
+        "mr": "परभणी",
+        "villageCount": 130
+      },
+      {
+        "id": "pathri",
+        "en": "Pathri",
+        "mr": "पाथरी",
+        "villageCount": 56
+      },
+      {
+        "id": "purna",
+        "en": "Purna",
+        "mr": "पूर्णा",
+        "villageCount": 92
+      },
+      {
+        "id": "sailu",
+        "en": "Sailu",
+        "mr": "सेलू",
+        "villageCount": 93
+      },
+      {
+        "id": "sonpeth",
+        "en": "Sonpeth",
+        "mr": "सोनपेठ",
+        "villageCount": 57
+      }
+    ]
+  },
+  {
+    "id": "pune",
+    "en": "Pune",
+    "mr": "पुणे",
+    "division": {
+      "en": "Pune",
+      "mr": "पुणे"
+    },
+    "talukaCount": 14,
+    "villageCount": 1883,
+    "talukas": [
+      {
+        "id": "ambegaon",
+        "en": "Ambegaon",
+        "mr": "आंबेगाव",
+        "villageCount": 144
+      },
+      {
+        "id": "baramati",
+        "en": "Baramati",
+        "mr": "बारामती",
+        "villageCount": 116
+      },
+      {
+        "id": "bhor",
+        "en": "Bhor",
+        "mr": "भोर",
+        "villageCount": 192
+      },
+      {
+        "id": "daund",
+        "en": "Daund",
+        "mr": "दौंड",
+        "villageCount": 103
+      },
+      {
+        "id": "haveli",
+        "en": "Haveli",
+        "mr": "हवेली",
+        "villageCount": 125
+      },
+      {
+        "id": "indapur",
+        "en": "Indapur",
+        "mr": "इंदापूर",
+        "villageCount": 141
+      },
+      {
+        "id": "junnar",
+        "en": "Junnar",
+        "mr": "जुन्नर",
+        "villageCount": 179
+      },
+      {
+        "id": "khed",
+        "en": "Khed",
+        "mr": "खेड",
+        "villageCount": 191
+      },
+      {
+        "id": "mawal",
+        "en": "Mawal",
+        "mr": "मावळ",
+        "villageCount": 189
+      },
+      {
+        "id": "mulshi",
+        "en": "Mulshi",
+        "mr": "मुळशी",
+        "villageCount": 147
+      },
+      {
+        "id": "pune_city",
+        "en": "Pune City",
+        "mr": "पुणे शहर",
+        "villageCount": 1
+      },
+      {
+        "id": "purandhar",
+        "en": "Purandhar",
+        "mr": "पुरंदर",
+        "villageCount": 109
+      },
+      {
+        "id": "shirur",
+        "en": "Shirur",
+        "mr": "शिरूर",
+        "villageCount": 116
+      },
+      {
+        "id": "velhe",
+        "en": "Velhe",
+        "mr": "वेल्हे",
+        "villageCount": 130
+      }
+    ]
+  },
+  {
+    "id": "raigad",
+    "en": "Raigad",
+    "mr": "रायगड",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 15,
+    "villageCount": 1938,
+    "talukas": [
+      {
+        "id": "alibag",
+        "en": "Alibag",
+        "mr": "अलिबाग",
+        "villageCount": 215
+      },
+      {
+        "id": "karjat",
+        "en": "Karjat",
+        "mr": "कर्जत",
+        "villageCount": 176
+      },
+      {
+        "id": "khalapur",
+        "en": "Khalapur",
+        "mr": "खालापूर",
+        "villageCount": 124
+      },
+      {
+        "id": "mahad",
+        "en": "Mahad",
+        "mr": "महाड",
+        "villageCount": 183
+      },
+      {
+        "id": "mangaon",
+        "en": "Mangaon",
+        "mr": "माणगाव",
+        "villageCount": 187
+      },
+      {
+        "id": "mhasla",
+        "en": "Mhasla",
+        "mr": "म्हसळा",
+        "villageCount": 84
+      },
+      {
+        "id": "murud",
+        "en": "Murud",
+        "mr": "मुरुड",
+        "villageCount": 73
+      },
+      {
+        "id": "panvel",
+        "en": "Panvel",
+        "mr": "पनवेल",
+        "villageCount": 165
+      },
+      {
+        "id": "pen",
+        "en": "Pen",
+        "mr": "पेण",
+        "villageCount": 171
+      },
+      {
+        "id": "poladpur",
+        "en": "Poladpur",
+        "mr": "पोलादपूर",
+        "villageCount": 87
+      },
+      {
+        "id": "roha",
+        "en": "Roha",
+        "mr": "रोहा",
+        "villageCount": 170
+      },
+      {
+        "id": "shrivardhan",
+        "en": "Shrivardhan",
+        "mr": "श्रीवर्धन",
+        "villageCount": 78
+      },
+      {
+        "id": "sudhagad",
+        "en": "Sudhagad",
+        "mr": "सुधागड (पाली)",
+        "villageCount": 99
+      },
+      {
+        "id": "tala",
+        "en": "Tala",
+        "mr": "तळा",
+        "villageCount": 63
+      },
+      {
+        "id": "uran",
+        "en": "Uran",
+        "mr": "उरण",
+        "villageCount": 63
+      }
+    ]
+  },
+  {
+    "id": "ratnagiri",
+    "en": "Ratnagiri",
+    "mr": "रत्नागिरी",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 9,
+    "villageCount": 1531,
+    "talukas": [
+      {
+        "id": "chiplun",
+        "en": "Chiplun",
+        "mr": "चिपळूण",
+        "villageCount": 166
+      },
+      {
+        "id": "dapoli",
+        "en": "Dapoli",
+        "mr": "दापोली",
+        "villageCount": 174
+      },
+      {
+        "id": "guhagar",
+        "en": "Guhagar",
+        "mr": "गुहागर",
+        "villageCount": 122
+      },
+      {
+        "id": "khed",
+        "en": "Khed",
+        "mr": "खेड",
+        "villageCount": 215
+      },
+      {
+        "id": "lanja",
+        "en": "Lanja",
+        "mr": "लांजा",
+        "villageCount": 122
+      },
+      {
+        "id": "mandangad",
+        "en": "Mandangad",
+        "mr": "मंडणगड",
+        "villageCount": 109
+      },
+      {
+        "id": "rajapur",
+        "en": "Rajapur",
+        "mr": "राजापूर",
+        "villageCount": 231
+      },
+      {
+        "id": "ratnagiri",
+        "en": "Ratnagiri",
+        "mr": "रत्नागिरी",
+        "villageCount": 193
+      },
+      {
+        "id": "sangameshwar",
+        "en": "Sangameshwar",
+        "mr": "संगमेश्वर",
+        "villageCount": 199
+      }
+    ]
+  },
+  {
+    "id": "sangli",
+    "en": "Sangli",
+    "mr": "सांगली",
+    "division": {
+      "en": "Pune",
+      "mr": "पुणे"
+    },
+    "talukaCount": 10,
+    "villageCount": 724,
+    "talukas": [
+      {
+        "id": "atpadi",
+        "en": "Atpadi",
+        "mr": "आटपाडी",
+        "villageCount": 59
+      },
+      {
+        "id": "jat",
+        "en": "Jat",
+        "mr": "जत",
+        "villageCount": 122
+      },
+      {
+        "id": "kadegaon",
+        "en": "Kadegaon",
+        "mr": "कडेगाव",
+        "villageCount": 55
+      },
+      {
+        "id": "kavathemahankal",
+        "en": "Kavathemahankal",
+        "mr": "Kavathemahankal",
+        "villageCount": 59
+      },
+      {
+        "id": "khanapur",
+        "en": "Khanapur",
+        "mr": "खानापूर (विटा)",
+        "villageCount": 66
+      },
+      {
+        "id": "miraj",
+        "en": "Miraj",
+        "mr": "मिरज",
+        "villageCount": 67
+      },
+      {
+        "id": "palus",
+        "en": "Palus",
+        "mr": "पलूस",
+        "villageCount": 35
+      },
+      {
+        "id": "shirala",
+        "en": "Shirala",
+        "mr": "शिराळा",
+        "villageCount": 97
+      },
+      {
+        "id": "tasgaon",
+        "en": "Tasgaon",
+        "mr": "तासगाव",
+        "villageCount": 68
+      },
+      {
+        "id": "walwa",
+        "en": "Walwa",
+        "mr": "वाळवा (इस्लामपूर)",
+        "villageCount": 96
+      }
+    ]
+  },
+  {
+    "id": "satara",
+    "en": "Satara",
+    "mr": "सातारा",
+    "division": {
+      "en": "Pune",
+      "mr": "पुणे"
+    },
+    "talukaCount": 11,
+    "villageCount": 1726,
+    "talukas": [
+      {
+        "id": "jaoli",
+        "en": "Jaoli",
+        "mr": "Jaoli",
+        "villageCount": 162
+      },
+      {
+        "id": "karad",
+        "en": "Karad",
+        "mr": "कराड",
+        "villageCount": 216
+      },
+      {
+        "id": "khandala",
+        "en": "Khandala",
+        "mr": "खंडाळा",
+        "villageCount": 67
+      },
+      {
+        "id": "khatav",
+        "en": "Khatav",
+        "mr": "खटाव",
+        "villageCount": 140
+      },
+      {
+        "id": "koregaon",
+        "en": "Koregaon",
+        "mr": "कोरेगाव",
+        "villageCount": 134
+      },
+      {
+        "id": "mahabaleshwar",
+        "en": "Mahabaleshwar",
+        "mr": "महाबळेश्वर",
+        "villageCount": 111
+      },
+      {
+        "id": "man",
+        "en": "Man",
+        "mr": "माण",
+        "villageCount": 103
+      },
+      {
+        "id": "patan",
+        "en": "Patan",
+        "mr": "पाटण",
+        "villageCount": 333
+      },
+      {
+        "id": "phaltan",
+        "en": "Phaltan",
+        "mr": "फलटण",
+        "villageCount": 122
+      },
+      {
+        "id": "satara",
+        "en": "Satara",
+        "mr": "सातारा",
+        "villageCount": 212
+      },
+      {
+        "id": "wai",
+        "en": "Wai",
+        "mr": "वाई",
+        "villageCount": 126
+      }
+    ]
+  },
+  {
+    "id": "sindhudurg",
+    "en": "Sindhudurg",
+    "mr": "सिंधुदुर्ग",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 8,
+    "villageCount": 749,
+    "talukas": [
+      {
+        "id": "devgad",
+        "en": "Devgad",
+        "mr": "देवगड",
+        "villageCount": 98
+      },
+      {
+        "id": "dodamarg",
+        "en": "Dodamarg",
+        "mr": "दोडामार्ग",
+        "villageCount": 62
+      },
+      {
+        "id": "kankavli",
+        "en": "Kankavli",
+        "mr": "कणकवली",
+        "villageCount": 105
+      },
+      {
+        "id": "kudal",
+        "en": "Kudal",
+        "mr": "कुडाळ",
+        "villageCount": 124
+      },
+      {
+        "id": "malwan",
+        "en": "Malwan",
+        "mr": "मालवण",
+        "villageCount": 134
+      },
+      {
+        "id": "sawantwadi",
+        "en": "Sawantwadi",
+        "mr": "सावंतवाडी",
+        "villageCount": 84
+      },
+      {
+        "id": "vaibhavvadi",
+        "en": "Vaibhavvadi",
+        "mr": "वैभववाडी",
+        "villageCount": 59
+      },
+      {
+        "id": "vengurla",
+        "en": "Vengurla",
+        "mr": "वेंगुर्ला",
+        "villageCount": 83
+      }
+    ]
+  },
+  {
+    "id": "solapur",
+    "en": "Solapur",
+    "mr": "सोलापूर",
+    "division": {
+      "en": "Pune",
+      "mr": "पुणे"
+    },
+    "talukaCount": 11,
+    "villageCount": 1132,
+    "talukas": [
+      {
+        "id": "akkalkot",
+        "en": "Akkalkot",
+        "mr": "अक्कलकोट",
+        "villageCount": 138
+      },
+      {
+        "id": "barshi",
+        "en": "Barshi",
+        "mr": "बार्शी",
+        "villageCount": 131
+      },
+      {
+        "id": "karmala",
+        "en": "Karmala",
+        "mr": "करमाळा",
+        "villageCount": 121
+      },
+      {
+        "id": "madha",
+        "en": "Madha",
+        "mr": "माढा",
+        "villageCount": 113
+      },
+      {
+        "id": "malshiras",
+        "en": "Malshiras",
+        "mr": "माळशिरस",
+        "villageCount": 114
+      },
+      {
+        "id": "mangalvedhe",
+        "en": "Mangalvedhe",
+        "mr": "Mangalvedhe",
+        "villageCount": 80
+      },
+      {
+        "id": "mohol",
+        "en": "Mohol",
+        "mr": "मोहोळ",
+        "villageCount": 102
+      },
+      {
+        "id": "pandharpur",
+        "en": "Pandharpur",
+        "mr": "पंढरपूर",
+        "villageCount": 102
+      },
+      {
+        "id": "sangole",
+        "en": "Sangole",
+        "mr": "सांगोला",
+        "villageCount": 99
+      },
+      {
+        "id": "solapur_north",
+        "en": "Solapur North",
+        "mr": "उत्तर सोलापूर",
+        "villageCount": 41
+      },
+      {
+        "id": "solapur_south",
+        "en": "Solapur South",
+        "mr": "दक्षिण सोलापूर",
+        "villageCount": 91
+      }
+    ]
+  },
+  {
+    "id": "thane",
+    "en": "Thane",
+    "mr": "ठाणे",
+    "division": {
+      "en": "Konkan",
+      "mr": "कोकण"
+    },
+    "talukaCount": 7,
+    "villageCount": 829,
+    "talukas": [
+      {
+        "id": "ambarnath",
+        "en": "Ambarnath",
+        "mr": "अंबरनाथ",
+        "villageCount": 75
+      },
+      {
+        "id": "bhiwandi",
+        "en": "Bhiwandi",
+        "mr": "भिवंडी",
+        "villageCount": 226
+      },
+      {
+        "id": "kalyan",
+        "en": "Kalyan",
+        "mr": "कल्याण",
+        "villageCount": 88
+      },
+      {
+        "id": "murbad",
+        "en": "Murbad",
+        "mr": "मुरबाड",
+        "villageCount": 203
+      },
+      {
+        "id": "shahapur",
+        "en": "Shahapur",
+        "mr": "शहापूर",
+        "villageCount": 223
+      },
+      {
+        "id": "thane",
+        "en": "Thane",
+        "mr": "ठाणे",
+        "villageCount": 14
+      },
+      {
+        "id": "ulhasnagar",
+        "en": "Ulhasnagar",
+        "mr": "उल्हासनगर",
+        "villageCount": 0
+      }
+    ]
+  },
+  {
+    "id": "wardha",
+    "en": "Wardha",
+    "mr": "वर्धा",
+    "division": {
+      "en": "Nagpur",
+      "mr": "नागपूर"
+    },
+    "talukaCount": 8,
+    "villageCount": 1255,
+    "talukas": [
+      {
+        "id": "arvi",
+        "en": "Arvi",
+        "mr": "आर्वी",
+        "villageCount": 204
+      },
+      {
+        "id": "ashti",
+        "en": "Ashti",
+        "mr": "आष्टी",
+        "villageCount": 150
+      },
+      {
+        "id": "deoli",
+        "en": "Deoli",
+        "mr": "देवळी",
+        "villageCount": 135
+      },
+      {
+        "id": "hinganghat",
+        "en": "Hinganghat",
+        "mr": "हिंगणघाट",
+        "villageCount": 168
+      },
+      {
+        "id": "karanja",
+        "en": "Karanja",
+        "mr": "कारंजा",
+        "villageCount": 116
+      },
+      {
+        "id": "samudrapur",
+        "en": "Samudrapur",
+        "mr": "समुद्रपूर",
+        "villageCount": 198
+      },
+      {
+        "id": "seloo",
+        "en": "Seloo",
+        "mr": "सेलू",
+        "villageCount": 146
+      },
+      {
+        "id": "wardha",
+        "en": "Wardha",
+        "mr": "वर्धा",
+        "villageCount": 138
+      }
+    ]
+  },
+  {
+    "id": "washim",
+    "en": "Washim",
+    "mr": "वाशीम",
+    "division": {
+      "en": "Amravati",
+      "mr": "अमरावती"
+    },
+    "talukaCount": 6,
+    "villageCount": 775,
+    "talukas": [
+      {
+        "id": "karanja",
+        "en": "Karanja",
+        "mr": "कारंजा",
+        "villageCount": 160
+      },
+      {
+        "id": "malegaon",
+        "en": "Malegaon",
+        "mr": "मालेगाव",
+        "villageCount": 122
+      },
+      {
+        "id": "mangrulpir",
+        "en": "Mangrulpir",
+        "mr": "मंगरुळपीर",
+        "villageCount": 134
+      },
+      {
+        "id": "manora",
+        "en": "Manora",
+        "mr": "मानोरा",
+        "villageCount": 135
+      },
+      {
+        "id": "risod",
+        "en": "Risod",
+        "mr": "रिसोड",
+        "villageCount": 96
+      },
+      {
+        "id": "washim",
+        "en": "Washim",
+        "mr": "वाशीम",
+        "villageCount": 128
+      }
+    ]
+  },
+  {
+    "id": "yavatmal",
+    "en": "Yavatmal",
+    "mr": "यवतमाळ",
+    "division": {
+      "en": "Amravati",
+      "mr": "अमरावती"
+    },
+    "talukaCount": 16,
+    "villageCount": 2038,
+    "talukas": [
+      {
+        "id": "arni",
+        "en": "Arni",
+        "mr": "Arni",
+        "villageCount": 103
+      },
+      {
+        "id": "babulgaon",
+        "en": "Babulgaon",
+        "mr": "Babulgaon",
+        "villageCount": 128
+      },
+      {
+        "id": "darwha",
+        "en": "Darwha",
+        "mr": "दारव्हा",
+        "villageCount": 140
+      },
+      {
+        "id": "digras",
+        "en": "Digras",
+        "mr": "दिग्रस",
+        "villageCount": 79
+      },
+      {
+        "id": "ghatanji",
+        "en": "Ghatanji",
+        "mr": "घाटंजी",
+        "villageCount": 112
+      },
+      {
+        "id": "kalamb",
+        "en": "Kalamb",
+        "mr": "कळंब",
+        "villageCount": 139
+      },
+      {
+        "id": "kelapur",
+        "en": "Kelapur",
+        "mr": "पांढरकवडा (केळापूर)",
+        "villageCount": 135
+      },
+      {
+        "id": "mahagaon",
+        "en": "Mahagaon",
+        "mr": "महागाव",
+        "villageCount": 111
+      },
+      {
+        "id": "maregaon",
+        "en": "Maregaon",
+        "mr": "मारेगाव",
+        "villageCount": 108
+      },
+      {
+        "id": "ner",
+        "en": "Ner",
+        "mr": "नेर",
+        "villageCount": 110
+      },
+      {
+        "id": "pusad",
+        "en": "Pusad",
+        "mr": "पुसद",
+        "villageCount": 183
+      },
+      {
+        "id": "ralegaon",
+        "en": "Ralegaon",
+        "mr": "राळेगाव",
+        "villageCount": 126
+      },
+      {
+        "id": "umarkhed",
+        "en": "Umarkhed",
+        "mr": "उमरखेड",
+        "villageCount": 149
+      },
+      {
+        "id": "wani",
+        "en": "Wani",
+        "mr": "वणी",
+        "villageCount": 153
+      },
+      {
+        "id": "yavatmal",
+        "en": "Yavatmal",
+        "mr": "यवतमाळ",
+        "villageCount": 138
+      },
+      {
+        "id": "zari_jamani",
+        "en": "Zari Jamani",
+        "mr": "Zari Jamani",
+        "villageCount": 124
+      }
+    ]
+  }
+]

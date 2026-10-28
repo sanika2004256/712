@@ -1,0 +1,52 @@
+{
+  "districtId": "mumbai_suburban",
+  "districtEn": "Mumbai Suburban",
+  "districtMr": "मुंबई उपनगर",
+  "talukas": {
+    "andheri": {
+      "id": "andheri",
+      "en": "Andheri",
+      "mr": "Andheri",
+      "villages": [
+        "Andheri East",
+        "Andheri West",
+        "Bandra",
+        "Juhu",
+        "Oshiwara",
+        "Santacruz",
+        "Versova",
+        "Vile Parle"
+      ]
+    },
+    "borivali": {
+      "id": "borivali",
+      "en": "Borivali",
+      "mr": "Borivali",
+      "villages": [
+        "Borivali East",
+        "Borivali West",
+        "Charkop",
+        "Dahisar",
+        "Gorai",
+        "Kandivali",
+        "Malad"
+      ]
+    },
+    "kurla": {
+      "id": "kurla",
+      "en": "Kurla",
+      "mr": "Kurla",
+      "villages": [
+        "Bhandup",
+        "Chembur",
+        "Deonar",
+        "Ghatkopar",
+        "Kurla",
+        "Mulund",
+        "Powai",
+        "Trombay",
+        "Vikhroli"
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import BenefitsSection from './components/BenefitsSection';
+import ProfitCalculator from './components/ProfitCalculator';
+import ServicesSection from './components/ServicesSection';
+import RegistrationSection from './components/RegistrationSection';
+import Footer from './components/Footer';
+import AdminPanel from './components/AdminPanel';
+import ApplicationDetailsModal from './components/ApplicationDetailsModal';
+import { fetchAllFranchiseApplications, updateFranchiseStatus } from './services/firebase';
+import { MessageCircle, ArrowUp, Send, Shield } from 'lucide-react';
+
+export default function App() {
+  const [lang, setLang] = useState('mr');
+  const [currentTab, setCurrentTab] = useState('landing'); // 'landing' | 'admin'
+  const [applications, setApplications] = useState([]);
+  const [selectedAppForModal, setSelectedAppForModal] = useState(null);
+
+  // Load applications count for admin badge
+  const refreshApplications = async () => {
+    try {
+      const list = await fetchAllFranchiseApplications();
+      setApplications(list);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    refreshApplications();
+  }, []);
+
+  const handleApplicationSuccess = (newDoc) => {
+    setApplications(prev => [newDoc, ...prev]);
+  };
+
+  const handleUpdateStatus = async (appId, newStatus) => {
+    await updateFranchiseStatus(appId, newStatus);
+    setApplications(prev => prev.map(a => {
+      if (a.id === appId || a.applicationNumber === appId) {
+        return { ...a, status: newStatus };
+      }
+      return a;
+    }));
+    if (selectedAppForModal && (selectedAppForModal.id === appId || selectedAppForModal.applicationNumber === appId)) {
+      setSelectedAppForModal(prev => ({ ...prev, status: newStatus }));
+    }
+  };
+
+  const scrollToRegistration = () => {
+    if (currentTab !== 'landing') {
+      setCurrentTab('landing');
+      setTimeout(() => {
+        const el = document.getElementById('register');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const el = document.getElementById('register');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const isMr = lang === 'mr';
+
+  return (
+    <div className="app-container inodayam-app">
+      {/* Navbar with Official SVG Brand Mark */}
+      <Navbar
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+        lang={lang}
+        setLang={setLang}
+        totalApplicationsCount={applications.length}
+        onScrollToForm={scrollToRegistration}
+      />
+
+      <main className="main-content-landing">
+        {/* VIEW 1: INTERACTIVE LANDING PAGE */}
+        {currentTab === 'landing' && (
+          <>
+            {/* Hero Section (Poster Style with Interactive UI - No static image!) */}
+            <HeroSection
+              lang={lang}
+              onApplyClick={scrollToRegistration}
+            />
+
+            {/* Poster-Style 6 Benefits Strip (गाव प्रतिनिधीचे फायदे) */}
+            <BenefitsSection
+              lang={lang}
+            />
+
+            {/* Interactive Live Earnings & ROI Calculator (फक्त ₹10,000 भांडवल -> मासिक ₹12,000-₹15,000) */}
+            <section className="calculator-section-wrap">
+              <div className="section-container">
+                <ProfitCalculator
+                  lang={lang}
+                  onApplyClick={scrollToRegistration}
+                />
+              </div>
+            </section>
+
+            {/* Services Showcase (Poster-Style Checklist Card) */}
+            <ServicesSection
+              lang={lang}
+              onApplyClick={scrollToRegistration}
+            />
+
+            {/* Cascading LGD Registration Section (State -> District -> Taluka -> Village) */}
+            <RegistrationSection
+              lang={lang}
+              onApplicationSuccess={handleApplicationSuccess}
+            />
+          </>
+        )}
+
+        {/* VIEW 2: ADMIN PANEL */}
+        {currentTab === 'admin' && (
+          <div className="admin-view-wrapper">
+            <div className="admin-top-nav-bar no-print">
+              <button 
+                type="button" 
+                className="back-to-landing-btn"
+                onClick={() => setCurrentTab('landing')}
+              >
+                ← {isMr ? 'मुख्य लँडिंग पृष्ठावर परत जा' : 'Back to Landing Page'}
+              </button>
+            </div>
+            <AdminPanel
+              lang={lang}
+              onSelectApplicationForView={(app) => setSelectedAppForModal(app)}
+            />
+          </div>
+        )}
+      </main>
+
+      {/* Footer with Empowering Bottom Wave Banner */}
+      <Footer
+        lang={lang}
+        onAdminClick={() => {
+          setCurrentTab('admin');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      />
+
+      {/* Application Details Modal */}
+      {selectedAppForModal && (
+        <ApplicationDetailsModal
+          application={selectedAppForModal}
+          onClose={() => setSelectedAppForModal(null)}
+          onUpdateStatus={handleUpdateStatus}
+          lang={lang}
+        />
+      )}
+
+      {/* Floating WhatsApp Action Button */}
+      <a
+        href="https://api.whatsapp.com/send?phone=919822012345&text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0%2C%20Inodayam%20Tech%20%E0%A4%97%E0%A4%BE%E0%A4%B5%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%A7%E0%A5%80%20%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%A3%E0%A5%82%E0%A4%A8%20%E0%A4%95%E0%A4%BE%E0%A4%AE%20%E0%A4%95%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AC%E0%A4%A4%20%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80%20%E0%A4%B9%E0%A4%B5%E0%A5%80%20%E0%A4%86%E0%A4%B9%E0%A5%87."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp-btn no-print"
+        title="WhatsApp Support"
+      >
+        <MessageCircle size={28} />
+        <span className="floating-wa-label hide-on-mobile">WhatsApp</span>
+      </a>
+
+      {/* Mobile Sticky Quick Apply Bar */}
+      {currentTab === 'landing' && (
+        <div className="mobile-landing-bottom-bar no-print">
+          <div className="mobile-offer-snippet">
+            <span className="price-tag">फक्त ₹10,000</span>
+            <span className="income-tag">मासिक ₹12,000-₹15,000</span>
+          </div>
+          <button 
+            type="button" 
+            className="mobile-apply-now-btn"
+            onClick={scrollToRegistration}
+          >
+            <span>गाव प्रतिनिधी बना ➔</span>
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}

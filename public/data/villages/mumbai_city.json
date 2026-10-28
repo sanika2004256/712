@@ -1,0 +1,28 @@
+{
+  "districtId": "mumbai_city",
+  "districtEn": "Mumbai City",
+  "districtMr": "मुंबई शहर",
+  "talukas": {
+    "mumbai_city": {
+      "id": "mumbai_city",
+      "en": "Mumbai City",
+      "mr": "Mumbai City",
+      "villages": [
+        "Byculla",
+        "Colaba",
+        "Dadar",
+        "Fort",
+        "Girgaon",
+        "Malabar Hill",
+        "Marine Lines",
+        "Nariman Point",
+        "Parel",
+        "Prabhadevi",
+        "Sewri",
+        "Tardeo",
+        "Wadala",
+        "Worli"
+      ]
+    }
+  }
+}
