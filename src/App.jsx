@@ -10,6 +10,7 @@ import AdminPanel from './components/AdminPanel';
 import ApplicationDetailsModal from './components/ApplicationDetailsModal';
 import { fetchAllFranchiseApplications, updateFranchiseStatus } from './services/firebase';
 import { MessageCircle, ArrowUp, Send, Shield } from 'lucide-react';
+import WhatsAppIcon from './components/WhatsAppIcon';
 import { openDirectWhatsApp, getDirectWhatsAppHref } from './utils/whatsapp';
 
 export default function App() {
@@ -165,7 +166,7 @@ export default function App() {
         title="WhatsApp Support"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle size={28} />
+        <WhatsAppIcon size={30} color="#ffffff" />
         <span className="floating-wa-label hide-on-mobile">WhatsApp</span>
       </a>
 

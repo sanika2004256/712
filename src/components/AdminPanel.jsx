@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { fetchAllFranchiseApplications, updateFranchiseStatus } from '../services/firebase';
 import { openDirectWhatsApp, getDirectWhatsAppHref } from '../utils/whatsapp';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const buildApplicantWhatsAppMessage = (applicantName, appNumber) => {
   return (
@@ -417,7 +418,7 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
                         className="mobile-action-btn wa-action"
                         title="Chat on WhatsApp"
                       >
-                        <MessageCircle size={14} />
+                        <WhatsAppIcon size={14} color="#ffffff" />
                         <span>WhatsApp</span>
                       </a>
                     )}
@@ -493,7 +494,7 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
                               className="whatsapp-micro-link"
                               title="Chat on WhatsApp"
                             >
-                              <MessageCircle size={12} className="inline mr-1" />
+                              <WhatsAppIcon size={13} color="#047857" className="inline mr-1" />
                               <span>WA: {item.whatsappNumber || item.mobileNumber}</span>
                             </a>
                           )}

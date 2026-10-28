@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Printer, Share2, Phone, Mail, MapPin, Building2, Store, Calendar, CheckCircle2 } from 'lucide-react';
 import { openDirectWhatsApp, getDirectWhatsAppHref } from '../utils/whatsapp';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function ApplicationDetailsModal({ application, onClose, onUpdateStatus, lang }) {
   if (!application) return null;
@@ -97,7 +98,10 @@ export default function ApplicationDetailsModal({ application, onClose, onUpdate
                     title="WhatsApp वर थेट मेसेज करा"
                   >
                     <span>{rawPhone}</span>
-                    <span style={{fontSize:'0.75rem',background:'#25d366',color:'#ffffff',padding:'2px 8px',borderRadius:'6px',textDecoration:'none',fontWeight:'800'}}>Chat ➔</span>
+                    <span style={{fontSize:'0.75rem',background:'#25d366',color:'#ffffff',padding:'2px 8px',borderRadius:'6px',textDecoration:'none',fontWeight:'800',display:'inline-flex',alignItems:'center',gap:'3px'}}>
+                      <WhatsAppIcon size={12} color="#ffffff" />
+                      <span>Chat ➔</span>
+                    </span>
                   </a>
                 );
               })()}
