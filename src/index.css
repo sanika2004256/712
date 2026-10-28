@@ -3439,11 +3439,204 @@ body {
 /* GLOBAL KEYFRAMES & MOBILE FIXES (Final Patch)           */
 /* ======================================================== */
 
+/* ======================================================== */
+/* GLOBAL KEYFRAMES & MICRO-INTERACTION ANIMATIONS         */
+/* ======================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes ping {
   75%, 100% {
     transform: scale(2);
     opacity: 0;
   }
+}
+
+/* Floating WhatsApp Gentle Float & Aura Wave */
+@keyframes waFloatBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes waPulseRing {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+/* Button Light Reflection Sweep */
+@keyframes btnSweep {
+  0% {
+    left: -90%;
+  }
+  30%, 100% {
+    left: 150%;
+  }
+}
+
+/* Live Status Pulse Dot */
+@keyframes livePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Smooth Entrance Fade-in-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer Light Reflection on Primary Action Buttons */
+.poster-apply-btn,
+.calc-apply-now-btn,
+.sweet-submit-btn,
+.mobile-apply-now-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-apply-btn::after,
+.calc-apply-now-btn::after,
+.sweet-submit-btn::after,
+.mobile-apply-now-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -90%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: btnSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Floating WhatsApp Aura & Float */
+.floating-whatsapp-btn {
+  animation: waFloatBounce 3s ease-in-out infinite;
+}
+
+.floating-whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: rgba(37, 211, 102, 0.35);
+  animation: waPulseRing 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Live Pulse on Status Dot */
+.pro-pulse-dot {
+  animation: livePulse 2s infinite;
+}
+
+/* Interactive Card Elevation & Micro-transitions */
+.pro-offer-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease;
+}
+
+.pro-offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.pro-benefit-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease;
+}
+
+.pro-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.08);
+  border-color: #93c5fd;
+}
+
+.pro-benefit-icon-box {
+  transition: transform 0.25s ease;
+}
+
+.pro-benefit-card:hover .pro-benefit-icon-box {
+  transform: scale(1.12);
+}
+
+.pro-arrow {
+  transition: transform 0.2s ease;
+}
+
+.pro-benefit-card:hover .pro-arrow {
+  transform: translateX(5px);
+}
+
+/* Range Slider Interactive Enhancements */
+.custom-range-slider {
+  transition: filter 0.2s ease;
+}
+
+.custom-range-slider:hover {
+  filter: brightness(1.05);
+}
+
+.custom-range-slider::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.custom-range-slider:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.25);
+}
+
+/* Interactive Service Item Transitions */
+.checklist-item-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.checklist-item-btn:hover {
+  transform: translateX(4px);
 }
 
 /* Ensure body/app doesn't overflow horizontally on mobile */
