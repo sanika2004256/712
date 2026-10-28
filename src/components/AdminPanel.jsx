@@ -182,10 +182,10 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
       {/* Printable Report Header (Visible only in Print / PDF export) */}
       <div className="print-only-header">
         <div className="print-logo-row">
-          <h2>🌸 अस्तित्व सॅनिटरी पॅड (Astitva Sanitary Pads)</h2>
+          <h2>🏢 इनोदयम टेक प्रा. लि. (Inodayam Tech Pvt. Ltd.)</h2>
           <span className="print-date">तारीख: {new Date().toLocaleDateString('mr-IN')}</span>
         </div>
-        <h3 className="print-report-title">फ्रँचायझी अर्जदार मास्टर अहवाल (Official Franchise Report)</h3>
+        <h3 className="print-report-title">अस्तित्व सॅनिटरी पॅड व गाव प्रतिनिधी फ्रँचायझी अहवाल</h3>
         <p className="print-report-meta">
           एकूण अर्ज: {filteredApps.length} • फिल्टर: {filterDistrict !== 'ALL' ? filterDistrict : 'सर्व जिल्हे'} • स्थिती: {filterStatus !== 'ALL' ? filterStatus : 'सर्व'}
         </p>
@@ -195,7 +195,7 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
       <div className="admin-header-row no-print">
         <div className="admin-title-area">
           <h2 className="admin-main-title">
-            {isMr ? 'अस्तित्व फ्रँचायझी ॲडमिन पॅनेल' : 'Astitva Admin Dashboard'}
+            {isMr ? 'इनोदयम टेक • फ्रँचायझी ॲडमिन पॅनेल' : 'Inodayam Tech • Franchise Admin Dashboard'}
           </h2>
           <p className="admin-main-subtitle">
             {isMr 
