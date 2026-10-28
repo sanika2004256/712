@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { getDistrictsList, getTalukasOfDistrict, getVillagesOfTaluka } from '../services/apiService';
 import { submitFranchiseApplication } from '../services/firebase';
+import { openDirectWhatsApp } from '../utils/whatsapp';
 
 const FRANCHISE_MODELS = [
   {
@@ -285,7 +286,7 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
 
   const handleShareWhatsApp = () => {
     if (!submittedData) return;
-    const text = encodeURIComponent(
+    const text = (
       `*अस्तित्व सॅनिटरी पॅड - फ्रँचायझी अर्ज नोंदणी पावती*\n` +
       `अर्ज क्रमांक: ${submittedData.applicationNumber}\n` +
       `अर्जदार: ${submittedData.applicantName}\n` +
@@ -293,7 +294,8 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
       `मॉडेल: ${submittedData.franchiseModelTitle}\n` +
       `मोबाईल: ${submittedData.mobileNumber}`
     );
-    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    const targetPhone = submittedData.whatsappNumber || submittedData.mobileNumber;
+    openDirectWhatsApp(targetPhone, text);
   };
 
   // If application was just submitted, show sweet success receipt!

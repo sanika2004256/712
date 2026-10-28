@@ -21,25 +21,15 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { fetchAllFranchiseApplications, updateFranchiseStatus } from '../services/firebase';
+import { openDirectWhatsApp, getDirectWhatsAppHref } from '../utils/whatsapp';
 
-// Helper to build 100% reliable WhatsApp URL for any Indian phone number
-const getWhatsAppUrl = (phone, applicantName, appNumber) => {
-  if (!phone) return '#';
-  // Strip all non-digit characters
-  let digits = String(phone).replace(/\D/g, '');
-  if (digits.length === 11 && digits.startsWith('0')) {
-    digits = digits.substring(1);
-  }
-  if (digits.length === 10) {
-    digits = '91' + digits;
-  }
-  const text = encodeURIComponent(
+const buildApplicantWhatsAppMessage = (applicantName, appNumber) => {
+  return (
     `नमस्कार ${applicantName || ''},\n\n` +
     `आम्ही Inodayam Tech Private Limited / अस्तित्व सॅनिटरी पॅड कडून संपर्क करत आहोत.\n` +
     `तुमचा फ्रँचायझी अर्ज (अर्ज क्र: ${appNumber || ''}) आम्हाला प्राप्त झाला आहे.\n\n` +
     `पुढील प्रक्रियेसाठी आम्ही आपल्याशी चर्चा करू इच्छितो.`
   );
-  return `https://wa.me/${digits}?text=${text}`;
 };
 
 export default function AdminPanel({ lang, onSelectApplicationForView }) {
@@ -413,9 +403,17 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
 
                     {(item.whatsappNumber || item.mobileNumber) && (
                       <a 
-                        href={getWhatsAppUrl(item.whatsappNumber || item.mobileNumber, item.applicantName, item.applicationNumber)}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={getDirectWhatsAppHref(
+                          item.whatsappNumber || item.mobileNumber,
+                          buildApplicantWhatsAppMessage(item.applicantName, item.applicationNumber)
+                        )}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openDirectWhatsApp(
+                            item.whatsappNumber || item.mobileNumber,
+                            buildApplicantWhatsAppMessage(item.applicantName, item.applicationNumber)
+                          );
+                        }}
                         className="mobile-action-btn wa-action"
                         title="Chat on WhatsApp"
                       >
@@ -481,12 +479,21 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
                           </a>
                           {(item.whatsappNumber || item.mobileNumber) && (
                             <a
-                              href={getWhatsAppUrl(item.whatsappNumber || item.mobileNumber, item.applicantName, item.applicationNumber)}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              href={getDirectWhatsAppHref(
+                                item.whatsappNumber || item.mobileNumber,
+                                buildApplicantWhatsAppMessage(item.applicantName, item.applicationNumber)
+                              )}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                openDirectWhatsApp(
+                                  item.whatsappNumber || item.mobileNumber,
+                                  buildApplicantWhatsAppMessage(item.applicantName, item.applicationNumber)
+                                );
+                              }}
                               className="whatsapp-micro-link"
                               title="Chat on WhatsApp"
                             >
+                              <MessageCircle size={12} className="inline mr-1" />
                               <span>WA: {item.whatsappNumber || item.mobileNumber}</span>
                             </a>
                           )}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Printer, Share2, Phone, Mail, MapPin, Building2, Store, Calendar, CheckCircle2 } from 'lucide-react';
+import { openDirectWhatsApp, getDirectWhatsAppHref } from '../utils/whatsapp';
 
 export default function ApplicationDetailsModal({ application, onClose, onUpdateStatus, lang }) {
   if (!application) return null;
@@ -84,19 +85,19 @@ export default function ApplicationDetailsModal({ application, onClose, onUpdate
               <span className="receipt-item-label">{isMr ? 'व्हॉट्सॲप नंबर:' : 'WhatsApp Number:'}</span>
               {(() => {
                 const rawPhone = application.whatsappNumber || application.mobileNumber;
-                let clean = String(rawPhone || '').replace(/\D/g, '');
-                if (clean.length === 11 && clean.startsWith('0')) clean = clean.substring(1);
-                if (clean.length === 10) clean = '91' + clean;
+                const msg = `नमस्कार ${application.applicantName}, इनोदयम टेक / अस्तित्व सॅनिटरी पॅड फ्रँचायझी अर्जाबाबत आम्ही संपर्क करत आहोत.`;
                 return (
                   <a 
-                    href={`https://wa.me/${clean}?text=${encodeURIComponent(`नमस्कार ${application.applicantName}, इनोदयम टेक / अस्तित्व सॅनिटरी पॅड फ्रँचायझी अर्जाबाबत आम्ही संपर्क करत आहोत.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-emerald-700 underline flex items-center gap-1"
+                    href={getDirectWhatsAppHref(rawPhone, msg)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      openDirectWhatsApp(rawPhone, msg);
+                    }}
+                    className="font-bold text-emerald-700 underline flex items-center gap-1.5"
                     title="WhatsApp वर थेट मेसेज करा"
                   >
-                    <span>{application.whatsappNumber || application.mobileNumber}</span>
-                    <span style={{fontSize:'0.75rem',background:'#25d366',color:'#ffffff',padding:'2px 6px',borderRadius:'4px',textDecoration:'none'}}>Chat ➔</span>
+                    <span>{rawPhone}</span>
+                    <span style={{fontSize:'0.75rem',background:'#25d366',color:'#ffffff',padding:'2px 8px',borderRadius:'6px',textDecoration:'none',fontWeight:'800'}}>Chat ➔</span>
                   </a>
                 );
               })()}
