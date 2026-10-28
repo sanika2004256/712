@@ -82,14 +82,24 @@ export default function ApplicationDetailsModal({ application, onClose, onUpdate
 
             <div className="receipt-info-item">
               <span className="receipt-item-label">{isMr ? 'व्हॉट्सॲप नंबर:' : 'WhatsApp Number:'}</span>
-              <a 
-                href={`https://api.whatsapp.com/send?phone=91${application.whatsappNumber}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-emerald-700 underline"
-              >
-                {application.whatsappNumber}
-              </a>
+              {(() => {
+                const rawPhone = application.whatsappNumber || application.mobileNumber;
+                let clean = String(rawPhone || '').replace(/\D/g, '');
+                if (clean.length === 11 && clean.startsWith('0')) clean = clean.substring(1);
+                if (clean.length === 10) clean = '91' + clean;
+                return (
+                  <a 
+                    href={`https://wa.me/${clean}?text=${encodeURIComponent(`नमस्कार ${application.applicantName}, इनोदयम टेक / अस्तित्व सॅनिटरी पॅड फ्रँचायझी अर्जाबाबत आम्ही संपर्क करत आहोत.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-emerald-700 underline flex items-center gap-1"
+                    title="WhatsApp वर थेट मेसेज करा"
+                  >
+                    <span>{application.whatsappNumber || application.mobileNumber}</span>
+                    <span style={{fontSize:'0.75rem',background:'#25d366',color:'#ffffff',padding:'2px 6px',borderRadius:'4px',textDecoration:'none'}}>Chat ➔</span>
+                  </a>
+                );
+              })()}
             </div>
 
             <div className="receipt-info-item">

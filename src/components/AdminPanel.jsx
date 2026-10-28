@@ -22,6 +22,26 @@ import {
 } from 'lucide-react';
 import { fetchAllFranchiseApplications, updateFranchiseStatus } from '../services/firebase';
 
+// Helper to build 100% reliable WhatsApp URL for any Indian phone number
+const getWhatsAppUrl = (phone, applicantName, appNumber) => {
+  if (!phone) return '#';
+  // Strip all non-digit characters
+  let digits = String(phone).replace(/\D/g, '');
+  if (digits.length === 11 && digits.startsWith('0')) {
+    digits = digits.substring(1);
+  }
+  if (digits.length === 10) {
+    digits = '91' + digits;
+  }
+  const text = encodeURIComponent(
+    `नमस्कार ${applicantName || ''},\n\n` +
+    `आम्ही Inodayam Tech Private Limited / अस्तित्व सॅनिटरी पॅड कडून संपर्क करत आहोत.\n` +
+    `तुमचा फ्रँचायझी अर्ज (अर्ज क्र: ${appNumber || ''}) आम्हाला प्राप्त झाला आहे.\n\n` +
+    `पुढील प्रक्रियेसाठी आम्ही आपल्याशी चर्चा करू इच्छितो.`
+  );
+  return `https://wa.me/${digits}?text=${text}`;
+};
+
 export default function AdminPanel({ lang, onSelectApplicationForView }) {
   const isMr = lang === 'mr';
 
@@ -391,12 +411,13 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
                       <span>{item.mobileNumber}</span>
                     </a>
 
-                    {item.whatsappNumber && (
+                    {(item.whatsappNumber || item.mobileNumber) && (
                       <a 
-                        href={`https://api.whatsapp.com/send?phone=91${item.whatsappNumber}&text=${encodeURIComponent(`नमस्कार ${item.applicantName}, अस्तित्व सॅनिटरी पॅड फ्रँचायझी अर्जाबाबत आम्ही संपर्क करत आहोत.`)}`}
+                        href={getWhatsAppUrl(item.whatsappNumber || item.mobileNumber, item.applicantName, item.applicationNumber)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mobile-action-btn wa-action"
+                        title="Chat on WhatsApp"
                       >
                         <MessageCircle size={14} />
                         <span>WhatsApp</span>
@@ -458,15 +479,15 @@ export default function AdminPanel({ lang, onSelectApplicationForView }) {
                             <Phone size={13} className="inline mr-1 text-rose-600" />
                             <span>{item.mobileNumber}</span>
                           </a>
-                          {item.whatsappNumber && (
+                          {(item.whatsappNumber || item.mobileNumber) && (
                             <a
-                              href={`https://api.whatsapp.com/send?phone=91${item.whatsappNumber}&text=${encodeURIComponent(`नमस्कार ${item.applicantName}, अस्तित्व सॅनिटरी पॅड फ्रँचायझी अर्जाबाबत आम्ही संपर्क करत आहोत.`)}`}
+                              href={getWhatsAppUrl(item.whatsappNumber || item.mobileNumber, item.applicantName, item.applicationNumber)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="whatsapp-micro-link"
                               title="Chat on WhatsApp"
                             >
-                              <span>WA: {item.whatsappNumber}</span>
+                              <span>WA: {item.whatsappNumber || item.mobileNumber}</span>
                             </a>
                           )}
                         </div>
