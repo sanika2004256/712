@@ -55,6 +55,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  /* Bottom padding so fixed bar (mobile sticky apply bar) doesn't cover content */
+  padding-bottom: 64px;
+}
+
+@media (min-width: 640px) {
+  .inodayam-app {
+    padding-bottom: 0;
+  }
 }
 
 .section-container {
@@ -1411,11 +1419,11 @@ body {
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 80px;
-  right: 18px;
+  right: 14px;
   background: #25d366;
   color: #ffffff;
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1537,6 +1545,12 @@ body {
   padding: 1.5rem 0 3rem;
   overflow: hidden;
   border-bottom: 1px solid #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  .hero-poster-style-section {
+    padding: 1rem 0 2rem;
+  }
 }
 
 .hero-sky-backdrop {
@@ -1723,6 +1737,7 @@ body {
   box-shadow: 0 6px 18px rgba(216, 27, 96, 0.35);
   transform: rotate(-1deg);
   border-left: 6px solid #fef08a;
+  max-width: 100%;
 }
 
 .brush-ribbon-text {
@@ -1734,11 +1749,17 @@ body {
   line-height: 1.1;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   margin: 0;
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
   .brush-ribbon-text {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+  .brush-ribbon-tag {
+    transform: none;
+    display: block;
   }
 }
 
@@ -1753,7 +1774,9 @@ body {
 
 @media (max-width: 640px) {
   .poster-main-subheading {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
+    line-height: 1.35;
+    padding-right: 0;
   }
 }
 
@@ -2349,12 +2372,20 @@ body {
   background: linear-gradient(135deg, #0b325e 0%, #0369a1 100%);
   color: #ffffff;
   border-radius: 20px;
-  padding: 1.75rem 2rem;
+  padding: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .calc-results-banner {
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
 }
 
 .calc-result-tag {
@@ -2407,7 +2438,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-width: 280px;
+  min-width: 260px;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .calc-result-right {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 .roi-highlight-box {
@@ -2447,6 +2486,7 @@ body {
   box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
   transition: transform 0.2s ease;
   font-family: inherit;
+  width: 100%;
 }
 
 .calc-apply-now-btn:hover {
@@ -3414,4 +3454,59 @@ body {
 
 .new-app-btn:hover {
   background: #f1f5f9;
+}
+
+
+/* ======================================================== */
+/* GLOBAL KEYFRAMES & MOBILE FIXES (Final Patch)           */
+/* ======================================================== */
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Ensure body/app doesn't overflow horizontally on mobile */
+@media (max-width: 640px) {
+  .inodayam-app {
+    padding-bottom: 64px;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 641px) {
+  .inodayam-app {
+    padding-bottom: 0;
+  }
+}
+
+/* Fix poster hero section hero-content alignment on small screens */
+@media (max-width: 640px) {
+  .poster-hero-content {
+    grid-template-columns: 1fr;
+  }
+  .poster-hero-right {
+    display: none;
+  }
+  .poster-hero-left {
+    max-width: 100%;
+  }
+}
+
+/* Prevent WhatsApp button from overlapping sticky bar */
+@media (max-width: 767px) {
+  .floating-whatsapp-btn {
+    bottom: 80px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+  }
+  .floating-whatsapp-btn .whatsapp-label {
+    display: none;
+  }
 }

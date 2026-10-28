@@ -132,8 +132,7 @@ export default function HeroSection({ lang, onApplyClick }) {
             <h1 className="poster-main-subheading">
               {isMr ? (
                 <>
-                  स्वतःचा व्यवसाय सुरु करा <br className="hidden sm:inline" />
-                  आणि <span className="text-pink-600">स्वतःसोबत आपल्या गावाचा</span> विकास घडवा !
+                  स्वतःचा व्यवसाय सुरु करा आणि <span style={{color:'#e11d48'}}>स्वतःसोबत आपल्या गावाचा</span> विकास घडवा !
                 </>
               ) : (
                 'Start your own business and drive your village development!'
@@ -200,19 +199,19 @@ export default function HeroSection({ lang, onApplyClick }) {
           <div className="poster-hero-right">
             <div className="interactive-empowerment-card">
               <div className="card-top-header">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
+                  <div style={{width:'12px',height:'12px',borderRadius:'50%',background:'#10b981',animation:'ping 1s cubic-bezier(0,0,.2,1) infinite'}} />
+                  <span style={{fontSize:'0.75rem',fontWeight:'700',textTransform:'uppercase',letterSpacing:'0.05em',color:'#065f46'}}>
                     {isMr ? 'प्रत्येक गावात १ जागा • थेट निवड' : '1 Seat Per Village • Direct Selection'}
                   </span>
                 </div>
-                <span className="text-xs bg-pink-100 text-pink-700 font-bold px-2.5 py-1 rounded-full">
+                <span style={{fontSize:'0.75rem',background:'#ffe4e6',color:'#be123c',fontWeight:'700',padding:'0.25rem 0.625rem',borderRadius:'9999px'}}>
                   {isMr ? 'महिलांना प्राधान्य' : 'Women Priority'}
                 </span>
               </div>
 
               <div className="roles-interactive-selector">
-                <span className="text-sm font-semibold text-slate-700 block mb-2">
+                <span style={{fontSize:'0.875rem',fontWeight:'600',color:'#334155',display:'block',marginBottom:'0.5rem'}}>
                   {isMr ? 'प्रतिनिधी म्हणून तुम्हाला मिळणाऱ्या ४ प्रमुख जबाबदाऱ्या:' : 'Key Responsibilities as Village Representative:'}
                 </span>
 
