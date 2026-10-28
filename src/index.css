@@ -3514,19 +3514,161 @@ html {
   }
 }
 
-/* Shimmer Light Reflection on Primary Action Buttons */
+/* Ambient Background Light Elements */
+.hero-poster-style-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.relative-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.orb-blue {
+  top: -100px;
+  right: -50px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(37, 99, 235, 0) 70%);
+  animation: floatOrb 14s ease-in-out infinite alternate;
+}
+
+.orb-indigo {
+  bottom: -80px;
+  left: -60px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.14) 0%, rgba(79, 70, 229, 0) 70%);
+  animation: floatOrb 18s ease-in-out infinite alternate-reverse;
+}
+
+.orb-emerald {
+  top: 40%;
+  left: 35%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0) 70%);
+  animation: floatOrb 16s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.08);
+  }
+  100% {
+    transform: translate(-25px, 25px) scale(0.95);
+  }
+}
+
+/* Role Card Switch Smooth Animation */
+@keyframes roleCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.role-animate-in {
+  animation: roleCardIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Number Pop on Earnings Update */
+@keyframes numPop {
+  0% {
+    transform: scale(1.08);
+    color: #38bdf8;
+  }
+  100% {
+    transform: scale(1);
+    color: #ffffff;
+  }
+}
+
+.calc-number-highlight {
+  display: inline-block;
+  animation: numPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Modal Smooth Animations */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.benefit-modal-overlay,
+.modal-backdrop {
+  animation: overlayFadeIn 0.25s ease forwards;
+}
+
+.benefit-modal-card,
+.application-modal-card {
+  animation: modalZoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Tactile Button Press Micro-interactions */
+.poster-apply-btn:active,
+.calc-apply-now-btn:active,
+.sweet-submit-btn:active,
+.mobile-apply-now-btn:active,
+.vacancy-check-btn:active,
+.benefit-modal-close:active,
+.back-to-landing-btn:active {
+  transform: scale(0.97) !important;
+}
+
+/* Shimmer Light Reflection on Primary Action & Vacancy Buttons */
 .poster-apply-btn,
 .calc-apply-now-btn,
 .sweet-submit-btn,
-.mobile-apply-now-btn {
+.mobile-apply-now-btn,
+.vacancy-check-btn {
   position: relative;
   overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.poster-apply-btn:hover,
+.calc-apply-now-btn:hover,
+.vacancy-check-btn:hover {
+  transform: translateY(-2px);
 }
 
 .poster-apply-btn::after,
 .calc-apply-now-btn::after,
 .sweet-submit-btn::after,
-.mobile-apply-now-btn::after {
+.mobile-apply-now-btn::after,
+.vacancy-check-btn::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -3536,17 +3678,35 @@ html {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.32),
     transparent
   );
   transform: rotate(25deg);
-  animation: btnSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: btnSweep 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   pointer-events: none;
+}
+
+/* Feature Pillars Interactive Micro-lift */
+.pro-pillar-pill {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.pro-pillar-pill:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+  background: #f0f7ff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
 }
 
 /* Floating WhatsApp Aura & Float */
 .floating-whatsapp-btn {
   animation: waFloatBounce 3s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-whatsapp-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
 }
 
 .floating-whatsapp-btn::before {
@@ -3573,8 +3733,9 @@ html {
 }
 
 .pro-offer-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+  border-color: #93c5fd;
 }
 
 .pro-benefit-card {
@@ -3637,6 +3798,17 @@ html {
 
 .checklist-item-btn:hover {
   transform: translateX(4px);
+}
+
+/* Sticky Navbar Frosted Glass Backdrop */
+.site-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: box-shadow 0.25s ease;
 }
 
 /* Ensure body/app doesn't overflow horizontally on mobile */

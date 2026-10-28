@@ -315,8 +315,8 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
                 </h2>
                 <p className="receipt-sub">
                   {isMr 
-                    ? 'तुमचा अर्ज सुरक्षितपणे गुगल फायरबेसवर जतन झाला आहे.' 
-                    : 'Application securely saved in Firebase Firestore.'}
+                    ? 'तुमचा अर्ज अधिकृतपणे सुरक्षित जतन झाला आहे. आमचे प्रतिनिधी लवकरच संपर्क करतील.' 
+                    : 'Your application has been securely recorded. Our team will contact you shortly.'}
                 </p>
               </div>
 

@@ -55,7 +55,12 @@ export default function HeroSection({ lang, onApplyClick }) {
 
   return (
     <section className="hero-poster-style-section" id="hero">
-      <div className="section-container">
+      {/* Background Animated Ambient Glow Orbs */}
+      <div className="hero-ambient-glow orb-blue" aria-hidden="true" />
+      <div className="hero-ambient-glow orb-indigo" aria-hidden="true" />
+      <div className="hero-ambient-glow orb-emerald" aria-hidden="true" />
+
+      <div className="section-container relative-hero-content">
         {/* TOP ROW: Clean Professional Announcement Bar */}
         <div className="pro-hero-announcement-bar">
           <div className="pro-badge-official">
@@ -208,8 +213,12 @@ export default function HeroSection({ lang, onApplyClick }) {
                   ))}
                 </div>
 
-                {/* Active Role Detailed Card */}
-                <div className="active-role-display-box" style={{ borderLeftColor: REPRESENTATIVE_ROLES[activeRole].color }}>
+                {/* Active Role Detailed Card with smooth switch animation */}
+                <div 
+                  key={REPRESENTATIVE_ROLES[activeRole].id} 
+                  className="active-role-display-box role-animate-in" 
+                  style={{ borderLeftColor: REPRESENTATIVE_ROLES[activeRole].color }}
+                >
                   <div className="role-display-head">
                     <span className="display-emoji">{REPRESENTATIVE_ROLES[activeRole].icon}</span>
                     <div>

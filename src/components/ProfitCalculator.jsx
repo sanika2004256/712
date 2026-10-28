@@ -133,7 +133,9 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           </span>
           <div className="calc-big-earnings">
             <span className="currency">₹</span>
-            <span>{totalMonthlyIncome.toLocaleString('en-IN')}</span>
+            <span key={totalMonthlyIncome} className="calc-number-highlight">
+              {totalMonthlyIncome.toLocaleString('en-IN')}
+            </span>
             <span className="per-month">{isMr ? '/ दरमहा' : '/ month'}</span>
           </div>
           <div className="calc-breakdown-tags">
