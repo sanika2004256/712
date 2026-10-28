@@ -9,7 +9,6 @@ import {
   CheckCircle2, 
   ArrowRight,
   Sparkles,
-  ExternalLink,
   ChevronRight
 } from 'lucide-react';
 
@@ -20,7 +19,8 @@ const POSTER_SERVICES = [
     titleEn: 'School ERP Management',
     taglineMr: 'गावातील शाळांचे १००% डिजिटल व्यवस्थापन',
     icon: School,
-    color: '#4f46e5',
+    color: '#2563eb',
+    bgColor: '#eff6ff',
     featuresMr: [
       'विद्यार्थी दैनिक बायोमेट्रिक/ॲप हजेरी',
       'परीक्षा निकाल व प्रगतीपुस्तक निर्मिती',
@@ -36,6 +36,7 @@ const POSTER_SERVICES = [
     taglineMr: 'गावातील विद्यार्थ्यांना उच्च दर्जाचे दर्जेदार ऑनलाइन शिक्षण',
     icon: GraduationCap,
     color: '#0284c7',
+    bgColor: '#f0f9ff',
     featuresMr: [
       'महाराष्ट्रातील तज्ज्ञ प्राध्यापकांचे लाइव्ह व रेकॉर्डेड लेक्चर्स',
       'मॉक टेस्ट सिरीज व ऑल-महाराष्ट्र रँकिंग',
@@ -51,6 +52,7 @@ const POSTER_SERVICES = [
     taglineMr: 'गावातील शेतजमीन, घरे व दुकाने खरेदी-विक्री ॲप',
     icon: Building,
     color: '#059669',
+    bgColor: '#ecfdf5',
     featuresMr: [
       'शेतजमीन, प्लॉट व घरांची स्थानिक डिजिटल नोंदणी',
       '७/१२ उतारा, फेरफार व नकाशा सहाय्य',
@@ -65,7 +67,8 @@ const POSTER_SERVICES = [
     titleEn: 'Filmy Adda (Film Production App)',
     taglineMr: 'ग्रामीण भागातील तरुण कलाकारांसाठी चित्रपट व मनोरंजन मंच',
     icon: Film,
-    color: '#d946ef',
+    color: '#4f46e5',
+    bgColor: '#eef2ff',
     featuresMr: [
       'स्थानिक कलाकारांची ऑडिशन नोंदणी',
       'लघुपट (Short Films) व संगीत अल्बम निर्मिती',
@@ -80,7 +83,8 @@ const POSTER_SERVICES = [
     titleEn: 'Astitva Mart (Online Shopping & Sanitary Pads)',
     taglineMr: 'सॅनिटरी नॅपकिन्स व दैनंदिन गृहोपयोगी वस्तूंचे वितरण',
     icon: ShoppingBag,
-    color: '#e11d48',
+    color: '#2563eb',
+    bgColor: '#eff6ff',
     featuresMr: [
       'महिलांसाठी उच्च दर्जाचे, ॲनायन चिपयुक्त सॅनिटरी पॅड्स',
       'अत्यंत वाजवी दरात थेट गावात घरपोच वितरण',
@@ -95,7 +99,8 @@ const POSTER_SERVICES = [
     titleEn: 'And Many More Digital Services...',
     taglineMr: 'गावातील सर्व शासकीय व खाजगी ऑनलाइन सेवांचे केंद्र',
     icon: Layers,
-    color: '#ea580c',
+    color: '#0d9488',
+    bgColor: '#f0fdfa',
     featuresMr: [
       '७/१२, ८-अ, फेरफार उतारे डाउनलोड व प्रिंट',
       'पॅन कार्ड, आधार कार्ड अपडेट सहाय्य',
@@ -116,15 +121,15 @@ export default function ServicesSection({ lang, onApplyClick }) {
     <section className="services-poster-section" id="services">
       <div className="section-container">
         {/* Section Heading */}
-        <div className="section-head-center">
-          <span className="section-mini-badge">
-            <Sparkles size={14} className="text-pink-500" />
-            {isMr ? 'Inodayam Tech डिजिटल इकोसिस्टम' : 'Inodayam Tech Ecosystem'}
-          </span>
-          <h2 className="section-title-large">
+        <div className="pro-section-header">
+          <div className="pro-pill-badge">
+            <Sparkles size={14} className="text-blue-600" />
+            <span>{isMr ? 'डिजिटल इकोसिस्टम' : 'Inodayam Tech Ecosystem'}</span>
+          </div>
+          <h2 className="pro-section-title">
             {isMr ? 'आमच्या प्रमुख डिजिटल सेवा' : 'Our Core Digital Services'}
           </h2>
-          <p className="section-subtitle">
+          <p className="pro-section-subtitle">
             {isMr 
               ? 'गाव प्रतिनिधी म्हणून तुम्हाला खालील सर्व सेवा आपल्या गावात देण्याचा अधिकृत अधिकार मिळेल:' 
               : 'As a Village Representative, you get authorized access to provide all these core services:'}
@@ -133,10 +138,10 @@ export default function ServicesSection({ lang, onApplyClick }) {
 
         {/* 2-Column Interactive Services Layout */}
         <div className="poster-services-container">
-          {/* Left Column: Exactly styled like the Poster's Magenta Checklist Box */}
+          {/* Left Column: Clean Service List Card */}
           <div className="poster-service-checklist-box">
             <div className="checklist-top-pill">
-              <span>{isMr ? 'आमच्या प्रमुख सेवा' : 'Our Core Services'}</span>
+              <span>{isMr ? 'अधिकृत सेवा यादी' : 'Official Services'}</span>
             </div>
 
             <div className="checklist-items-stack">
@@ -150,15 +155,15 @@ export default function ServicesSection({ lang, onApplyClick }) {
                     className={`checklist-item-btn ${isSelected ? 'selected' : ''}`}
                     onClick={() => setActiveServiceId(srv.id)}
                   >
-                    <div className="flex items-center gap-3">
+                    <div style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
                       <div className="check-box-icon">
-                        <CheckCircle2 size={18} className="text-pink-600 flex-shrink-0" />
+                        <CheckCircle2 size={18} className="check-icon-svg" />
                       </div>
                       <span className="checklist-item-title">
                         {isMr ? srv.titleMr : srv.titleEn}
                       </span>
                     </div>
-                    <ChevronRight size={18} className="arrow-indicator text-pink-300" />
+                    <ChevronRight size={18} className="arrow-indicator" />
                   </button>
                 );
               })}
@@ -171,28 +176,27 @@ export default function ServicesSection({ lang, onApplyClick }) {
               <div className="inspector-head">
                 <div 
                   className="inspector-icon-box"
-                  style={{ backgroundColor: `${currentService.color}15`, color: currentService.color }}
+                  style={{ backgroundColor: currentService.bgColor, color: currentService.color }}
                 >
-                  <currentService.icon size={32} />
+                  <currentService.icon size={30} />
                 </div>
                 <div>
                   <h3 className="inspector-title">
                     {isMr ? currentService.titleMr : currentService.titleEn}
                   </h3>
                   <p className="inspector-tagline">
-                    {isMr ? currentService.taglineMr : currentService.taglineMr}
+                    {isMr ? currentService.taglineMr : currentService.titleEn}
                   </p>
                 </div>
               </div>
 
-              {/* Key Features Bullet List */}
               <div className="inspector-features-box">
                 <span className="features-head">
-                  {isMr ? 'या सेवेतील प्रमुख वैशिष्ट्ये:' : 'Key Service Features:'}
+                  {isMr ? 'या सेवेतील प्रमुख वैशिष्ट्ये:' : 'Key Features:'}
                 </span>
                 <ul className="features-list">
-                  {currentService.featuresMr.map((feat, i) => (
-                    <li key={i} className="feature-item">
+                  {currentService.featuresMr.map((feat, idx) => (
+                    <li key={idx} className="feature-item">
                       <div className="feature-bullet" style={{ backgroundColor: currentService.color }} />
                       <span>{feat}</span>
                     </li>
@@ -200,27 +204,23 @@ export default function ServicesSection({ lang, onApplyClick }) {
                 </ul>
               </div>
 
-              {/* Village Representative Earning Highlight */}
               <div className="rep-earning-highlight">
-                <div className="earning-badge">
-                  <span>💰 {isMr ? 'प्रतिनिधीचे उत्पन्न (Earnings)' : 'Representative Earnings'}</span>
-                </div>
+                <span className="earning-badge">
+                  {isMr ? 'प्रतिनिधीचा नफा / कमिशन:' : 'Representative Income:'}
+                </span>
                 <p className="earning-text">
                   {isMr ? currentService.repBenefitMr : currentService.repBenefitMr}
                 </p>
               </div>
 
-              {/* Action Button */}
-              <div className="inspector-cta-row">
-                <button
-                  type="button"
-                  className="inspector-apply-btn"
-                  onClick={onApplyClick}
-                >
-                  <span>{isMr ? 'ही सेवा आपल्या गावात सुरू करा' : 'Start this service in your village'}</span>
-                  <ArrowRight size={18} />
-                </button>
-              </div>
+              <button 
+                type="button" 
+                className="inspector-apply-btn"
+                onClick={onApplyClick}
+              >
+                <span>{isMr ? 'या सेवेसाठी प्रतिनिधी अर्ज करा' : 'Apply For This Service'}</span>
+                <ArrowRight size={16} />
+              </button>
             </div>
           </div>
         </div>

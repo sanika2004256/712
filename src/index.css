@@ -1541,164 +1541,105 @@ body {
 
 .hero-poster-style-section {
   position: relative;
-  background: linear-gradient(180deg, #f0f9ff 0%, #f0fdf4 50%, #ffffff 100%);
-  padding: 1.5rem 0 3rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  padding: 2.25rem 0 3.25rem;
   overflow: hidden;
   border-bottom: 1px solid #e2e8f0;
 }
 
 @media (max-width: 640px) {
   .hero-poster-style-section {
-    padding: 1rem 0 2rem;
+    padding: 1.25rem 0 2rem;
   }
 }
 
-.hero-sky-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(circle at 85% 15%, rgba(254, 240, 138, 0.35) 0%, transparent 40%),
-              radial-gradient(circle at 10% 25%, rgba(224, 242, 254, 0.6) 0%, transparent 50%);
-  z-index: 0;
-}
-
-/* Poster Top Bar */
-.poster-top-bar {
+/* Professional Announcement Bar */
+.pro-hero-announcement-bar {
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
   padding-bottom: 1.25rem;
-  border-bottom: 2px dashed rgba(2, 132, 199, 0.15);
+  border-bottom: 1px solid #e2e8f0;
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .poster-top-bar {
+  .pro-hero-announcement-bar {
     justify-content: center;
     text-align: center;
   }
 }
 
-/* Arched Slogan Banner */
-.poster-arch-slogan {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-width: 280px;
-}
-
-.slogan-curved-box {
-  background: linear-gradient(135deg, #0b325e 0%, #0369a1 100%);
-  color: #ffffff;
-  padding: 0.65rem 1.75rem;
-  border-radius: 9999px;
-  box-shadow: 0 4px 14px rgba(3, 105, 161, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-align: center;
-  transform: perspective(400px) rotateX(2deg);
-}
-
-.slogan-arc-text {
-  font-family: 'Mukta', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #fef08a;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-/* Maharashtra 44,000 Villages Badge */
-.poster-maharashtra-badge {
-  flex-shrink: 0;
-}
-
-.maha-map-shape {
-  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
-  color: #ffffff;
-  padding: 0.6rem 1.25rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
-  border: 2px solid #bbf7d0;
-  display: flex;
-  flex-direction: column;
+.pro-badge-official {
+  display: inline-flex;
   align-items: center;
-  text-align: center;
-  line-height: 1.15;
-}
-
-.maha-state-label {
-  font-size: 0.75rem;
+  gap: 0.5rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #dcfce7;
 }
 
-.maha-number {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: -0.5px;
+.pro-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
 }
 
-.maha-village-label {
-  font-size: 0.75rem;
+.pro-badge-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #475569;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #fef08a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
 }
 
-/* 4 Core Pillars */
+/* 4 Professional Feature Pills */
 .poster-pillars-container {
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 2rem;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
 }
 
-.poster-pillar-pill {
+@media (max-width: 640px) {
+  .poster-pillars-container {
+    justify-content: center;
+  }
+}
+
+.pro-pillar-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 1.15rem;
+  gap: 0.4rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
-  font-weight: 800;
-  font-size: 0.92rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  color: #ffffff;
-  transition: transform 0.2s ease;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
-.poster-pillar-pill:hover {
-  transform: translateY(-2px);
-}
-
-.pillar-blue {
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
-}
-
-.pillar-green {
-  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
-}
-
-.pillar-magenta {
-  background: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
-}
-
-.pillar-orange {
-  background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
-}
-
-.pillar-dot {
-  font-size: 0.75rem;
+.pro-pillar-icon {
+  color: #2563eb;
 }
 
 /* Main Hero Grid */
@@ -1724,57 +1665,37 @@ body {
   flex-direction: column;
 }
 
-/* Painted Brush Ribbon: गाव प्रतिनिधी बना... */
-.brush-ribbon-wrapper {
-  margin-bottom: 1rem;
-}
-
-.brush-ribbon-tag {
-  display: inline-block;
-  background: linear-gradient(135deg, #d81b60 0%, #c2185b 50%, #9c27b0 100%);
-  padding: 0.55rem 2rem 0.65rem 1.5rem;
-  border-radius: 8px 30px 30px 8px;
-  box-shadow: 0 6px 18px rgba(216, 27, 96, 0.35);
-  transform: rotate(-1deg);
-  border-left: 6px solid #fef08a;
-  max-width: 100%;
-}
-
-.brush-ribbon-text {
-  font-family: 'Mukta', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  line-height: 1.1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  margin: 0;
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .brush-ribbon-text {
-    font-size: 1.5rem;
-    white-space: normal;
-  }
-  .brush-ribbon-tag {
-    transform: none;
-    display: block;
-  }
+.pro-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+  width: fit-content;
 }
 
 .poster-main-subheading {
-  font-size: 2.15rem;
+  font-size: 2.35rem;
   font-weight: 900;
-  color: #0b325e;
+  color: #0f172a;
   line-height: 1.25;
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
 }
 
+.text-pro-accent {
+  color: #2563eb;
+}
+
 @media (max-width: 640px) {
   .poster-main-subheading {
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     line-height: 1.35;
     padding-right: 0;
   }
@@ -1785,106 +1706,104 @@ body {
   color: #475569;
   line-height: 1.6;
   margin-bottom: 1.75rem;
+  max-width: 620px;
 }
 
-/* Exact Poster Offer Callout Ribbons */
-.poster-offers-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+/* Professional Financial Offer Cards Grid */
+.pro-offers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-/* Yellow Banner: फक्त ₹10,000 भांडवलात */
-.poster-yellow-ribbon {
-  background: linear-gradient(135deg, #fffbeb 0%, #fef08a 60%, #fde047 100%);
-  border: 2px solid #eab308;
+@media (max-width: 600px) {
+  .pro-offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pro-offer-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
   border-radius: 16px;
-  padding: 0.85rem 1.5rem;
-  box-shadow: 0 6px 16px rgba(234, 179, 8, 0.25);
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pro-offer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.pro-card-capital {
+  border-color: #dbeafe;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+}
+
+.pro-card-income {
+  border-color: #d1fae5;
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.pro-offer-header {
   display: flex;
   align-items: center;
-}
-
-.ribbon-inner {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.ribbon-small-label {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #b91c1c;
-}
-
-.ribbon-big-amount {
-  font-size: 2.35rem;
-  font-weight: 900;
-  color: #dc2626;
-  letter-spacing: -1px;
-  line-height: 1;
-  display: flex;
-  align-items: baseline;
-  text-shadow: 0 1px 2px rgba(220, 38, 38, 0.2);
-}
-
-.ribbon-big-amount .currency {
-  font-size: 1.5rem;
-  margin-right: 2px;
-}
-
-.ribbon-text-lines {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.ribbon-text-lines strong {
-  font-size: 1.05rem;
-  color: #1e293b;
-  font-weight: 800;
-}
-
-.ribbon-text-lines span {
-  font-size: 0.95rem;
-  color: #b91c1c;
-  font-weight: 800;
-}
-
-/* Magenta Curved Ribbon: मासिक उत्पन्न मिळवा: किमान ₹12,000 – ₹15,000 */
-.poster-magenta-ribbon {
-  background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #9f1239 100%);
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  box-shadow: 0 6px 18px rgba(190, 18, 60, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.magenta-ribbon-content {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 0.85rem;
+  margin-bottom: 0.5rem;
 }
 
-.magenta-income-label {
-  font-size: 0.98rem;
+.pro-offer-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.capital-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.income-icon {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.pro-offer-label {
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #ffe4e6;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: block;
 }
 
-.magenta-income-val {
-  font-size: 1.35rem;
+.pro-offer-amount {
+  font-size: 1.55rem;
   font-weight: 900;
-  color: #fef08a;
-  letter-spacing: 0.3px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.pro-offer-amount.text-emerald {
+  color: #059669;
+}
+
+.pro-offer-amount .plus {
+  font-size: 1.2rem;
+  margin-left: 2px;
+}
+
+.pro-offer-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* Action CTA Group */
@@ -1896,34 +1815,35 @@ body {
 }
 
 .poster-apply-btn {
-  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+  background: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 0.95rem 1.75rem;
-  border-radius: 14px;
-  font-size: 1.05rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 12px;
+  font-size: 0.98rem;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.35);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  transition: all 0.25s ease;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s ease;
   font-family: inherit;
 }
 
 .poster-apply-btn:hover {
+  background: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(22, 163, 74, 0.45);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 .poster-calc-btn {
   background: #ffffff;
-  border: 2px solid #cbd5e1;
+  border: 1.5px solid #cbd5e1;
   color: #334155;
   padding: 0.85rem 1.35rem;
-  border-radius: 14px;
-  font-size: 0.98rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
   font-weight: 800;
   text-decoration: none;
   display: inline-flex;
@@ -1933,9 +1853,9 @@ body {
 }
 
 .poster-calc-btn:hover {
-  border-color: #0284c7;
-  color: #0284c7;
-  background: #f0f9ff;
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #eff6ff;
 }
 
 /* Right Column: Interactive Empowerment Card */
@@ -2086,113 +2006,143 @@ body {
 }
 
 /* ======================================================== */
-/* POSTER-STYLE BENEFITS BAR (गाव प्रतिनिधीचे फायदे) */
+/* CLEAN PROFESSIONAL BENEFITS SECTION                     */
 /* ======================================================== */
 
 .benefits-poster-section {
-  padding: 2rem 0;
-  background: #f8fafc;
-}
-
-.poster-benefits-bar-wrapper {
-  position: relative;
+  padding: 4rem 0;
   background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 2.5rem 1.5rem 1.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #e2e8f0;
 }
 
-/* Top Blue Header Tab matching poster */
-.poster-benefits-blue-tab {
-  position: absolute;
-  top: -18px;
-  left: 2rem;
-  background: linear-gradient(135deg, #0b325e 0%, #0369a1 100%);
-  color: #ffffff;
-  padding: 0.55rem 1.75rem;
-  border-radius: 9999px;
-  font-size: 1.15rem;
-  font-weight: 900;
+.pro-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.pro-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(3, 105, 161, 0.35);
-  border: 2px solid #e0f2fe;
+  gap: 0.4rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
 }
 
-@media (max-width: 640px) {
-  .poster-benefits-blue-tab {
-    left: 1rem;
-    font-size: 0.98rem;
-    padding: 0.45rem 1.25rem;
-  }
+.pro-section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
 }
 
-.poster-benefits-circles-grid {
+.pro-section-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.pro-benefits-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.25rem;
-  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-@media (max-width: 1024px) {
-  .poster-benefits-circles-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .poster-benefits-circles-grid {
+@media (max-width: 900px) {
+  .pro-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
   }
 }
 
-.benefit-circle-item {
+@media (max-width: 600px) {
+  .pro-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pro-benefit-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  cursor: pointer;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 16px;
-  transition: all 0.25s ease;
 }
 
-.benefit-circle-item:hover {
-  background: #f1f5f9;
+.pro-benefit-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
 }
 
-.circle-icon-badge {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
+.pro-benefit-top-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 0.85rem;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-  border: 4px solid #ffffff;
-  transition: transform 0.25s ease;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
 }
 
-.circle-item-title {
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #1e293b;
-  line-height: 1.35;
-  margin-bottom: 0.4rem;
-  min-height: 2.7rem;
+.pro-benefit-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.circle-learn-more {
+.pro-benefit-pill {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #0284c7;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.pro-benefit-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.35;
+  margin-bottom: 0.65rem;
+}
+
+.pro-benefit-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.pro-benefit-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2563eb;
+  padding-top: 0.85rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.pro-arrow {
+  transition: transform 0.2s ease;
+}
+
+.pro-benefit-card:hover .pro-arrow {
+  transform: translateX(4px);
 }
 
 /* Benefit Modal */
@@ -2235,32 +2185,34 @@ body {
 }
 
 /* ======================================================== */
-/* LIVE EARNINGS / PROFIT CALCULATOR */
+/* CLEAN PROFESSIONAL LIVE EARNINGS / CALCULATOR           */
 /* ======================================================== */
 
 .calculator-section-wrap {
-  padding: 2.5rem 0;
-  background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 100%);
+  padding: 3.5rem 0;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .profit-calculator-card {
   background: #ffffff;
-  border: 2px solid #bae6fd;
-  border-radius: 24px;
-  padding: 2rem;
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.1);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
 }
 
 .calc-header-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: #0b325e;
-  color: #fef08a;
-  padding: 0.45rem 1.15rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #1d4ed8;
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 800;
+  font-size: 0.8rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -2269,32 +2221,35 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .calc-title {
   font-size: 1.65rem;
   font-weight: 900;
-  color: #0b325e;
+  color: #0f172a;
   line-height: 1.25;
-  margin-bottom: 0.35rem;
 }
 
 .calc-subtitle {
-  font-size: 0.98rem;
-  color: #475569;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 0.35rem;
 }
 
 .investment-guarantee-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  background: #065f46;
-  color: #ffffff;
-  padding: 0.6rem 1.15rem;
-  border-radius: 12px;
-  font-size: 0.92rem;
+  gap: 0.5rem;
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  color: #1d4ed8;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
   font-weight: 800;
 }
 
@@ -2315,7 +2270,7 @@ body {
 .calc-slider-box {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 1.25rem;
 }
 
@@ -2348,11 +2303,12 @@ body {
 
 .custom-range-slider {
   width: 100%;
-  height: 8px;
+  height: 6px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
   margin-bottom: 0.75rem;
+  accent-color: #2563eb;
 }
 
 .slider-subtext {
@@ -2360,38 +2316,43 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: #334155;
+  color: #475569;
 }
 
 .slider-subtext strong {
-  color: #0b325e;
+  color: #0f172a;
+}
+
+.rate-note {
+  font-size: 0.78rem;
+  color: #94a3b8;
 }
 
 /* Results Banner */
 .calc-results-banner {
-  background: linear-gradient(135deg, #0b325e 0%, #0369a1 100%);
+  background: #0f172a;
   color: #ffffff;
-  border-radius: 20px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 @media (max-width: 700px) {
   .calc-results-banner {
     flex-direction: column;
     padding: 1.25rem;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 }
 
 .calc-result-tag {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #bae6fd;
+  color: #94a3b8;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
@@ -2399,9 +2360,9 @@ body {
 }
 
 .calc-big-earnings {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  color: #fef08a;
+  color: #ffffff;
   line-height: 1;
   display: flex;
   align-items: baseline;
@@ -2410,13 +2371,14 @@ body {
 }
 
 .calc-big-earnings .currency {
-  font-size: 1.85rem;
+  font-size: 1.65rem;
+  color: #38bdf8;
 }
 
 .calc-big-earnings .per-month {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #e0f2fe;
+  color: #94a3b8;
 }
 
 .calc-breakdown-tags {
@@ -2426,18 +2388,19 @@ body {
 }
 
 .break-tag {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e2e8f0;
 }
 
 .calc-result-right {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
   min-width: 260px;
   flex: 1;
 }
@@ -2450,10 +2413,10 @@ body {
 }
 
 .roi-highlight-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  padding: 0.85rem 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -2461,45 +2424,43 @@ body {
 
 .roi-highlight-box strong {
   display: block;
-  font-size: 0.95rem;
-  color: #fef08a;
+  font-size: 0.92rem;
+  color: #34d399;
 }
 
 .roi-highlight-box span {
   font-size: 0.8rem;
-  color: #e2e8f0;
+  color: #94a3b8;
 }
 
 .calc-apply-now-btn {
-  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  background: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 0.9rem 1.5rem;
-  border-radius: 14px;
-  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
-  transition: transform 0.2s ease;
-  font-family: inherit;
+  transition: all 0.2s ease;
   width: 100%;
 }
 
 .calc-apply-now-btn:hover {
-  transform: translateY(-2px);
+  background: #1d4ed8;
 }
-
 /* ======================================================== */
-/* POSTER-STYLE SERVICES CHECKLIST CARD */
+/* CLEAN PROFESSIONAL SERVICES SECTION                     */
 /* ======================================================== */
 
 .services-poster-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .poster-services-container {
@@ -2516,34 +2477,34 @@ body {
   }
 }
 
-/* Poster Magenta/Purple Checklist Box */
+/* Services Checklist Box */
 .poster-service-checklist-box {
-  background: linear-gradient(180deg, #fdf4ff 0%, #ffffff 100%);
-  border: 2px solid #f0abfc;
-  border-radius: 24px;
-  padding: 2.25rem 1.5rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem 1.25rem 1.25rem;
   position: relative;
-  box-shadow: 0 10px 25px rgba(217, 70, 239, 0.08);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
 }
 
 .checklist-top-pill {
   position: absolute;
-  top: -16px;
-  left: 1.75rem;
-  background: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
+  top: -14px;
+  left: 1.5rem;
+  background: #0f172a;
   color: #ffffff;
-  padding: 0.5rem 1.5rem;
+  padding: 0.35rem 1.15rem;
   border-radius: 9999px;
-  font-size: 1.05rem;
-  font-weight: 900;
+  font-size: 0.85rem;
+  font-weight: 800;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
 }
 
 .checklist-items-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .checklist-item-btn {
@@ -2552,9 +2513,9 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 0.85rem 1rem;
-  background: #ffffff;
-  border: 1.5px solid #f1f5f9;
-  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
@@ -2562,32 +2523,45 @@ body {
 }
 
 .checklist-item-btn:hover {
-  background: #faf5ff;
-  border-color: #f0abfc;
+  background: #eff6ff;
+  border-color: #bfdbfe;
 }
 
 .checklist-item-btn.selected {
-  background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
-  border-color: #d946ef;
-  box-shadow: 0 4px 12px rgba(217, 70, 239, 0.15);
+  background: #eff6ff;
+  border-color: #2563eb;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
 }
 
 .checklist-item-title {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #1e293b;
 }
 
 .checklist-item-btn.selected .checklist-item-title {
-  color: #86198f;
+  color: #1d4ed8;
+}
+
+.check-box-icon .check-icon-svg {
+  color: #2563eb;
+}
+
+.arrow-indicator {
+  color: #94a3b8;
+}
+
+.checklist-item-btn.selected .arrow-indicator {
+  color: #2563eb;
 }
 
 /* Service Details Inspector */
 .service-details-inspector {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
   padding: 2rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
 }
 
 .inspector-head {
@@ -2600,9 +2574,9 @@ body {
 }
 
 .inspector-icon-box {
-  width: 64px;
-  height: 64px;
-  border-radius: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2610,14 +2584,14 @@ body {
 }
 
 .inspector-title {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 900;
   color: #0f172a;
   line-height: 1.2;
 }
 
 .inspector-tagline {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: #64748b;
   margin-top: 0.25rem;
 }
@@ -2627,13 +2601,13 @@ body {
 }
 
 .features-head {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  color: #334155;
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .features-list {
@@ -2641,75 +2615,81 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  padding: 0;
+  margin: 0;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #334155;
 }
 
 .feature-bullet {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .rep-earning-highlight {
   background: #ecfdf5;
-  border: 1.5px solid #a7f3d0;
-  border-radius: 16px;
-  padding: 1rem 1.25rem;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
   margin-bottom: 1.5rem;
 }
 
 .earning-badge {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 800;
   color: #065f46;
   text-transform: uppercase;
-  margin-bottom: 0.35rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+  display: block;
 }
 
 .earning-text {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #047857;
   line-height: 1.4;
+  margin: 0;
 }
 
 .inspector-apply-btn {
-  background: #0b325e;
+  background: #0f172a;
   color: #ffffff;
   border: none;
-  padding: 0.85rem 1.5rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  font-weight: 800;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   font-family: inherit;
 }
 
 .inspector-apply-btn:hover {
-  background: #0369a1;
+  background: #1e293b;
+  transform: translateY(-1px);
 }
 
 /* ======================================================== */
-/* POSTER-STYLE BOTTOM WAVE BANNER */
+/* CORPORATE BOTTOM BANNER                                 */
 /* ======================================================== */
 
 .poster-bottom-wave-banner {
-  background: linear-gradient(135deg, #071e3d 0%, #0b325e 60%, #15803d 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
   padding: 1.25rem 0;
-  border-bottom: 4px solid #f59e0b;
+  border-bottom: 3px solid #2563eb;
 }
 
 .wave-banner-content {
@@ -2727,11 +2707,11 @@ body {
 }
 
 .sprout-icon-circle {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid #bbf7d0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2740,16 +2720,15 @@ body {
 
 .wave-slogan-text {
   font-family: 'Mukta', sans-serif;
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: #fef08a;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 640px) {
   .wave-slogan-text {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -2768,34 +2747,33 @@ body {
 }
 
 .wave-company-title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 900;
   color: #ffffff;
   letter-spacing: -0.3px;
 }
 
 .wave-company-tagline {
-  font-size: 0.82rem;
-  color: #bbf7d0;
+  font-size: 0.8rem;
+  color: #94a3b8;
   font-weight: 600;
 }
 
-
 /* ======================================================== */
-/* SWEET FORM STYLES (MATCHING PREVIOUS IMAGE 2 DESIGN) */
+/* CORPORATE REGISTRATION FORM STYLES                      */
 /* ======================================================== */
 
 .registration-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background: #f8fafc;
 }
 
 .sweet-form-card {
   background: #ffffff;
-  border: 1.5px solid #fecdd3;
+  border: 1px solid #e2e8f0;
   border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(225, 29, 72, 0.06);
-  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  padding: 2.25rem;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -2807,10 +2785,10 @@ body {
   }
 }
 
-/* Sweet Hero Intro Banner */
+/* Official Form Intro Banner */
 .sweet-hero-banner {
-  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
-  border: 1px solid #fecdd3;
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1px solid #dbeafe;
   border-radius: 14px;
   padding: 1.5rem 1.75rem;
   margin-bottom: 2rem;
@@ -2821,18 +2799,17 @@ body {
   align-items: center;
   gap: 0.35rem;
   background: #ffffff;
-  border: 1px solid #fecdd3;
-  color: #be123c;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
   font-size: 0.8rem;
-  font-weight: 800;
-  padding: 0.3rem 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   margin-bottom: 0.65rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .sweet-hero-title {
-  color: #9f1239;
+  color: #0f172a;
   font-size: 1.65rem;
   font-weight: 900;
   line-height: 1.25;
@@ -2846,7 +2823,7 @@ body {
 }
 
 .sweet-hero-subtitle {
-  color: #4c0519;
+  color: #475569;
   font-size: 0.95rem;
   line-height: 1.45;
 }
@@ -2880,7 +2857,7 @@ body {
 .step-circle-badge {
   width: 28px;
   height: 28px;
-  background: #be123c;
+  background: #0f172a;
   color: #ffffff;
   border-radius: 50%;
   font-weight: 800;
@@ -2889,7 +2866,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(190, 18, 60, 0.3);
   margin-top: 2px;
 }
 
@@ -2976,8 +2952,8 @@ body {
 .sweet-input:focus,
 .sweet-textarea:focus {
   outline: none;
-  border-color: #be123c;
-  box-shadow: 0 0 0 3px rgba(190, 18, 60, 0.12);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .sweet-select:disabled {
@@ -3039,20 +3015,20 @@ body {
 
 /* Confirmed Location Pill */
 .sweet-selection-pill {
-  background: #ecfdf5;
-  border: 1.5px solid #a7f3d0;
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
   border-radius: 12px;
   padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  color: #065f46;
+  color: #1d4ed8;
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
 
 .location-pill-text strong {
-  color: #065f46;
+  color: #1d4ed8;
 }
 
 /* Personal Fields Grid */
@@ -3108,8 +3084,8 @@ body {
 
 .model-card-label {
   position: relative;
-  border: 2px solid #e2e8f0;
-  border-radius: 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
   padding: 1.15rem;
   background: #ffffff;
   cursor: pointer;
@@ -3125,18 +3101,18 @@ body {
   right: 1.15rem;
   width: 18px;
   height: 18px;
-  accent-color: #e11d48;
+  accent-color: #2563eb;
 }
 
 .model-card-label:hover {
-  border-color: #fda4af;
-  background: #fff1f2;
+  border-color: #bfdbfe;
+  background: #f8fafc;
 }
 
 .model-card-label.active {
-  border-color: #be123c;
-  background: #fff1f2;
-  box-shadow: 0 4px 14px rgba(190, 18, 60, 0.1);
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
 }
 
 .model-card-top {
@@ -3150,8 +3126,9 @@ body {
 .model-badge-tag {
   font-size: 0.72rem;
   font-weight: 800;
-  background: #fef08a;
-  color: #854d0e;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
   padding: 0.2rem 0.55rem;
   border-radius: 9999px;
 }
@@ -3159,7 +3136,7 @@ body {
 .model-investment-text {
   font-size: 0.95rem;
   font-weight: 900;
-  color: #be123c;
+  color: #1d4ed8;
 }
 
 .model-title-text {
@@ -3201,7 +3178,7 @@ body {
 }
 
 .premises-option-card input[type="radio"] {
-  accent-color: #be123c;
+  accent-color: #2563eb;
   width: 16px;
   height: 16px;
 }
@@ -3211,9 +3188,9 @@ body {
 }
 
 .premises-option-card.active {
-  border-color: #be123c;
-  background: #fff1f2;
-  font-weight: 800;
+  border-color: #2563eb;
+  background: #eff6ff;
+  font-weight: 700;
 }
 
 .premises-label-text {
@@ -3231,28 +3208,29 @@ body {
 }
 
 .sweet-submit-btn {
-  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+  background: #2563eb;
   color: #ffffff;
   border: none;
-  padding: 1rem 2.75rem;
-  border-radius: 9999px;
-  font-size: 1.15rem;
-  font-weight: 900;
+  padding: 0.95rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 800;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
   transition: all 0.25s ease;
   width: 100%;
-  max-width: 480px;
-  min-height: 54px;
+  max-width: 440px;
+  min-height: 50px;
   font-family: inherit;
 }
 
 .sweet-submit-btn:hover {
+  background: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.5);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 .privacy-guarantee-note {
@@ -3261,7 +3239,7 @@ body {
   gap: 0.35rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #047857;
+  color: #059669;
   text-align: center;
 }
 

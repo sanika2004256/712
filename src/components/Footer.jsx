@@ -72,12 +72,12 @@ export default function Footer({ lang, onAdminClick }) {
           <div className="footer-col">
             <h5 className="footer-col-title">{isMr ? 'प्रमुख सेवा' : 'Core Services'}</h5>
             <ul className="footer-links-list">
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'शाळा ERP व्यवस्थापन' : 'School ERP'}</li>
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'CET / JEE / NEET क्लासेस' : 'Online Coaching'}</li>
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'अस्तित्व रियल्टी (Property App)' : 'Astitva Realty'}</li>
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'फिल्मी अड्डा (Film Production App)' : 'Filmy Adda'}</li>
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'अस्तित्व मार्ट (Online Shopping & Pads)' : 'Astitva Mart'}</li>
-              <li><CheckCircle2 size={13} className="inline mr-1 text-pink-400" /> {isMr ? 'इतर शासकीय डिजिटल सेवा' : 'Digital Services'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'शाळा ERP व्यवस्थापन' : 'School ERP'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'CET / JEE / NEET क्लासेस' : 'Online Coaching'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'अस्तित्व रियल्टी (Property App)' : 'Astitva Realty'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'फिल्मी अड्डा (Film Production App)' : 'Filmy Adda'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'अस्तित्व मार्ट (Online Shopping & Pads)' : 'Astitva Mart'}</li>
+              <li><CheckCircle2 size={13} className="inline mr-1 text-blue-400" /> {isMr ? 'इतर शासकीय डिजिटल सेवा' : 'Digital Services'}</li>
             </ul>
           </div>
 

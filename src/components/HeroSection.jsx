@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
   ArrowRight, 
   MapPin, 
-  Users, 
   CheckCircle2, 
   ShieldCheck, 
   TrendingUp, 
   Search,
-  Heart,
   Award,
-  BookOpen,
-  Briefcase
+  Building2
 } from 'lucide-react';
 
 const REPRESENTATIVE_ROLES = [
@@ -22,7 +18,7 @@ const REPRESENTATIVE_ROLES = [
     badgeMr: 'महिला सबलीकरण',
     icon: '👩‍💼',
     descMr: 'गावातच राहून स्वतःचा स्वाभिमानी व्यवसाय सांभाळा. मासिक किमान ₹12,000 - ₹15,000 उत्पन्न.',
-    color: '#e11d48'
+    color: '#2563eb'
   },
   {
     id: 'health',
@@ -40,7 +36,7 @@ const REPRESENTATIVE_ROLES = [
     badgeMr: 'डिजिटल शिक्षण',
     icon: '👩‍🏫',
     descMr: 'शाळा ERP व्यवस्थापन आणि CET / JEE / NEET ऑनलाईन क्लासेसचे गावातील विद्यार्थ्यांसाठी समन्वयक बना.',
-    color: '#16a34a'
+    color: '#059669'
   },
   {
     id: 'realty',
@@ -49,7 +45,7 @@ const REPRESENTATIVE_ROLES = [
     badgeMr: 'स्थानिक सेवा',
     icon: '🏡',
     descMr: 'अस्तित्व रियल्टी ॲपद्वारे शेतजमीन, घरे व दुकानांची स्थानिक खरेदी-विक्री नोंदणी व इतर शासकीय डिजिटल सेवा.',
-    color: '#f59e0b'
+    color: '#4f46e5'
   }
 ];
 
@@ -59,119 +55,102 @@ export default function HeroSection({ lang, onApplyClick }) {
 
   return (
     <section className="hero-poster-style-section" id="hero">
-      {/* Background Stylized Waves and Sky Ambience */}
-      <div className="hero-sky-backdrop">
-        <div className="sun-glow" />
-        <div className="rural-hills-silhouette" />
-      </div>
-
       <div className="section-container">
-        {/* TOP ROW: Arched Slogan & Maharashtra 44,000 Villages Badge */}
-        <div className="poster-top-bar">
-          {/* Slogan */}
-          <div className="poster-arch-slogan">
-            <div className="slogan-curved-box">
-              <span className="slogan-arc-text">
-                {isMr 
-                  ? 'एक गाव... एक प्रतिनिधी... मजबूत होणार आपले गाव !' 
-                  : 'One Village... One Representative... Empowered Village!'}
-              </span>
-            </div>
+        {/* TOP ROW: Clean Professional Announcement Bar */}
+        <div className="pro-hero-announcement-bar">
+          <div className="pro-badge-official">
+            <span className="pro-pulse-dot" />
+            <span>{isMr ? 'इनोदयम टेक प्रा. लि. • अधिकृत गाव प्रतिनिधी मोहीम २०२६' : 'Inodayam Tech Pvt. Ltd. • Village Representative Drive 2026'}</span>
           </div>
 
-          {/* Maharashtra 44,000 Villages Badge */}
-          <div className="poster-maharashtra-badge">
-            <div className="maha-map-shape">
-              <span className="maha-state-label">
-                {isMr ? 'महाराष्ट्रातील' : 'Across'}
-              </span>
-              <strong className="maha-number">
-                {isMr ? '४४,०००' : '44,000'}
-              </strong>
-              <span className="maha-village-label">
-                {isMr ? 'गावांमध्ये' : 'Villages'}
-              </span>
-            </div>
+          <div className="pro-badge-stat">
+            <Building2 size={15} />
+            <span>{isMr ? 'महाराष्ट्र: ४४,०००+ गावे' : 'Maharashtra: 44,000+ Villages'}</span>
           </div>
         </div>
 
-        {/* 4 CORE PILLARS: Exact Poster Pills */}
+        {/* 4 Professional Feature Pills */}
         <div className="poster-pillars-container">
-          <div className="poster-pillar-pill pillar-blue">
-            <span className="pillar-dot">🔵</span>
-            <span>{isMr ? 'गाव तिथे प्रतिनिधी' : 'Village Representative'}</span>
+          <div className="pro-pillar-pill">
+            <CheckCircle2 size={14} className="pro-pillar-icon" />
+            <span>{isMr ? 'एक गाव एक प्रतिनिधी' : 'One Village One Rep'}</span>
           </div>
-          <div className="poster-pillar-pill pillar-green">
-            <span className="pillar-dot">🟢</span>
-            <span>{isMr ? 'गावाचा विकास' : 'Village Growth'}</span>
+          <div className="pro-pillar-pill">
+            <CheckCircle2 size={14} className="pro-pillar-icon" />
+            <span>{isMr ? 'गावाचा सर्वांगीण विकास' : 'Village Development'}</span>
           </div>
-          <div className="poster-pillar-pill pillar-magenta">
-            <span className="pillar-dot">🔴</span>
-            <span>{isMr ? 'महिलांचे सबलीकरण' : 'Women Empowerment'}</span>
+          <div className="pro-pillar-pill">
+            <CheckCircle2 size={14} className="pro-pillar-icon" />
+            <span>{isMr ? 'महिला स्वावलंबन' : 'Women Empowerment'}</span>
           </div>
-          <div className="poster-pillar-pill pillar-orange">
-            <span className="pillar-dot">🟠</span>
-            <span>{isMr ? 'समृद्ध महाराष्ट्र' : 'Prosperous Maharashtra'}</span>
+          <div className="pro-pillar-pill">
+            <CheckCircle2 size={14} className="pro-pillar-icon" />
+            <span>{isMr ? '१००% डिजिटल सपोर्ट' : '100% Digital Support'}</span>
           </div>
         </div>
 
         {/* MAIN HERO INTERACTIVE SHOWCASE */}
         <div className="poster-hero-main-grid">
-          {/* Left Column: Headlines & Callout Ribbons */}
+          {/* Left Column: Headlines & Callout Cards */}
           <div className="poster-hero-left">
-            {/* Pink Painted Brush Ribbon: गाव प्रतिनिधी बना... */}
-            <div className="brush-ribbon-wrapper">
-              <div className="brush-ribbon-tag">
-                <h2 className="brush-ribbon-text">
-                  {isMr ? 'गाव प्रतिनिधी बना...' : 'Become Village Representative...'}
-                </h2>
-              </div>
+            <div className="pro-tag-badge">
+              <Award size={16} />
+              <span>{isMr ? 'अधिकृत गाव प्रतिनिधी नियुक्ती' : 'Official Village Representative'}</span>
             </div>
 
-            {/* Dark Navy Subheading */}
+            {/* Clean Executive Heading */}
             <h1 className="poster-main-subheading">
               {isMr ? (
                 <>
-                  स्वतःचा व्यवसाय सुरु करा आणि <span style={{color:'#e11d48'}}>स्वतःसोबत आपल्या गावाचा</span> विकास घडवा !
+                  स्वतःचा व्यवसाय सुरु करा आणि <span className="text-pro-accent">आपल्या गावाचा विकास</span> साधा !
                 </>
               ) : (
-                'Start your own business and drive your village development!'
+                'Start your own business and drive village development!'
               )}
             </h1>
 
             <p className="poster-subtext-para">
               {isMr 
-                ? 'Inodayam Tech Private Limited च्या माध्यमातून आपल्या गावातच उच्च प्रतीच्या डिजिटल सेवा, सॅनिटरी पॅड्स, शाळा ERP आणि मालमत्ता सेवा केंद्र सुरू करा. महिलांसाठी विशेष स्वावलंबनाची सुवर्णसंधी.' 
+                ? 'Inodayam Tech Private Limited च्या माध्यमातून आपल्या गावातच उच्च प्रतीचे सॅनिटरी पॅड्स, डिजिटल सेवा, शाळा ERP आणि मालमत्ता सेवा केंद्र सुरू करा. महिलांसाठी विशेष स्वावलंबनाची सुवर्णसंधी.' 
                 : 'Empower your village with digital services, sanitary hygiene, education ERP, and real estate solutions with Inodayam Tech Private Limited.'}
             </p>
 
-            {/* EXACT POSTER OFFER CALLOUT BOXES (Yellow Capital + Magenta Income) */}
-            <div className="poster-offers-stack">
-              {/* Yellow Banner: फक्त ₹10,000 भांडवलात */}
-              <div className="poster-yellow-ribbon">
-                <div className="ribbon-inner">
-                  <span className="ribbon-small-label">{isMr ? 'फक्त' : 'Only'}</span>
-                  <div className="ribbon-big-amount">
-                    <span className="currency">₹</span>10,000
+            {/* Clean Professional Financial Offer Cards */}
+            <div className="pro-offers-grid">
+              {/* Card 1: Investment */}
+              <div className="pro-offer-card pro-card-capital">
+                <div className="pro-offer-header">
+                  <div className="pro-offer-icon-wrap capital-icon">
+                    <ShieldCheck size={20} />
                   </div>
-                  <div className="ribbon-text-lines">
-                    <strong>{isMr ? 'भांडवलात सुरु करा' : 'Start with capital of'}</strong>
-                    <span>{isMr ? 'आपला स्वतःचा व्यवसाय !' : 'Your Own Business!'}</span>
+                  <div>
+                    <span className="pro-offer-label">{isMr ? 'किमान भांडवल' : 'Minimum Capital'}</span>
+                    <div className="pro-offer-amount">
+                      <span className="currency">₹</span>10,000
+                    </div>
                   </div>
                 </div>
+                <p className="pro-offer-desc">
+                  {isMr ? 'कमी गुंतवणुकीत स्वतःचा खात्रीशीर व्यवसाय सुरू करा' : 'Start your own business with low investment'}
+                </p>
               </div>
 
-              {/* Magenta Curved Banner: मासिक उत्पन्न मिळवा: किमान ₹12,000 – ₹15,000 */}
-              <div className="poster-magenta-ribbon">
-                <div className="magenta-ribbon-content">
-                  <div className="magenta-income-label">
-                    <Sparkles size={16} className="inline mr-1 text-amber-300" />
-                    <span>{isMr ? 'मासिक उत्पन्न मिळवा:' : 'Earn Monthly Income:'}</span>
+              {/* Card 2: Expected Monthly Income */}
+              <div className="pro-offer-card pro-card-income">
+                <div className="pro-offer-header">
+                  <div className="pro-offer-icon-wrap income-icon">
+                    <TrendingUp size={20} />
                   </div>
-                  <div className="magenta-income-val">
-                    {isMr ? 'किमान ₹12,000 – ₹15,000' : 'Min ₹12,000 – ₹15,000'}
+                  <div>
+                    <span className="pro-offer-label">{isMr ? 'अपेक्षित मासिक उत्पन्न' : 'Monthly Income'}</span>
+                    <div className="pro-offer-amount text-emerald">
+                      ₹12,000 – ₹15,000<span className="plus">+</span>
+                    </div>
                   </div>
                 </div>
+                <p className="pro-offer-desc">
+                  {isMr ? 'दरमहा थेट बँक खात्यात नियमित कमिशन व उत्पन्न' : 'Guaranteed regular monthly commission'}
+                </p>
               </div>
             </div>
 
@@ -183,7 +162,7 @@ export default function HeroSection({ lang, onApplyClick }) {
                 onClick={onApplyClick}
               >
                 <span>{isMr ? 'आताच आपल्या गावाची जागा आरक्षित करा' : 'Reserve Your Village Seat Now'}</span>
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </button>
 
               <a 
@@ -195,24 +174,24 @@ export default function HeroSection({ lang, onApplyClick }) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Empowerment Hub (Replaces static poster image) */}
+          {/* Right Column: Interactive Empowerment Hub */}
           <div className="poster-hero-right">
             <div className="interactive-empowerment-card">
               <div className="card-top-header">
                 <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
-                  <div style={{width:'12px',height:'12px',borderRadius:'50%',background:'#10b981',animation:'ping 1s cubic-bezier(0,0,.2,1) infinite'}} />
-                  <span style={{fontSize:'0.75rem',fontWeight:'700',textTransform:'uppercase',letterSpacing:'0.05em',color:'#065f46'}}>
-                    {isMr ? 'प्रत्येक गावात १ जागा • थेट निवड' : '1 Seat Per Village • Direct Selection'}
+                  <div style={{width:'10px',height:'10px',borderRadius:'50%',background:'#10b981'}} />
+                  <span style={{fontSize:'0.78rem',fontWeight:'700',textTransform:'uppercase',letterSpacing:'0.05em',color:'#0f172a'}}>
+                    {isMr ? '१ गाव • १ प्रतिनिधी' : '1 Village • 1 Representative'}
                   </span>
                 </div>
-                <span style={{fontSize:'0.75rem',background:'#ffe4e6',color:'#be123c',fontWeight:'700',padding:'0.25rem 0.625rem',borderRadius:'9999px'}}>
+                <span style={{fontSize:'0.75rem',background:'#f1f5f9',color:'#334155',fontWeight:'700',padding:'0.25rem 0.65rem',borderRadius:'9999px',border:'1px solid #e2e8f0'}}>
                   {isMr ? 'महिलांना प्राधान्य' : 'Women Priority'}
                 </span>
               </div>
 
               <div className="roles-interactive-selector">
-                <span style={{fontSize:'0.875rem',fontWeight:'600',color:'#334155',display:'block',marginBottom:'0.5rem'}}>
-                  {isMr ? 'प्रतिनिधी म्हणून तुम्हाला मिळणाऱ्या ४ प्रमुख जबाबदाऱ्या:' : 'Key Responsibilities as Village Representative:'}
+                <span style={{fontSize:'0.85rem',fontWeight:'600',color:'#475569',display:'block',marginBottom:'0.65rem'}}>
+                  {isMr ? 'प्रतिनिधी म्हणून मिळणाऱ्या प्रमुख जबाबदाऱ्या:' : 'Key Responsibilities as Village Representative:'}
                 </span>
 
                 <div className="roles-tabs-grid">
@@ -230,14 +209,14 @@ export default function HeroSection({ lang, onApplyClick }) {
                 </div>
 
                 {/* Active Role Detailed Card */}
-                <div className="active-role-display-box" style={{ borderColor: REPRESENTATIVE_ROLES[activeRole].color }}>
+                <div className="active-role-display-box" style={{ borderLeftColor: REPRESENTATIVE_ROLES[activeRole].color }}>
                   <div className="role-display-head">
                     <span className="display-emoji">{REPRESENTATIVE_ROLES[activeRole].icon}</span>
                     <div>
                       <h4 className="display-title">
                         {isMr ? REPRESENTATIVE_ROLES[activeRole].titleMr : REPRESENTATIVE_ROLES[activeRole].titleEn}
                       </h4>
-                      <span className="display-badge" style={{ backgroundColor: `${REPRESENTATIVE_ROLES[activeRole].color}15`, color: REPRESENTATIVE_ROLES[activeRole].color }}>
+                      <span className="display-badge" style={{ backgroundColor: '#f1f5f9', color: '#1e293b' }}>
                         {isMr ? REPRESENTATIVE_ROLES[activeRole].badgeMr : 'Official Role'}
                       </span>
                     </div>
@@ -260,11 +239,11 @@ export default function HeroSection({ lang, onApplyClick }) {
                     : 'Only 1 representative per village across 44,000 villages in Maharashtra. Reserve early!'}
                 </p>
                 <button 
-                  type="button"
+                  type="button" 
                   className="vacancy-check-btn"
                   onClick={onApplyClick}
                 >
-                  <Search size={16} />
+                  <Search size={15} />
                   <span>{isMr ? 'जिल्हा व गाव निवडून जागा तपासा ➔' : 'Select Village & Check ➔'}</span>
                 </button>
               </div>

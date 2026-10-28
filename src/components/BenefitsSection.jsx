@@ -8,7 +8,8 @@ import {
   Users, 
   CheckCircle2, 
   X,
-  Sparkles 
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 const POSTER_BENEFITS = [
@@ -18,8 +19,8 @@ const POSTER_BENEFITS = [
     titleEn: 'Women Self-Reliance Opportunity',
     descMr: 'गावातील महिलांना स्वतःच्या गावात राहून स्वाभिमानाने स्वतःचा डिजिटल व सॅनिटरी पॅड्सचा व्यवसाय सुरू करता येतो. कुटुंबाला आर्थिक हातभार लावण्याची उत्तम संधी.',
     icon: UserCheck,
-    color: '#e11d48',
-    bgColor: '#ffe4e6',
+    color: '#2563eb',
+    bgColor: '#eff6ff',
     pillText: 'स्वावलंबन'
   },
   {
@@ -28,8 +29,8 @@ const POSTER_BENEFITS = [
     titleEn: 'Stable & Regular Income',
     descMr: 'किमान ₹१०,००० च्या एकाच भांडवलात दरमहा किमान ₹१२,००० ते ₹१५,००० पर्यंत खात्रीशीर व नियमित उत्पन्न मिळते. कोणतेही लपलेले शुल्क नाही.',
     icon: TrendingUp,
-    color: '#16a34a',
-    bgColor: '#dcfce7',
+    color: '#059669',
+    bgColor: '#ecfdf5',
     pillText: 'दरमहा उत्पन्न'
   },
   {
@@ -38,8 +39,8 @@ const POSTER_BENEFITS = [
     titleEn: 'Full Training & Guidance',
     descMr: 'Inodayam Tech तर्फे ॲप हाताळणी, ग्राहक संवाद, उत्पादनांचे ज्ञान आणि व्यवसाय वाढीचे १००% मोफत वैयक्तिक प्रशिक्षण दिले जाते.',
     icon: Handshake,
-    color: '#ea580c',
-    bgColor: '#ffedd5',
+    color: '#0284c7',
+    bgColor: '#f0f9ff',
     pillText: 'मोफत प्रशिक्षण'
   },
   {
@@ -48,8 +49,8 @@ const POSTER_BENEFITS = [
     titleEn: '100% Digital Platform Support',
     descMr: 'मोबाईल ॲपद्वारे सर्व ऑर्डर, विद्यार्थी नोंदी, मालमत्ता सेवा आणि ग्राहक डेटा सहज मॅनेज करा. २४/७ कंपनी सपोर्ट उपलब्ध.',
     icon: Smartphone,
-    color: '#0284c7',
-    bgColor: '#e0f2fe',
+    color: '#4f46e5',
+    bgColor: '#eef2ff',
     pillText: 'हाय-टेक प्लॅटफॉर्म'
   },
   {
@@ -58,8 +59,8 @@ const POSTER_BENEFITS = [
     titleEn: 'Work in Your Own Village',
     descMr: 'शहरात जाण्याची किंवा रोज प्रवासाची मुळीच गरज नाही. आपल्या स्वतःच्या घरातून किंवा गावात लहान जागेतून हे केंद्र सुरू करा.',
     icon: MapPin,
-    color: '#d946ef',
-    bgColor: '#fae8ff',
+    color: '#0d9488',
+    bgColor: '#f0fdfa',
     pillText: 'आपल्या गावात'
   },
   {
@@ -68,8 +69,8 @@ const POSTER_BENEFITS = [
     titleEn: 'Respect & Social Identity',
     descMr: 'गावातील अधिकृत Inodayam Tech प्रतिनिधी म्हणून ओळख. सरपंच, ग्रामसेवक, शाळा आणि गावकरी यांच्याशी थेट संपर्क व आदर.',
     icon: Users,
-    color: '#0d9488',
-    bgColor: '#ccfbf1',
+    color: '#1e293b',
+    bgColor: '#f8fafc',
     pillText: 'प्रतिष्ठा व मान'
   }
 ];
@@ -81,40 +82,61 @@ export default function BenefitsSection({ lang }) {
   return (
     <section className="benefits-poster-section" id="benefits">
       <div className="section-container">
-        {/* Main Poster-Style Benefits Container */}
-        <div className="poster-benefits-bar-wrapper">
-          {/* Top Blue Header Tab (Exact match to flyer) */}
-          <div className="poster-benefits-blue-tab">
-            <Sparkles size={18} className="text-amber-300" />
-            <span>{isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits of Village Representative'}</span>
+        {/* Section Header */}
+        <div className="pro-section-header">
+          <div className="pro-pill-badge">
+            <Sparkles size={14} className="text-blue-600" />
+            <span>{isMr ? 'प्रमुख फायदे' : 'Core Benefits'}</span>
           </div>
+          <h2 className="pro-section-title">
+            {isMr ? 'गाव प्रतिनिधी बनण्याचे ६ मोठे फायदे' : '6 Core Benefits of Becoming Village Representative'}
+          </h2>
+          <p className="pro-section-subtitle">
+            {isMr 
+              ? 'स्थानिक महिला सबलीकरण, खात्रीशीर दरमहा कमिशन आणि गावातच अधिकृत प्रतिष्ठा.' 
+              : 'Local empowerment, regular monthly income, and village-wide respect.'}
+          </p>
+        </div>
 
-          {/* 6 Circular Icon Badges Row */}
-          <div className="poster-benefits-circles-grid">
-            {POSTER_BENEFITS.map((item) => {
-              const IconComp = item.icon;
-              return (
-                <div 
-                  key={item.id} 
-                  className="benefit-circle-item group cursor-pointer"
-                  onClick={() => setSelectedBenefit(item)}
-                >
+        {/* 6 Clean Benefit Cards Grid */}
+        <div className="pro-benefits-grid">
+          {POSTER_BENEFITS.map((item) => {
+            const IconComp = item.icon;
+            return (
+              <div 
+                key={item.id} 
+                className="pro-benefit-card"
+                onClick={() => setSelectedBenefit(item)}
+              >
+                <div className="pro-benefit-top-row">
                   <div 
-                    className="circle-icon-badge"
-                    style={{ backgroundColor: item.color }}
+                    className="pro-benefit-icon-box"
+                    style={{ backgroundColor: item.bgColor, color: item.color }}
                   >
-                    <IconComp size={28} className="text-white transform group-hover:scale-110 transition-transform" />
+                    <IconComp size={24} />
                   </div>
-                  <h4 className="circle-item-title">
-                    {isMr ? item.titleMr : item.titleEn}
-                  </h4>
-                  <span className="circle-learn-more">
-                    {isMr ? 'तपशील पहा +' : 'Details +'}
+                  <span className="pro-benefit-pill">
+                    {item.pillText}
                   </span>
                 </div>
-              );
-            })}
-          </div>
+
+                <h3 className="pro-benefit-title">
+                  {isMr ? item.titleMr : item.titleEn}
+                </h3>
+
+                <p className="pro-benefit-desc">
+                  {isMr ? item.descMr : item.descMr}
+                </p>
+
+                <div className="pro-benefit-footer">
+                  <span className="pro-learn-more-text">
+                    {isMr ? 'सविस्तर वाचा' : 'Read details'}
+                  </span>
+                  <ArrowRight size={14} className="pro-arrow" />
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Interactive Benefit Details Modal */}
@@ -126,46 +148,67 @@ export default function BenefitsSection({ lang }) {
                 className="benefit-modal-close"
                 onClick={() => setSelectedBenefit(null)}
               >
-                <X size={20} />
+                <X size={18} />
               </button>
 
-              <div className="flex items-center gap-4 mb-4">
+              <div style={{display:'flex',alignItems:'center',gap:'1rem',marginBottom:'1.25rem'}}>
                 <div 
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: selectedBenefit.color }}
+                  style={{
+                    width:'52px',
+                    height:'52px',
+                    borderRadius:'14px',
+                    display:'flex',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    backgroundColor: selectedBenefit.bgColor,
+                    color: selectedBenefit.color
+                  }}
                 >
-                  <selectedBenefit.icon size={30} className="text-white" />
+                  <selectedBenefit.icon size={26} />
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <span style={{fontSize:'0.75rem',fontWeight:'700',color:'#64748b',textTransform:'uppercase',letterSpacing:'0.05em'}}>
                     {selectedBenefit.pillText}
                   </span>
-                  <h3 className="text-xl font-black text-slate-900 leading-tight">
+                  <h3 style={{fontSize:'1.2rem',fontWeight:'800',color:'#0f172a',margin:'0.2rem 0 0'}}>
                     {isMr ? selectedBenefit.titleMr : selectedBenefit.titleEn}
                   </h3>
                 </div>
               </div>
 
-              <p className="text-slate-600 text-base leading-relaxed mb-6">
-                {selectedBenefit.descMr}
+              <p style={{fontSize:'0.95rem',color:'#475569',lineHeight:'1.6',marginBottom:'1.5rem'}}>
+                {isMr ? selectedBenefit.descMr : selectedBenefit.descMr}
               </p>
 
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 flex items-center gap-3">
-                <CheckCircle2 size={20} className="text-emerald-600 flex-shrink-0" />
-                <span className="text-sm font-semibold text-emerald-900">
-                  {isMr ? 'Inodayam Tech तर्फे या सुविधेचे संपूर्ण मार्गदर्शन मिळेल.' : 'Guaranteed guidance provided by Inodayam Tech.'}
-                </span>
+              <div style={{background:'#f8fafc',borderRadius:'12px',padding:'1rem',border:'1px solid #e2e8f0',marginBottom:'1.25rem'}}>
+                <div style={{display:'flex',alignItems:'center',gap:'0.5rem',color:'#059669',fontWeight:'700',fontSize:'0.88rem',marginBottom:'0.35rem'}}>
+                  <CheckCircle2 size={16} />
+                  <span>{isMr ? 'कंपनीकडून मिळणारे सहकार्य:' : 'Support from Inodayam Tech:'}</span>
+                </div>
+                <p style={{fontSize:'0.85rem',color:'#64748b',margin:0,lineHeight:'1.5'}}>
+                  {isMr 
+                    ? 'प्रत्येक प्रतिनिधीला अधिकृत ओळखपत्र, ॲप प्रशिक्षण, मार्केटिंग साहित्य आणि २४/७ ग्राहक सहाय्य दिले जाते.' 
+                    : 'Official ID, training, marketing collateral, and round-the-clock support.'}
+                </p>
               </div>
 
-              <div className="mt-6 flex justify-end">
-                <button
-                  type="button"
-                  className="px-5 py-2.5 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors"
-                  onClick={() => setSelectedBenefit(null)}
-                >
-                  {isMr ? 'समजले (Close)' : 'Got it'}
-                </button>
-              </div>
+              <button 
+                type="button" 
+                style={{
+                  width:'100%',
+                  background:'#0f172a',
+                  color:'#ffffff',
+                  border:'none',
+                  padding:'0.75rem',
+                  borderRadius:'10px',
+                  fontWeight:'700',
+                  fontSize:'0.92rem',
+                  cursor:'pointer'
+                }}
+                onClick={() => setSelectedBenefit(null)}
+              >
+                {isMr ? 'समजले' : 'Close'}
+              </button>
             </div>
           </div>
         )}

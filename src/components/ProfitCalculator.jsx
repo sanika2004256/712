@@ -5,8 +5,6 @@ import {
   ShoppingBag, 
   GraduationCap, 
   Building2, 
-  CheckCircle2, 
-  Sparkles, 
   ArrowRight,
   ShieldCheck
 } from 'lucide-react';
@@ -20,11 +18,8 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
   const [digitalServices, setDigitalServices] = useState(40); // 7/12, Realty, PAN, etc.
 
   // Earnings model based on realistic village unit economics
-  // Sanitary pads + groceries per household ~ ₹35 commission
   const martIncome = households * 35;
-  // School ERP / online coaching enrollment referral/management ~ ₹200 per student
   const educationIncome = students * 200;
-  // Digital services / property listings ~ ₹80 per transaction
   const digitalIncome = digitalServices * 80;
 
   const totalMonthlyIncome = martIncome + educationIncome + digitalIncome;
@@ -34,14 +29,14 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
   return (
     <div className="profit-calculator-card" id="calculator">
       <div className="calc-header-badge">
-        <Calculator size={18} className="text-amber-300" />
-        <span>{isMr ? 'लाईव्ह उत्पन्न कॅल्क्युलेटर (Earnings Simulator)' : 'Live Earnings Simulator'}</span>
+        <Calculator size={16} className="text-blue-600" />
+        <span>{isMr ? 'उत्पन्न सिम्युलेटर (Earnings Calculator)' : 'Live Earnings Simulator'}</span>
       </div>
 
       <div className="calc-headline-row">
         <div>
           <h3 className="calc-title">
-            {isMr ? 'तुमच्या गावातील अंदाजित मासिक कमाई तपासा' : 'Estimate Your Village Monthly Earnings'}
+            {isMr ? 'तुमच्या गावातील अंदाजित मासिक कमाई' : 'Estimate Your Village Monthly Earnings'}
           </h3>
           <p className="calc-subtitle">
             {isMr 
@@ -50,8 +45,8 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           </p>
         </div>
         <div className="investment-guarantee-pill">
-          <ShieldCheck size={18} className="text-emerald-300" />
-          <span>{isMr ? 'भांडवल: फक्त ₹10,000' : 'Capital: Just ₹10,000'}</span>
+          <ShieldCheck size={18} className="text-blue-600" />
+          <span>{isMr ? 'भांडवल: फक्त ₹१०,०००' : 'Capital: Just ₹10,000'}</span>
         </div>
       </div>
 
@@ -61,7 +56,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
         <div className="calc-slider-box">
           <div className="slider-label-row">
             <span className="slider-title">
-              <ShoppingBag size={16} className="text-pink-500" />
+              <ShoppingBag size={16} className="text-blue-600" />
               {isMr ? 'अस्तित्व मार्ट (सॅनिटरी पॅड्स व गृहोपयोगी ग्राहक)' : 'Astitva Mart & Sanitary Pad Families'}
             </span>
             <span className="slider-val-badge">{households} {isMr ? 'कुटुंबे' : 'families'}</span>
@@ -73,11 +68,11 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
             step="10"
             value={households} 
             onChange={(e) => setHouseholds(Number(e.target.value))}
-            className="custom-range-slider pink-slider"
+            className="custom-range-slider blue-slider"
           />
           <div className="slider-subtext">
             <span>{isMr ? 'अंदाजित नफा:' : 'Estimated profit:'} <strong>₹{martIncome.toLocaleString('en-IN')}/महिना</strong></span>
-            <span className="text-xs text-slate-400">₹35/कुटुंब</span>
+            <span className="rate-note">₹35/कुटुंब</span>
           </div>
         </div>
 
@@ -101,7 +96,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           />
           <div className="slider-subtext">
             <span>{isMr ? 'अंदाजित नफा:' : 'Estimated profit:'} <strong>₹{educationIncome.toLocaleString('en-IN')}/महिना</strong></span>
-            <span className="text-xs text-slate-400">₹200/विद्यार्थी</span>
+            <span className="rate-note">₹200/विद्यार्थी</span>
           </div>
         </div>
 
@@ -125,7 +120,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           />
           <div className="slider-subtext">
             <span>{isMr ? 'अंदाजित नफा:' : 'Estimated profit:'} <strong>₹{digitalIncome.toLocaleString('en-IN')}/महिना</strong></span>
-            <span className="text-xs text-slate-400">₹80/नोंदणी</span>
+            <span className="rate-note">₹80/नोंदणी</span>
           </div>
         </div>
       </div>
@@ -134,7 +129,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
       <div className="calc-results-banner">
         <div className="calc-result-left">
           <span className="calc-result-tag">
-            {isMr ? 'तुमचे अंदाजित मासिक उत्पन्न' : 'Your Estimated Monthly Income'}
+            {isMr ? 'एकूण अंदाजित मासिक उत्पन्न' : 'Total Estimated Monthly Income'}
           </span>
           <div className="calc-big-earnings">
             <span className="currency">₹</span>
@@ -150,10 +145,10 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
 
         <div className="calc-result-right">
           <div className="roi-highlight-box">
-            <TrendingUp size={20} className="text-emerald-400" />
+            <TrendingUp size={20} className="text-emerald-300" />
             <div>
               <strong>{isMr ? `अवघ्या ${roiDays} दिवसांत भांडवल वसूल!` : `Capital Recovered in ${roiDays} Days!`}</strong>
-              <span>{isMr ? '₹10,000 ची गुंतवणूक पहिल्याच महिन्यात सुरक्षितपणे परत!' : '₹10,000 capital recovered in 1st month!'}</span>
+              <span>{isMr ? '₹10,000 ची गुंतवणूक पहिल्याच महिन्यात सुरक्षितपणे परत' : '₹10,000 capital recovered in 1st month'}</span>
             </div>
           </div>
 

@@ -413,19 +413,19 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
       <div className="section-container">
         {/* Sweet Form Card exactly matching previous photo */}
         <div className="sweet-form-card">
-          {/* Hero Intro Banner */}
+          {/* Official Corporate Application Banner */}
           <div className="sweet-hero-banner">
             <div className="hero-heart-badge">
-              <Heart size={14} className="inline mr-1 text-rose-500 fill-rose-500" />
-              <span>{isMr ? 'महिला आरोग्य व स्वावलंबन' : 'Health & Self-Reliance'}</span>
+              <Building2 size={14} className="inline mr-1 text-blue-600" />
+              <span>{isMr ? 'अधिकृत नोंदणी पोर्टल • इनोदयम टेक प्रा. लि.' : 'Official Application • Inodayam Tech Pvt. Ltd.'}</span>
             </div>
             <h2 className="sweet-hero-title">
-              {isMr ? 'अस्तित्व सॅनिटरी पॅड फ्रँचायझी नोंदणी' : 'Franchise Registration'}
+              {isMr ? 'अस्तित्व सॅनिटरी पॅड व गाव प्रतिनिधी फ्रँचायझी नोंदणी' : 'Franchise & Village Representative Registration'}
             </h2>
             <p className="sweet-hero-subtitle">
               {isMr 
-                ? 'कमी भांडवल, खात्रीशीर नफा आणि स्वतःचा सन्मानजनक व्यवसाय! खालील माहिती भरून फ्रँचायझीसाठी अर्ज करा:' 
-                : 'Start your own Sanitary Pad distribution business in your area:'}
+                ? 'कमी भांडवल, खात्रीशीर नफा आणि स्वतःचा सन्मानजनक व्यवसाय! खालील माहिती भरून अधिकृत अर्ज दाखल करा:' 
+                : 'Start your own Sanitary Pad and Village Representative Kendra in your village:'}
             </p>
           </div>
 
