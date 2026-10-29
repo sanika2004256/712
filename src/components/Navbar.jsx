@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InodayamLogo from './InodayamLogo';
 import { Menu, X, Globe2, ArrowRight, Shield } from 'lucide-react';
 
@@ -13,6 +13,18 @@ export default function Navbar({
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMr = lang === 'mr';
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const handleNavClick = (sectionId) => {
     setMobileMenuOpen(false);
@@ -126,59 +138,83 @@ export default function Navbar({
         </button>
       </div>
 
-      {/* Mobile Drawer (Only displays when hamburger clicked) */}
+      {/* Full-Screen Pure Mobile Drawer Menu (No background page visible) */}
       {mobileMenuOpen && (
-        <div className="mobile-nav-drawer-menu">
-          <button 
-            type="button" 
-            className="mobile-nav-item"
-            onClick={() => handleNavClick('hero')}
-          >
-            {isMr ? 'मुख्य पृष्ठ (Home)' : 'Home'}
-          </button>
-          <button 
-            type="button" 
-            className="mobile-nav-item"
-            onClick={() => handleNavClick('benefits')}
-          >
-            {isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}
-          </button>
-          <button 
-            type="button" 
-            className="mobile-nav-item highlight-apply-mobile"
-            onClick={handleApplyTab}
-          >
-            {isMr ? '📝 नोंदणी अर्ज करा (Apply Now)' : '📝 Apply Now'}
-          </button>
-
-          {/* Admin Panel Option for Mobile */}
-          <button 
-            type="button" 
-            className="mobile-nav-item mobile-admin-menu-item"
-            onClick={handleAdminTab}
-          >
-            <div className="flex items-center gap-2">
-              <Shield size={17} className="text-emerald-700" />
-              <span>{isMr ? '🔐 ॲडमिन पॅनेल (Admin Panel)' : '🔐 Admin Panel'}</span>
+        <div className="mobile-nav-fullscreen-overlay">
+          <div className="mobile-fullscreen-header">
+            <div 
+              className="navbar-brand-clickable" 
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setCurrentTab('landing');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              <InodayamLogo variant="full" size={40} />
             </div>
-            {totalApplicationsCount > 0 && (
-              <span className="mobile-admin-count-badge">{totalApplicationsCount}</span>
-            )}
-          </button>
 
-          <div className="mobile-nav-footer-row">
             <button 
               type="button" 
-              className="mobile-sub-btn"
-              onClick={() => {
-                setLang(isMr ? 'en' : 'mr');
-                setMobileMenuOpen(false);
-              }}
-              style={{ width: '100%', justifyContent: 'center' }}
+              className="mobile-close-btn"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close Navigation Menu"
             >
-              <Globe2 size={16} />
-              <span>{isMr ? 'Switch to English' : 'मराठीत पहा'}</span>
+              <X size={24} />
             </button>
+          </div>
+
+          <div className="mobile-fullscreen-body">
+            <button 
+              type="button" 
+              className="mobile-nav-item"
+              onClick={() => handleNavClick('hero')}
+            >
+              {isMr ? 'मुख्य पृष्ठ (Home)' : 'Home'}
+            </button>
+            <button 
+              type="button" 
+              className="mobile-nav-item"
+              onClick={() => handleNavClick('benefits')}
+            >
+              {isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}
+            </button>
+            <button 
+              type="button" 
+              className="mobile-nav-item highlight-apply-mobile"
+              onClick={handleApplyTab}
+            >
+              {isMr ? '📝 नोंदणी अर्ज करा (Apply Now)' : '📝 Apply Now'}
+            </button>
+
+            {/* Admin Panel Option for Mobile */}
+            <button 
+              type="button" 
+              className="mobile-nav-item mobile-admin-menu-item"
+              onClick={handleAdminTab}
+            >
+              <div className="flex items-center gap-2">
+                <Shield size={17} className="text-emerald-700" />
+                <span>{isMr ? '🔐 ॲडमिन पॅनेल (Admin Panel)' : '🔐 Admin Panel'}</span>
+              </div>
+              {totalApplicationsCount > 0 && (
+                <span className="mobile-admin-count-badge">{totalApplicationsCount}</span>
+              )}
+            </button>
+
+            <div className="mobile-nav-footer-row">
+              <button 
+                type="button" 
+                className="mobile-sub-btn"
+                onClick={() => {
+                  setLang(isMr ? 'en' : 'mr');
+                  setMobileMenuOpen(false);
+                }}
+                style={{ width: '100%', justifyContent: 'center' }}
+              >
+                <Globe2 size={16} />
+                <span>{isMr ? 'Switch to English' : 'मराठीत पहा'}</span>
+              </button>
+            </div>
           </div>
         </div>
       )}
