@@ -58,12 +58,7 @@ export default function ApplyPage({ lang, onBackToHome, onApplicationSuccess }) 
               : 'Complete your registration to become the official representative for your village in just 2 minutes.'}
           </p>
 
-          <div className="apply-header-trust-pills">
-            <span className="apply-trust-pill">✓ {isMr ? '१ गाव १ प्रतिनिधी' : '1 Village 1 Representative'}</span>
-            <span className="apply-trust-pill">✓ {isMr ? 'महिला स्वावलंबन' : 'Women Empowerment'}</span>
-            <span className="apply-trust-pill">✓ {isMr ? '१००% मोफत प्रशिक्षण' : '100% Free Training'}</span>
-            <span className="apply-trust-pill">✓ {isMr ? 'थेट बँक खात्यात कमिशन' : 'Direct Bank Payouts'}</span>
-          </div>
+
         </div>
       </div>
 
