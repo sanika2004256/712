@@ -1719,6 +1719,141 @@ body {
   color: #d97706;
 }
 
+.fresh-pillar-pill.pill-active {
+  background: #ffffff !important;
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25), 0 4px 12px rgba(16, 185, 129, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+.pill-tap-hint {
+  font-size: 0.72rem;
+  opacity: 0.6;
+  margin-left: 2px;
+}
+
+.pill-interactive-tooltip {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid #a7f3d0;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.pill-tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #065f46;
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+}
+
+.pill-tooltip-desc {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Quick Hero Roles Bar */
+.hero-roles-quick-bar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid #a7f3d0;
+  border-radius: 18px;
+  padding: 0.95rem 1rem;
+  margin-bottom: 1.35rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.06);
+}
+
+.quick-bar-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #065f46;
+  margin-bottom: 0.55rem;
+}
+
+.quick-roles-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.quick-role-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+.quick-role-btn:hover {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.quick-role-btn.active-quick-role {
+  background: #059669 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.hero-active-role-spotlight {
+  border-radius: 12px;
+  border: 1.5px solid;
+  padding: 0.75rem 0.85rem;
+}
+
+.spotlight-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.25rem;
+}
+
+.spotlight-emoji {
+  font-size: 1.35rem;
+}
+
+.spotlight-title {
+  font-size: 0.92rem;
+  font-weight: 850;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.spotlight-earning {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.spotlight-desc {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* Main Hero Grid */
 .poster-hero-main-grid {
   position: relative;
@@ -1909,6 +2044,61 @@ body {
   color: #475569;
   line-height: 1.35;
   margin: 0;
+}
+
+/* Interactive Tap Financial Cards */
+.interactive-tap-card {
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.card-tap-expanded {
+  border-width: 2px !important;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+.card-tap-hint-row {
+  margin-top: 0.65rem;
+  padding-top: 0.45rem;
+  border-top: 1px dashed rgba(100, 116, 139, 0.25);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #059669;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.interactive-card-breakdown {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(100, 116, 139, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.breakdown-item.text-bold-income {
+  font-weight: 800;
+  color: #065f46;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #a7f3d0;
 }
 
 /* Action CTA Group */

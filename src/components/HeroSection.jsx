@@ -11,7 +11,13 @@ import {
   Sparkles,
   Users,
   Check,
-  HeartHandshake
+  HeartHandshake,
+  ChevronDown,
+  ChevronUp,
+  HelpCircle,
+  Package,
+  BadgePercent,
+  Wallet
 } from 'lucide-react';
 
 const REPRESENTATIVE_ROLES = [
@@ -28,7 +34,8 @@ const REPRESENTATIVE_ROLES = [
       'गावात महिला स्वावलंबन केंद्र चालवणे',
       'महिलांना घरबसल्या सन्मानजनक उत्पन्न मिळवून देणे',
       'इनोदयमचे अधिकृत गाव प्रतिनिधी म्हणून काम करणे'
-    ]
+    ],
+    expectedEarning: '₹12,000 - ₹15,000+'
   },
   {
     id: 'health',
@@ -37,13 +44,14 @@ const REPRESENTATIVE_ROLES = [
     badgeMr: 'महिला आरोग्य',
     icon: '🌸',
     descMr: 'अस्तित्व सॅनिटरी पॅड्स व महिला आरोग्य उत्पादने गावातील प्रत्येक घरापर्यंत पोहोचवा.',
-    color: '#0284c7',
-    bgColor: '#eff6ff',
+    color: '#e11d48',
+    bgColor: '#fff1f2',
     dutiesMr: [
       'गावातील महिलांना सॅनिटरी पॅड्स उपलब्ध करून देणे',
       'आरोग्य आणि स्वच्छतेबाबत जनजागृती करणे',
-      'नियमित उत्पादने वितरण व मासिक उत्पन्न'
-    ]
+      'नियमित उत्पादने वितरण व मासिक नफा'
+    ],
+    expectedEarning: '₹10,000 - ₹14,000+'
   },
   {
     id: 'education',
@@ -58,7 +66,8 @@ const REPRESENTATIVE_ROLES = [
       'गावातील शाळांसाठी ERP सॉफ्टवेअर सहाय्य',
       'विद्यार्थ्यांना ऑनलाईन कोचिंगची माहिती देणे',
       'गावात डिजिटल शिक्षणाचा पाया मजबूत करणे'
-    ]
+    ],
+    expectedEarning: '₹12,000 - ₹16,000+'
   },
   {
     id: 'realty',
@@ -67,13 +76,37 @@ const REPRESENTATIVE_ROLES = [
     badgeMr: 'स्थानिक सेवा',
     icon: '🏡',
     descMr: 'शेतजमीन, घरे खरेदी-विक्री नोंदणी व इतर शासकीय डिजिटल सेवांचे गावातील केंद्र चालवा.',
-    color: '#0d9488',
-    bgColor: '#f0fdfa',
+    color: '#0284c7',
+    bgColor: '#eff6ff',
     dutiesMr: [
       'शेतजमीन खरेदी-विक्री माहिती व नोंदणी',
       'डिजिटल शासकीय दाखले व कागदपत्रे सहाय्य',
       'गावातील नागरिकांना एकाच ठिकाणी सर्व सेवा'
-    ]
+    ],
+    expectedEarning: '₹15,000 - ₹18,000+'
+  }
+];
+
+const PILL_INFO = [
+  {
+    id: 0,
+    titleMr: '१ गाव १ प्रतिनिधी',
+    descMr: 'एका गावात फक्त १ अधिकृत प्रतिनिधी नेमला जाईल. संपूर्ण गावात तुमचाच अधिकृत व्यवसाय असेल!'
+  },
+  {
+    id: 1,
+    titleMr: 'महिला स्वावलंबन',
+    descMr: 'स्थानिक महिलांना घरबसल्या स्वाभिमानाने काम करण्याची संधी आणि कंपनीकडून विशेष प्राधान्य.'
+  },
+  {
+    id: 2,
+    titleMr: '१००% मोफत प्रशिक्षण',
+    descMr: 'मोबाईल ॲप चालवणे, सेवा देणे आणि व्यवसाय वाढवण्याचे मराठीत पूर्ण मोफत प्रशिक्षण.'
+  },
+  {
+    id: 3,
+    titleMr: 'थेट बँक खात्यात कमिशन',
+    descMr: 'तुमचे दरमहा कमिशन आणि नफा थेट तुमच्या बँक खात्यात पारदर्शकपणे जमा केला जातो.'
   }
 ];
 
@@ -93,6 +126,8 @@ const POPULAR_DISTRICTS = [
 export default function HeroSection({ lang, onApplyClick }) {
   const isMr = lang === 'mr';
   const [activeRole, setActiveRole] = useState(0);
+  const [activePillIndex, setActivePillIndex] = useState(null);
+  const [expandedCard, setExpandedCard] = useState('capital'); // default show capital breakdown
   
   // Interactive Village Vacancy Checker state
   const [selectedDistrict, setSelectedDistrict] = useState('पुणे (Pune)');
@@ -111,6 +146,14 @@ export default function HeroSection({ lang, onApplyClick }) {
     });
   };
 
+  const togglePill = (idx) => {
+    setActivePillIndex(prev => (prev === idx ? null : idx));
+  };
+
+  const toggleCard = (cardType) => {
+    setExpandedCard(prev => (prev === cardType ? null : cardType));
+  };
+
   return (
     <section className="hero-poster-style-section" id="hero">
       {/* Background Fresh Ambient Glow Orbs */}
@@ -119,7 +162,7 @@ export default function HeroSection({ lang, onApplyClick }) {
       <div className="hero-ambient-glow fresh-orb-amber" aria-hidden="true" />
 
       <div className="section-container relative-hero-content">
-        {/* TOP ROW: Fresh & Crisp Announcement Pill (No clipping on mobile!) */}
+        {/* TOP ROW: Fresh & Crisp Announcement Pill */}
         <div className="fresh-hero-announcement-bar">
           <div className="fresh-badge-official">
             <span className="fresh-pulse-dot" />
@@ -134,25 +177,61 @@ export default function HeroSection({ lang, onApplyClick }) {
           </div>
         </div>
 
-        {/* 4 Fresh Feature Pillars */}
+        {/* 4 Interactive Feature Pillars (Tap to view details!) */}
         <div className="poster-pillars-container">
-          <div className="fresh-pillar-pill">
+          <button 
+            type="button" 
+            className={`fresh-pillar-pill ${activePillIndex === 0 ? 'pill-active' : ''}`}
+            onClick={() => togglePill(0)}
+          >
             <CheckCircle2 size={14} className="fresh-pillar-icon" />
             <span>{isMr ? '१ गाव १ प्रतिनिधी' : '1 Village 1 Rep'}</span>
-          </div>
-          <div className="fresh-pillar-pill">
+            <span className="pill-tap-hint">👆</span>
+          </button>
+
+          <button 
+            type="button" 
+            className={`fresh-pillar-pill ${activePillIndex === 1 ? 'pill-active' : ''}`}
+            onClick={() => togglePill(1)}
+          >
             <HeartHandshake size={14} className="fresh-pillar-icon text-pink" />
             <span>{isMr ? 'महिला स्वावलंबन' : 'Women Empowerment'}</span>
-          </div>
-          <div className="fresh-pillar-pill">
+            <span className="pill-tap-hint">👆</span>
+          </button>
+
+          <button 
+            type="button" 
+            className={`fresh-pillar-pill ${activePillIndex === 2 ? 'pill-active' : ''}`}
+            onClick={() => togglePill(2)}
+          >
             <Sparkles size={14} className="fresh-pillar-icon text-amber" />
             <span>{isMr ? '१००% मोफत प्रशिक्षण' : '100% Free Training'}</span>
-          </div>
-          <div className="fresh-pillar-pill">
+            <span className="pill-tap-hint">👆</span>
+          </button>
+
+          <button 
+            type="button" 
+            className={`fresh-pillar-pill ${activePillIndex === 3 ? 'pill-active' : ''}`}
+            onClick={() => togglePill(3)}
+          >
             <CheckCircle2 size={14} className="fresh-pillar-icon" />
             <span>{isMr ? 'थेट बँक खात्यात कमिशन' : 'Direct Bank Payouts'}</span>
-          </div>
+            <span className="pill-tap-hint">👆</span>
+          </button>
         </div>
+
+        {/* Interactive Pill Info Bubble (Shows when any pill is tapped) */}
+        {activePillIndex !== null && (
+          <div className="pill-interactive-tooltip role-animate-in">
+            <div className="pill-tooltip-header">
+              <Sparkles size={15} className="text-emerald" />
+              <strong>{PILL_INFO[activePillIndex].titleMr}</strong>
+            </div>
+            <p className="pill-tooltip-desc">
+              {PILL_INFO[activePillIndex].descMr}
+            </p>
+          </div>
+        )}
 
         {/* MAIN HERO INTERACTIVE SHOWCASE */}
         <div className="poster-hero-main-grid">
@@ -182,10 +261,55 @@ export default function HeroSection({ lang, onApplyClick }) {
                 : 'Empower your village with sanitary hygiene, digital government services, school ERP, and property solutions with Inodayam Tech.'}
             </p>
 
-            {/* Fresh Soft Glowing Financial Offer Cards */}
+            {/* Interactive 4 Roles Bar (Right inside mobile view!) */}
+            <div className="hero-roles-quick-bar">
+              <span className="quick-bar-label">
+                {isMr ? '🎯 प्रमुख ४ जबाबदाऱ्या (टॅप करून पहा):' : 'Explore Roles (Tap to view):'}
+              </span>
+              <div className="quick-roles-pills">
+                {REPRESENTATIVE_ROLES.map((role, idx) => (
+                  <button
+                    key={role.id}
+                    type="button"
+                    className={`quick-role-btn ${activeRole === idx ? 'active-quick-role' : ''}`}
+                    onClick={() => setActiveRole(idx)}
+                  >
+                    <span>{role.icon}</span>
+                    <span>{isMr ? role.titleMr.split(' ')[0] : role.titleEn.split(' ')[0]}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Active Role Quick Spotlight */}
+              <div 
+                className="hero-active-role-spotlight role-animate-in"
+                style={{ 
+                  background: REPRESENTATIVE_ROLES[activeRole].bgColor,
+                  borderColor: REPRESENTATIVE_ROLES[activeRole].color 
+                }}
+              >
+                <div className="spotlight-header">
+                  <span className="spotlight-emoji">{REPRESENTATIVE_ROLES[activeRole].icon}</span>
+                  <div>
+                    <h4 className="spotlight-title">{REPRESENTATIVE_ROLES[activeRole].titleMr}</h4>
+                    <span className="spotlight-earning" style={{ color: REPRESENTATIVE_ROLES[activeRole].color }}>
+                      दरमहा {REPRESENTATIVE_ROLES[activeRole].expectedEarning}
+                    </span>
+                  </div>
+                </div>
+                <p className="spotlight-desc">{REPRESENTATIVE_ROLES[activeRole].descMr}</p>
+              </div>
+            </div>
+
+            {/* Fresh Interactive Financial Offer Cards (Tap to expand breakdown!) */}
             <div className="fresh-offers-grid">
               {/* Card 1: Investment */}
-              <div className="fresh-offer-card fresh-card-capital">
+              <div 
+                className={`fresh-offer-card fresh-card-capital interactive-tap-card ${expandedCard === 'capital' ? 'card-tap-expanded' : ''}`}
+                onClick={() => toggleCard('capital')}
+                role="button"
+                tabIndex={0}
+              >
                 <div className="fresh-offer-top">
                   <div className="fresh-icon-wrap fresh-icon-mint">
                     <ShieldCheck size={22} />
@@ -203,10 +327,41 @@ export default function HeroSection({ lang, onApplyClick }) {
                     {isMr ? 'कमी गुंतवणुकीत खात्रीशीर सुरुवात' : 'Start with minimal investment'}
                   </p>
                 </div>
+
+                <div className="card-tap-hint-row">
+                  <span>{expandedCard === 'capital' ? 'माहिती बंद करा ▲' : 'काय काय मिळते? टॅप करा ▼'}</span>
+                </div>
+
+                {/* Expanded Capital Breakdown */}
+                {expandedCard === 'capital' && (
+                  <div className="interactive-card-breakdown role-animate-in" onClick={(e) => e.stopPropagation()}>
+                    <div className="breakdown-item">
+                      <Package size={14} className="text-emerald" />
+                      <span>सॅनिटरी पॅड्सचा सुरुवातीचा स्टॉक</span>
+                    </div>
+                    <div className="breakdown-item">
+                      <Sparkles size={14} className="text-emerald" />
+                      <span>इनोदयम अधिकृत किट व ओळखपत्र</span>
+                    </div>
+                    <div className="breakdown-item">
+                      <Check size={14} className="text-emerald" />
+                      <span>मोबाईल ॲप व शाळा ERP ॲक्सेस</span>
+                    </div>
+                    <div className="breakdown-item">
+                      <Check size={14} className="text-emerald" />
+                      <span>१००% मोफत व्यवसाय व विक्री प्रशिक्षण</span>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Card 2: Expected Monthly Income */}
-              <div className="fresh-offer-card fresh-card-income">
+              <div 
+                className={`fresh-offer-card fresh-card-income interactive-tap-card ${expandedCard === 'income' ? 'card-tap-expanded' : ''}`}
+                onClick={() => toggleCard('income')}
+                role="button"
+                tabIndex={0}
+              >
                 <div className="fresh-offer-top">
                   <div className="fresh-icon-wrap fresh-icon-sky">
                     <TrendingUp size={22} />
@@ -224,6 +379,32 @@ export default function HeroSection({ lang, onApplyClick }) {
                     {isMr ? 'दरमहा थेट नियमित उत्पन्न' : 'Guaranteed regular income'}
                   </p>
                 </div>
+
+                <div className="card-tap-hint-row">
+                  <span>{expandedCard === 'income' ? 'माहिती बंद करा ▲' : 'उत्पन्न कसे मिळते? टॅप करा ▼'}</span>
+                </div>
+
+                {/* Expanded Income Breakdown */}
+                {expandedCard === 'income' && (
+                  <div className="interactive-card-breakdown role-animate-in" onClick={(e) => e.stopPropagation()}>
+                    <div className="breakdown-item">
+                      <Wallet size={14} className="text-sky" />
+                      <span>सॅनिटरी पॅड्स विक्री: ~₹4,500/महिना</span>
+                    </div>
+                    <div className="breakdown-item">
+                      <BadgePercent size={14} className="text-sky" />
+                      <span>शाळा ERP व ऑनलाईन क्लासेस: ~₹5,500/महिना</span>
+                    </div>
+                    <div className="breakdown-item">
+                      <Check size={14} className="text-sky" />
+                      <span>डिजिटल व इतर सेवा: ~₹3,500/महिना</span>
+                    </div>
+                    <div className="breakdown-item text-bold-income">
+                      <Sparkles size={14} className="text-emerald" />
+                      <span>एकूण दरमहा: ₹12,000 ते ₹15,000+ थेट बँकेत!</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -246,7 +427,7 @@ export default function HeroSection({ lang, onApplyClick }) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Empowerment Hub & Village Checker */}
+          {/* Right Column: Interactive Village Vacancy Hub */}
           <div className="poster-hero-right">
             <div className="interactive-empowerment-card fresh-glass-card">
               <div className="card-top-header">
@@ -261,92 +442,18 @@ export default function HeroSection({ lang, onApplyClick }) {
                 </span>
               </div>
 
-              {/* Interactive Role Selector Tabs */}
-              <div className="roles-interactive-selector">
-                <div className="roles-selector-title-row">
-                  <Users size={16} className="text-emerald" />
-                  <span className="roles-selector-title">
-                    {isMr ? '४ प्रमुख प्रतिनिधी भूमिका (निवडून माहिती पहा):' : 'Explore Representative Roles (Tap to view):'}
-                  </span>
-                </div>
-
-                <div className="roles-tabs-grid">
-                  {REPRESENTATIVE_ROLES.map((role, idx) => (
-                    <button
-                      key={role.id}
-                      type="button"
-                      className={`fresh-role-tab-btn ${activeRole === idx ? 'fresh-active-tab' : ''}`}
-                      onClick={() => setActiveRole(idx)}
-                      style={{
-                        borderColor: activeRole === idx ? role.color : undefined
-                      }}
-                    >
-                      <span className="role-icon">{role.icon}</span>
-                      <span className="role-name">{isMr ? role.titleMr : role.titleEn}</span>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Active Role Detailed Card with smooth animation */}
-                <div 
-                  key={REPRESENTATIVE_ROLES[activeRole].id} 
-                  className="fresh-active-role-card role-animate-in" 
-                  style={{ 
-                    borderLeftColor: REPRESENTATIVE_ROLES[activeRole].color,
-                    background: `linear-gradient(135deg, #ffffff 0%, ${REPRESENTATIVE_ROLES[activeRole].bgColor} 100%)`
-                  }}
-                >
-                  <div className="role-display-head">
-                    <span className="display-emoji">{REPRESENTATIVE_ROLES[activeRole].icon}</span>
-                    <div>
-                      <h4 className="display-title">
-                        {isMr ? REPRESENTATIVE_ROLES[activeRole].titleMr : REPRESENTATIVE_ROLES[activeRole].titleEn}
-                      </h4>
-                      <span 
-                        className="display-badge" 
-                        style={{ 
-                          backgroundColor: '#ffffff', 
-                          color: REPRESENTATIVE_ROLES[activeRole].color,
-                          border: `1px solid ${REPRESENTATIVE_ROLES[activeRole].color}33`
-                        }}
-                      >
-                        {isMr ? REPRESENTATIVE_ROLES[activeRole].badgeMr : 'Official Role'}
-                      </span>
-                    </div>
-                  </div>
-
-                  <p className="display-desc">
-                    {REPRESENTATIVE_ROLES[activeRole].descMr}
-                  </p>
-
-                  {/* Checklist of duties */}
-                  <div className="role-duties-list">
-                    {REPRESENTATIVE_ROLES[activeRole].dutiesMr.map((duty, dIdx) => (
-                      <div key={dIdx} className="role-duty-item">
-                        <Check size={14} className="text-emerald" />
-                        <span>{duty}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Quick role apply button */}
-                  <button 
-                    type="button" 
-                    className="role-apply-shortcut-btn"
-                    onClick={onApplyClick}
-                  >
-                    <span>{isMr ? `या भूमिकेसाठी अर्ज करा` : 'Apply for this Role'}</span>
-                    <ArrowRight size={14} />
-                  </button>
-                </div>
-              </div>
-
               {/* Interactive Village Vacancy Checker */}
               <div className="fresh-quick-vacancy-box">
                 <div className="vacancy-title-row">
                   <MapPin size={17} className="text-emerald" />
                   <strong>{isMr ? 'तुमच्या गावातील जागा तपासा:' : 'Check Village Vacancy:'}</strong>
                 </div>
+
+                <p className="vacancy-note">
+                  {isMr 
+                    ? 'महाराष्ट्रातील ४४,००० गावांत प्रत्येकी फक्त १ जागा उपलब्ध आहे.' 
+                    : 'Only 1 representative spot per village across Maharashtra.'}
+                </p>
 
                 <form onSubmit={handleCheckVacancy} className="vacancy-search-form">
                   <div className="vacancy-input-group">
