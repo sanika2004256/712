@@ -11,13 +11,53 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import { openDirectWhatsApp, getDirectWhatsAppHref } from './utils/whatsapp';
 
+// Helper to detect initial tab from URL path or hash
+const getTabFromLocation = () => {
+  const path = (window.location.pathname || '').toLowerCase();
+  const hash = (window.location.hash || '').toLowerCase();
+  if (path.includes('admin') || hash.includes('admin')) return 'admin';
+  if (path.includes('apply') || hash.includes('apply')) return 'apply';
+  return 'landing';
+};
+
 export default function App() {
   const [lang, setLang] = useState('mr');
-  const [currentTab, setCurrentTab] = useState('landing'); // 'landing' | 'apply' | 'admin'
+  const [currentTab, setCurrentTab] = useState(getTabFromLocation); // 'landing' | 'apply' | 'admin'
   const [applications, setApplications] = useState([]);
   const [selectedAppForModal, setSelectedAppForModal] = useState(null);
 
-  // Load applications count for admin badge
+  // Synchronize Tab with Browser URL & History
+  const navigateToTab = (tab, targetSection = 'hero') => {
+    setCurrentTab(tab);
+    const targetUrl = tab === 'landing' ? '/' : `/${tab}`;
+    if (window.location.pathname !== targetUrl && window.location.hash !== `#${tab}`) {
+      window.history.pushState({ tab }, '', targetUrl);
+    }
+    if (tab === 'landing' && targetSection && targetSection !== 'hero') {
+      setTimeout(() => {
+        const el = document.getElementById(targetSection);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  };
+
+  // Listen to browser Back/Forward & Hash changes
+  useEffect(() => {
+    const handleUrlSync = () => {
+      const tab = getTabFromLocation();
+      setCurrentTab(tab);
+    };
+    window.addEventListener('popstate', handleUrlSync);
+    window.addEventListener('hashchange', handleUrlSync);
+    return () => {
+      window.removeEventListener('popstate', handleUrlSync);
+      window.removeEventListener('hashchange', handleUrlSync);
+    };
+  }, []);
+
+  // Load applications count
   const refreshApplications = async () => {
     try {
       const list = await fetchAllFranchiseApplications();
@@ -50,21 +90,12 @@ export default function App() {
 
   // Navigate to dedicated Apply Page
   const handleOpenApplyPage = () => {
-    setCurrentTab('apply');
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    navigateToTab('apply');
   };
 
   // Return to Landing Page
   const handleBackToLanding = (targetSection = 'hero') => {
-    setCurrentTab('landing');
-    setTimeout(() => {
-      if (targetSection === 'hero') {
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      } else {
-        const el = document.getElementById(targetSection);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 80);
+    navigateToTab('landing', targetSection);
   };
 
   const isMr = lang === 'mr';
@@ -165,6 +196,7 @@ export default function App() {
             </div>
             <AdminPanel
               lang={lang}
+              onBackToLanding={() => handleBackToLanding('hero')}
               onSelectApplicationForView={(app) => setSelectedAppForModal(app)}
             />
           </div>
@@ -174,10 +206,6 @@ export default function App() {
       {/* Footer with Empowering Bottom Wave Banner */}
       <Footer
         lang={lang}
-        onAdminClick={() => {
-          setCurrentTab('admin');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
         onApplyClick={handleOpenApplyPage}
         onHomeClick={(sec) => handleBackToLanding(sec)}
       />

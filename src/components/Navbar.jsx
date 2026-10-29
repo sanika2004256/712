@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InodayamLogo from './InodayamLogo';
-import { Menu, X, Shield, Globe2, ArrowRight } from 'lucide-react';
+import { Menu, X, Globe2, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ 
   currentTab, 
@@ -93,23 +93,6 @@ export default function Navbar({
             <span>{isMr ? 'English' : 'मराठी'}</span>
           </button>
 
-          {/* Admin Switch */}
-          <button 
-            type="button" 
-            className={`nav-action-pill-btn admin-btn ${currentTab === 'admin' ? 'active-admin' : ''}`}
-            onClick={() => {
-              setCurrentTab(currentTab === 'admin' ? 'landing' : 'admin');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            title="Admin Dashboard"
-          >
-            <Shield size={15} />
-            <span>{isMr ? 'प्रशासक' : 'Admin'}</span>
-            {totalApplicationsCount > 0 && (
-              <span className="nav-admin-badge">{totalApplicationsCount}</span>
-            )}
-          </button>
-
           {/* Apply Now Primary CTA */}
           <button 
             type="button" 
@@ -165,22 +148,10 @@ export default function Navbar({
                 setLang(isMr ? 'en' : 'mr');
                 setMobileMenuOpen(false);
               }}
+              style={{ width: '100%', justifyContent: 'center' }}
             >
               <Globe2 size={16} />
               <span>{isMr ? 'Switch to English' : 'मराठीत पहा'}</span>
-            </button>
-
-            <button 
-              type="button" 
-              className="mobile-sub-btn admin-highlight"
-              onClick={() => {
-                setCurrentTab(currentTab === 'admin' ? 'landing' : 'admin');
-                setMobileMenuOpen(false);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              <Shield size={16} />
-              <span>{isMr ? 'ॲडमिन' : 'Admin'} ({totalApplicationsCount})</span>
             </button>
           </div>
         </div>

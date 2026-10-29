@@ -78,12 +78,6 @@ export default function Footer({ lang, onAdminClick, onApplyClick, onHomeClick }
                   {isMr ? 'नोंदणी अर्ज (Apply)' : 'Register Online'}
                 </button>
               </li>
-              <li>
-                <button type="button" className="footer-admin-link" onClick={onAdminClick}>
-                  <Shield size={13} className="inline mr-1 text-blue-400" />
-                  <span>{isMr ? 'प्रशासक पॅनेल (Admin Panel)' : 'Admin Panel'}</span>
-                </button>
-              </li>
             </ul>
           </div>
 
