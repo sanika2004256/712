@@ -1854,27 +1854,20 @@ body {
   margin: 0;
 }
 
-/* Main Hero Grid */
+/* Main Hero Container */
 .poster-hero-main-grid {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.5rem;
-  align-items: flex-start;
-}
-
-@media (max-width: 960px) {
-  .poster-hero-main-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  display: block;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 /* Left Hero Content */
 .poster-hero-left {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .fresh-tag-badge {

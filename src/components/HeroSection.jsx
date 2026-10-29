@@ -110,40 +110,10 @@ const PILL_INFO = [
   }
 ];
 
-const POPULAR_DISTRICTS = [
-  'पुणे (Pune)',
-  'सातारा (Satara)',
-  'कोल्हापूर (Kolhapur)',
-  'सोलापूर (Solapur)',
-  'अहिल्यानगर (Ahmednagar)',
-  'नाशिक (Nashik)',
-  'छत्रपती संभाजीनगर (Aurangabad)',
-  'सांगली (Sangli)',
-  'जळगाव (Jalgaon)',
-  'ठाणे (Thane)'
-];
-
 export default function HeroSection({ lang, onApplyClick }) {
   const isMr = lang === 'mr';
   const [activeRole, setActiveRole] = useState(0);
   const [activePillIndex, setActivePillIndex] = useState(null);
-  
-  // Interactive Village Vacancy Checker state
-  const [selectedDistrict, setSelectedDistrict] = useState('पुणे (Pune)');
-  const [villageSearchName, setVillageSearchName] = useState('');
-  const [checkedVillageResult, setCheckedVillageResult] = useState(null);
-
-  const handleCheckVacancy = (e) => {
-    e.preventDefault();
-    const vName = villageSearchName.trim() || (isMr ? 'तुमच्या गावात' : 'your village');
-    setCheckedVillageResult({
-      village: vName,
-      district: selectedDistrict,
-      status: 'AVAILABLE',
-      messageMr: `🎉 अभिनंदन! ${vName} (${selectedDistrict.split(' ')[0]}) येथे प्रतिनिधी जागा रिक्त आहे!`,
-      messageEn: `🎉 Congratulations! 1 Representative vacancy is available in ${vName}!`
-    });
-  };
 
   const togglePill = (idx) => {
     setActivePillIndex(prev => (prev === idx ? null : idx));
@@ -348,92 +318,6 @@ export default function HeroSection({ lang, onApplyClick }) {
               <div className="apply-trust-subtext">
                 <Check size={13} className="text-emerald" />
                 <span>{isMr ? '१००% सुरक्षित नोंदणी • अवघ्या २ मिनिटांत अर्ज • मोफत माहिती' : '100% Secure • 2-Min Application • Free Guidance'}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Interactive Village Vacancy Hub */}
-          <div className="poster-hero-right">
-            <div className="interactive-empowerment-card fresh-glass-card">
-              <div className="card-top-header">
-                <div className="header-status-indicator">
-                  <span className="fresh-live-dot" />
-                  <span className="header-status-title">
-                    {isMr ? '१ गाव • १ प्रतिनिधी' : '1 Village • 1 Representative'}
-                  </span>
-                </div>
-                <span className="header-women-priority-pill">
-                  {isMr ? '👩 महिलांना प्राधान्य' : '👩 Women Priority'}
-                </span>
-              </div>
-
-              {/* Interactive Village Vacancy Checker */}
-              <div className="fresh-quick-vacancy-box">
-                <div className="vacancy-title-row">
-                  <MapPin size={17} className="text-emerald" />
-                  <strong>{isMr ? 'तुमच्या गावातील जागा तपासा:' : 'Check Village Vacancy:'}</strong>
-                </div>
-
-                <p className="vacancy-note">
-                  {isMr 
-                    ? 'महाराष्ट्रातील ४४,००० गावांत प्रत्येकी फक्त १ जागा उपलब्ध आहे.' 
-                    : 'Only 1 representative spot per village across Maharashtra.'}
-                </p>
-
-                <form onSubmit={handleCheckVacancy} className="vacancy-search-form">
-                  <div className="vacancy-input-group">
-                    <select 
-                      className="vacancy-district-select"
-                      value={selectedDistrict}
-                      onChange={(e) => {
-                        setSelectedDistrict(e.target.value);
-                        setCheckedVillageResult(null);
-                      }}
-                    >
-                      {POPULAR_DISTRICTS.map((dist) => (
-                        <option key={dist} value={dist}>{dist}</option>
-                      ))}
-                    </select>
-
-                    <input 
-                      type="text" 
-                      className="vacancy-village-input"
-                      placeholder={isMr ? 'गावाचे नाव टाका (उदा. शिरूर)' : 'Enter village name'}
-                      value={villageSearchName}
-                      onChange={(e) => {
-                        setVillageSearchName(e.target.value);
-                        setCheckedVillageResult(null);
-                      }}
-                    />
-                  </div>
-
-                  <button type="submit" className="fresh-vacancy-check-btn">
-                    <Search size={15} />
-                    <span>{isMr ? 'जागा तपासा' : 'Check Vacancy'}</span>
-                  </button>
-                </form>
-
-                {/* Instant Vacancy Result Alert */}
-                {checkedVillageResult && (
-                  <div className="vacancy-result-badge vacancy-animate-in">
-                    <div className="vacancy-result-header">
-                      <span className="vacancy-green-dot" />
-                      <strong>{checkedVillageResult.messageMr}</strong>
-                    </div>
-                    <p className="vacancy-result-sub">
-                      {isMr 
-                        ? 'फक्त १ जागा शिल्लक आहे. आधी अर्ज करणाऱ्यास प्राधान्य दिले जाईल.' 
-                        : 'Only 1 spot available. First come, first priority.'}
-                    </p>
-                    <button 
-                      type="button" 
-                      className="vacancy-result-apply-link"
-                      onClick={onApplyClick}
-                    >
-                      <span>{isMr ? 'त्वरित अर्ज पूर्ण करा ➔' : 'Complete Application Now ➔'}</span>
-                    </button>
-                  </div>
-                )}
               </div>
             </div>
           </div>
