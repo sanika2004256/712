@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
-import RegistrationSection from './components/RegistrationSection';
+import ApplyPage from './components/ApplyPage';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
 import ApplicationDetailsModal from './components/ApplicationDetailsModal';
 import { fetchAllFranchiseApplications, updateFranchiseStatus } from './services/firebase';
-import { MessageCircle, ArrowUp, Send, Shield } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import { openDirectWhatsApp, getDirectWhatsAppHref } from './utils/whatsapp';
 
 export default function App() {
   const [lang, setLang] = useState('mr');
-  const [currentTab, setCurrentTab] = useState('landing'); // 'landing' | 'admin'
+  const [currentTab, setCurrentTab] = useState('landing'); // 'landing' | 'apply' | 'admin'
   const [applications, setApplications] = useState([]);
   const [selectedAppForModal, setSelectedAppForModal] = useState(null);
 
@@ -48,17 +48,23 @@ export default function App() {
     }
   };
 
-  const scrollToRegistration = () => {
-    if (currentTab !== 'landing') {
-      setCurrentTab('landing');
-      setTimeout(() => {
-        const el = document.getElementById('register');
+  // Navigate to dedicated Apply Page
+  const handleOpenApplyPage = () => {
+    setCurrentTab('apply');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  // Return to Landing Page
+  const handleBackToLanding = (targetSection = 'hero') => {
+    setCurrentTab('landing');
+    setTimeout(() => {
+      if (targetSection === 'hero') {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        const el = document.getElementById(targetSection);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const el = document.getElementById('register');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
+      }
+    }, 80);
   };
 
   const isMr = lang === 'mr';
@@ -72,17 +78,17 @@ export default function App() {
         lang={lang}
         setLang={setLang}
         totalApplicationsCount={applications.length}
-        onScrollToForm={scrollToRegistration}
+        onApplyClick={handleOpenApplyPage}
       />
 
       <main className="main-content-landing">
         {/* VIEW 1: INTERACTIVE LANDING PAGE */}
         {currentTab === 'landing' && (
           <>
-            {/* Hero Section (Poster Style with Interactive UI - No static image!) */}
+            {/* Hero Section */}
             <HeroSection
               lang={lang}
-              onApplyClick={scrollToRegistration}
+              onApplyClick={handleOpenApplyPage}
             />
 
             {/* Poster-Style 6 Benefits Strip (गाव प्रतिनिधीचे फायदे) */}
@@ -90,22 +96,68 @@ export default function App() {
               lang={lang}
             />
 
-            {/* Cascading LGD Registration Section (State -> District -> Taluka -> Village) */}
-            <RegistrationSection
-              lang={lang}
-              onApplicationSuccess={handleApplicationSuccess}
-            />
+            {/* Clean Professional Bottom Call-To-Action Banner */}
+            <section className="landing-bottom-apply-strip">
+              <div className="section-container">
+                <div className="bottom-apply-card">
+                  <div className="bottom-apply-text">
+                    <span className="bottom-apply-pill">
+                      <Sparkles size={14} className="text-emerald" />
+                      <span>{isMr ? 'अधिकृत गाव प्रतिनिधी नियुक्ती २०२६' : 'Official Representative Drive 2026'}</span>
+                    </span>
+                    <h3 className="bottom-apply-heading">
+                      {isMr ? (
+                        <>
+                          आपल्या गावातच सुरू करा <span className="fresh-gradient-text">स्वावलंबी व्यवसाय!</span>
+                        </>
+                      ) : (
+                        'Start your self-reliant business in your own village!'
+                      )}
+                    </h3>
+                    <p className="bottom-apply-sub">
+                      {isMr 
+                        ? 'फक्त ₹१०,००० भांडवलात दरमहा ₹१२,००० ते ₹१५,०००+ नियमित उत्पन्न. महिलांना विशेष प्राधान्य आणि १००% मोफत प्रशिक्षण.' 
+                        : 'Minimum ₹10,000 capital, ₹12,000 - ₹15,000+ monthly income. Priority for women with 100% free training.'}
+                    </p>
+                  </div>
+
+                  <div className="bottom-apply-cta-box">
+                    <button 
+                      type="button" 
+                      className="animated-hero-apply-btn"
+                      onClick={handleOpenApplyPage}
+                    >
+                      <span className="apply-btn-sparkle" aria-hidden="true">✨</span>
+                      <span className="apply-btn-text">Apply</span>
+                      <ArrowRight size={20} className="apply-btn-arrow" />
+                    </button>
+                    <span className="bottom-trust-note">
+                      🔒 {isMr ? 'अवघ्या २ मिनिटांत अर्ज • १००% सुरक्षित नोंदणी' : '2-Min Process • 100% Safe'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </section>
           </>
         )}
 
-        {/* VIEW 2: ADMIN PANEL */}
+        {/* VIEW 2: DEDICATED SEPARATE APPLICATION PAGE */}
+        {currentTab === 'apply' && (
+          <ApplyPage
+            lang={lang}
+            onBackToHome={() => handleBackToLanding('hero')}
+            onApplicationSuccess={handleApplicationSuccess}
+          />
+        )}
+
+        {/* VIEW 3: ADMIN PANEL */}
         {currentTab === 'admin' && (
           <div className="admin-view-wrapper">
             <div className="admin-top-nav-bar no-print">
               <button 
                 type="button" 
                 className="back-to-landing-btn"
-                onClick={() => setCurrentTab('landing')}
+                onClick={() => handleBackToLanding('hero')}
               >
                 ← {isMr ? 'मुख्य लँडिंग पृष्ठावर परत जा' : 'Back to Landing Page'}
               </button>
@@ -125,6 +177,8 @@ export default function App() {
           setCurrentTab('admin');
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
+        onApplyClick={handleOpenApplyPage}
+        onHomeClick={(sec) => handleBackToLanding(sec)}
       />
 
       {/* Application Details Modal */}
@@ -162,7 +216,7 @@ export default function App() {
           <button 
             type="button" 
             className="mobile-apply-now-btn"
-            onClick={scrollToRegistration}
+            onClick={handleOpenApplyPage}
           >
             <span>गाव प्रतिनिधी बना ➔</span>
           </button>

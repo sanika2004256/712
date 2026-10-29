@@ -8,7 +8,7 @@ export default function Navbar({
   lang, 
   setLang,
   totalApplicationsCount = 0,
-  onScrollToForm 
+  onApplyClick 
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMr = lang === 'mr';
@@ -18,13 +18,26 @@ export default function Navbar({
     if (currentTab !== 'landing') {
       setCurrentTab('landing');
       setTimeout(() => {
+        if (sectionId === 'hero') {
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        } else {
+          const el = document.getElementById(sectionId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 80);
+    } else {
+      if (sectionId === 'hero') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
         const el = document.getElementById(sectionId);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  const handleApplyTab = () => {
+    setMobileMenuOpen(false);
+    if (onApplyClick) onApplyClick();
   };
 
   return (
@@ -46,7 +59,7 @@ export default function Navbar({
         <div className="navbar-links-desktop">
           <button 
             type="button" 
-            className="nav-link-btn"
+            className={`nav-link-btn ${currentTab === 'landing' ? 'active-nav-link' : ''}`}
             onClick={() => handleNavClick('hero')}
           >
             {isMr ? 'मुख्य पृष्ठ' : 'Home'}
@@ -60,10 +73,10 @@ export default function Navbar({
           </button>
           <button 
             type="button" 
-            className="nav-link-btn"
-            onClick={() => handleNavClick('register')}
+            className={`nav-link-btn ${currentTab === 'apply' ? 'active-nav-link' : ''}`}
+            onClick={handleApplyTab}
           >
-            {isMr ? 'नोंदणी अर्ज' : 'Apply'}
+            {isMr ? 'नोंदणी अर्ज (Apply)' : 'Apply Form'}
           </button>
         </div>
 
@@ -101,14 +114,14 @@ export default function Navbar({
           <button 
             type="button" 
             className="nav-primary-apply-btn"
-            onClick={onScrollToForm}
+            onClick={handleApplyTab}
           >
             <span>{isMr ? 'गाव प्रतिनिधी बना' : 'Become Representative'}</span>
             <ArrowRight size={15} />
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle (strictly hidden on desktop > 960px) */}
+        {/* Mobile Hamburger Toggle */}
         <button 
           type="button" 
           className="mobile-hamburger-toggle"
@@ -138,10 +151,10 @@ export default function Navbar({
           </button>
           <button 
             type="button" 
-            className="mobile-nav-item"
-            onClick={() => handleNavClick('register')}
+            className="mobile-nav-item highlight-apply-mobile"
+            onClick={handleApplyTab}
           >
-            {isMr ? 'नोंदणी अर्ज करा (Apply Now)' : 'Apply Now'}
+            {isMr ? '📝 नोंदणी अर्ज करा (Apply Now)' : '📝 Apply Now'}
           </button>
 
           <div className="mobile-nav-footer-row">

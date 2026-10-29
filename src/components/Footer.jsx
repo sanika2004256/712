@@ -2,11 +2,20 @@ import React from 'react';
 import InodayamLogo from './InodayamLogo';
 import { Heart, Phone, Mail, MapPin, Sparkles, Shield, ArrowUp, CheckCircle2 } from 'lucide-react';
 
-export default function Footer({ lang, onAdminClick }) {
+export default function Footer({ lang, onAdminClick, onApplyClick, onHomeClick }) {
   const isMr = lang === 'mr';
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLink = (sectionId) => {
+    if (onHomeClick) {
+      onHomeClick(sectionId);
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -54,9 +63,21 @@ export default function Footer({ lang, onAdminClick }) {
           <div className="footer-col">
             <h5 className="footer-col-title">{isMr ? 'महत्त्वाचे दुवे' : 'Quick Links'}</h5>
             <ul className="footer-links-list">
-              <li><a href="#hero">{isMr ? 'मुख्य पृष्ठ' : 'Home'}</a></li>
-              <li><a href="#benefits">{isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}</a></li>
-              <li><a href="#register">{isMr ? 'नोंदणी अर्ज (Apply)' : 'Register Online'}</a></li>
+              <li>
+                <button type="button" className="footer-nav-btn-link" onClick={() => handleLink('hero')}>
+                  {isMr ? 'मुख्य पृष्ठ' : 'Home'}
+                </button>
+              </li>
+              <li>
+                <button type="button" className="footer-nav-btn-link" onClick={() => handleLink('benefits')}>
+                  {isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}
+                </button>
+              </li>
+              <li>
+                <button type="button" className="footer-nav-btn-link" onClick={onApplyClick}>
+                  {isMr ? 'नोंदणी अर्ज (Apply)' : 'Register Online'}
+                </button>
+              </li>
               <li>
                 <button type="button" className="footer-admin-link" onClick={onAdminClick}>
                   <Shield size={13} className="inline mr-1 text-blue-400" />
