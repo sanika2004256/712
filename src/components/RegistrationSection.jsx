@@ -345,13 +345,8 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
                 </div>
 
                 <div className="receipt-info-item">
-                  <span className="receipt-item-label">{isMr ? 'फ्रँचायझी मॉडेल:' : 'Franchise Model:'}</span>
-                  <strong className="receipt-item-val text-rose-700">{submittedData.franchiseModelTitle} ({submittedData.franchiseInvestment})</strong>
-                </div>
-
-                <div className="receipt-info-item full-span">
-                  <span className="receipt-item-label">{isMr ? 'दुकान / जागा उपलब्धता:' : 'Premises Status:'}</span>
-                  <strong className="receipt-item-val">{submittedData.premisesStatus}</strong>
+                  <span className="receipt-item-label">{isMr ? 'अधिकृत पद / मोहीम:' : 'Designation / Drive:'}</span>
+                  <strong className="receipt-item-val text-emerald-700">{isMr ? 'अधिकृत गाव प्रतिनिधी' : 'Official Village Representative'}</strong>
                 </div>
 
                 {submittedData.address && (
@@ -731,89 +726,6 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
                     onChange={(e) => setPincode(e.target.value.replace(/\D/g, ''))}
                   />
                 </div>
-              </div>
-            </div>
-
-            {/* ======================================================== */}
-            {/* STEP 3: FRANCHISE MODEL & BUSINESS PREMISES */}
-            {/* ======================================================== */}
-            <div className="form-step-section">
-              <div className="step-section-header">
-                <div className="step-circle-badge">३</div>
-                <div>
-                  <h3 className="step-section-title">
-                    {isMr ? 'फ्रँचायझी प्रकार व व्यवसायाची माहिती' : 'Franchise Plan & Details'}
-                  </h3>
-                  <p className="step-section-desc">
-                    {isMr ? 'आपल्या बजेटनुसार योग्य फ्रँचायझी प्लॅन निवडा:' : 'Select your desired plan:'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Franchise Model Cards */}
-              <div className="models-selection-grid">
-                {FRANCHISE_MODELS.map(model => (
-                  <label 
-                    key={model.id}
-                    className={`model-card-label ${selectedModel === model.id ? 'active' : ''}`}
-                  >
-                    <input
-                      type="radio"
-                      name="franchiseModel"
-                      value={model.id}
-                      checked={selectedModel === model.id}
-                      onChange={() => setSelectedModel(model.id)}
-                    />
-                    <div className="model-card-top">
-                      <span className="model-badge-tag">{model.badge}</span>
-                      <span className="model-investment-text">{model.investment}</span>
-                    </div>
-                    <h4 className="model-title-text">{isMr ? model.titleMr : model.titleEn}</h4>
-                    <p className="model-desc-text">{model.descMr}</p>
-                  </label>
-                ))}
-              </div>
-
-              {/* Premises Status Radio Group */}
-              <div className="premises-group mt-3">
-                <label className="sweet-field-label mb-2">
-                  <Store size={15} className="text-rose-600 inline mr-1 flex-shrink-0" />
-                  <span>{isMr ? 'दुकान / जागेची सद्यस्थिती:' : 'Premises Availability:'}</span>
-                </label>
-
-                <div className="premises-options-list">
-                  {PREMISES_OPTIONS.map(opt => (
-                    <label 
-                      key={opt.id}
-                      className={`premises-option-card ${premisesStatus === opt.id ? 'active' : ''}`}
-                    >
-                      <input
-                        type="radio"
-                        name="premisesStatus"
-                        value={opt.id}
-                        checked={premisesStatus === opt.id}
-                        onChange={() => setPremisesStatus(opt.id)}
-                      />
-                      <span className="radio-circle-dot" />
-                      <span className="premises-label-text">{isMr ? opt.labelMr : opt.labelEn}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Note or Experience */}
-              <div className="sweet-field-group full-span mt-3">
-                <label className="sweet-field-label">
-                  <Briefcase size={15} className="text-rose-600 inline mr-1 flex-shrink-0" />
-                  <span>{isMr ? 'काही पूर्व अनुभव किंवा संदेश (पर्यायी):' : 'Prior Experience or Note (Optional):'}</span>
-                </label>
-                <textarea
-                  rows={2}
-                  className="sweet-textarea"
-                  placeholder={isMr ? 'उदा. किराणा दुकानातून विक्री करणार किंवा बचत गटात काम केले आहे...' : 'Write any experience or message...'}
-                  value={experienceNote}
-                  onChange={(e) => setExperienceNote(e.target.value)}
-                />
               </div>
             </div>
 
