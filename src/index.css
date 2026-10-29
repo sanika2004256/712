@@ -336,6 +336,30 @@ body {
   color: #0284c7;
 }
 
+.mobile-admin-menu-item {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0fdf4 !important;
+  border: 1.5px solid #bbf7d0 !important;
+  color: #166534 !important;
+  margin-top: 0.25rem;
+}
+
+.mobile-admin-menu-item:hover {
+  background: #dcfce7 !important;
+  color: #14532d !important;
+}
+
+.mobile-admin-count-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: #059669;
+  color: #ffffff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
 .mobile-nav-footer-row {
   display: flex;
   align-items: center;

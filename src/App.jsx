@@ -110,6 +110,7 @@ export default function App() {
         setLang={setLang}
         totalApplicationsCount={applications.length}
         onApplyClick={handleOpenApplyPage}
+        onAdminClick={() => navigateToTab('admin')}
       />
 
       <main className="main-content-landing">
