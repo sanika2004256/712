@@ -1957,6 +1957,18 @@ body {
   border: 1.5px solid #bfdbfe;
 }
 
+.price-only-card {
+  padding: 1.15rem 1.25rem;
+}
+
+.price-only-card .fresh-offer-body {
+  margin-top: 0.35rem;
+}
+
+.price-only-card .fresh-offer-amount {
+  margin-bottom: 0;
+}
+
 .fresh-offer-top {
   display: flex;
   align-items: center;

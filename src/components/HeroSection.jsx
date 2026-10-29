@@ -127,7 +127,6 @@ export default function HeroSection({ lang, onApplyClick }) {
   const isMr = lang === 'mr';
   const [activeRole, setActiveRole] = useState(0);
   const [activePillIndex, setActivePillIndex] = useState(null);
-  const [expandedCard, setExpandedCard] = useState('capital'); // default show capital breakdown
   
   // Interactive Village Vacancy Checker state
   const [selectedDistrict, setSelectedDistrict] = useState('पुणे (Pune)');
@@ -148,10 +147,6 @@ export default function HeroSection({ lang, onApplyClick }) {
 
   const togglePill = (idx) => {
     setActivePillIndex(prev => (prev === idx ? null : idx));
-  };
-
-  const toggleCard = (cardType) => {
-    setExpandedCard(prev => (prev === cardType ? null : cardType));
   };
 
   return (
@@ -301,110 +296,40 @@ export default function HeroSection({ lang, onApplyClick }) {
               </div>
             </div>
 
-            {/* Fresh Interactive Financial Offer Cards (Tap to expand breakdown!) */}
+            {/* Fresh Clean Price Offer Cards */}
             <div className="fresh-offers-grid">
               {/* Card 1: Investment */}
-              <div 
-                className={`fresh-offer-card fresh-card-capital interactive-tap-card ${expandedCard === 'capital' ? 'card-tap-expanded' : ''}`}
-                onClick={() => toggleCard('capital')}
-                role="button"
-                tabIndex={0}
-              >
+              <div className="fresh-offer-card fresh-card-capital price-only-card">
                 <div className="fresh-offer-top">
                   <div className="fresh-icon-wrap fresh-icon-mint">
                     <ShieldCheck size={22} />
                   </div>
                   <span className="fresh-card-tag mint-tag">
-                    {isMr ? '१००% सुरक्षित' : '100% Safe'}
+                    {isMr ? 'भांडवल' : 'Capital'}
                   </span>
                 </div>
                 <div className="fresh-offer-body">
-                  <span className="fresh-offer-label">{isMr ? 'किमान भांडवल' : 'Minimum Capital'}</span>
                   <div className="fresh-offer-amount text-mint">
                     <span className="currency">₹</span>10,000
                   </div>
-                  <p className="fresh-offer-desc">
-                    {isMr ? 'कमी गुंतवणुकीत खात्रीशीर सुरुवात' : 'Start with minimal investment'}
-                  </p>
                 </div>
-
-                <div className="card-tap-hint-row">
-                  <span>{expandedCard === 'capital' ? 'माहिती बंद करा ▲' : 'काय काय मिळते? टॅप करा ▼'}</span>
-                </div>
-
-                {/* Expanded Capital Breakdown */}
-                {expandedCard === 'capital' && (
-                  <div className="interactive-card-breakdown role-animate-in" onClick={(e) => e.stopPropagation()}>
-                    <div className="breakdown-item">
-                      <Package size={14} className="text-emerald" />
-                      <span>सॅनिटरी पॅड्सचा सुरुवातीचा स्टॉक</span>
-                    </div>
-                    <div className="breakdown-item">
-                      <Sparkles size={14} className="text-emerald" />
-                      <span>इनोदयम अधिकृत किट व ओळखपत्र</span>
-                    </div>
-                    <div className="breakdown-item">
-                      <Check size={14} className="text-emerald" />
-                      <span>मोबाईल ॲप व शाळा ERP ॲक्सेस</span>
-                    </div>
-                    <div className="breakdown-item">
-                      <Check size={14} className="text-emerald" />
-                      <span>१००% मोफत व्यवसाय व विक्री प्रशिक्षण</span>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Card 2: Expected Monthly Income */}
-              <div 
-                className={`fresh-offer-card fresh-card-income interactive-tap-card ${expandedCard === 'income' ? 'card-tap-expanded' : ''}`}
-                onClick={() => toggleCard('income')}
-                role="button"
-                tabIndex={0}
-              >
+              <div className="fresh-offer-card fresh-card-income price-only-card">
                 <div className="fresh-offer-top">
                   <div className="fresh-icon-wrap fresh-icon-sky">
                     <TrendingUp size={22} />
                   </div>
                   <span className="fresh-card-tag sky-tag">
-                    {isMr ? 'दरमहा थेट' : 'Every Month'}
+                    {isMr ? 'दरमहा उत्पन्न' : 'Monthly Income'}
                   </span>
                 </div>
                 <div className="fresh-offer-body">
-                  <span className="fresh-offer-label">{isMr ? 'अपेक्षित मासिक उत्पन्न' : 'Monthly Income'}</span>
                   <div className="fresh-offer-amount text-sky">
                     ₹12,000 – ₹15,000<span className="plus">+</span>
                   </div>
-                  <p className="fresh-offer-desc">
-                    {isMr ? 'दरमहा थेट नियमित उत्पन्न' : 'Guaranteed regular income'}
-                  </p>
                 </div>
-
-                <div className="card-tap-hint-row">
-                  <span>{expandedCard === 'income' ? 'माहिती बंद करा ▲' : 'उत्पन्न कसे मिळते? टॅप करा ▼'}</span>
-                </div>
-
-                {/* Expanded Income Breakdown */}
-                {expandedCard === 'income' && (
-                  <div className="interactive-card-breakdown role-animate-in" onClick={(e) => e.stopPropagation()}>
-                    <div className="breakdown-item">
-                      <Wallet size={14} className="text-sky" />
-                      <span>सॅनिटरी पॅड्स विक्री: ~₹4,500/महिना</span>
-                    </div>
-                    <div className="breakdown-item">
-                      <BadgePercent size={14} className="text-sky" />
-                      <span>शाळा ERP व ऑनलाईन क्लासेस: ~₹5,500/महिना</span>
-                    </div>
-                    <div className="breakdown-item">
-                      <Check size={14} className="text-sky" />
-                      <span>डिजिटल व इतर सेवा: ~₹3,500/महिना</span>
-                    </div>
-                    <div className="breakdown-item text-bold-income">
-                      <Sparkles size={14} className="text-emerald" />
-                      <span>एकूण दरमहा: ₹12,000 ते ₹15,000+ थेट बँकेत!</span>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
 
