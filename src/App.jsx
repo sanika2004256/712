@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
-import ServicesSection from './components/ServicesSection';
 import RegistrationSection from './components/RegistrationSection';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
@@ -89,12 +88,6 @@ export default function App() {
             {/* Poster-Style 6 Benefits Strip (गाव प्रतिनिधीचे फायदे) */}
             <BenefitsSection
               lang={lang}
-            />
-
-            {/* Services Showcase (Poster-Style Checklist Card) */}
-            <ServicesSection
-              lang={lang}
-              onApplyClick={scrollToRegistration}
             />
 
             {/* Cascading LGD Registration Section (State -> District -> Taluka -> Village) */}

@@ -56,7 +56,6 @@ export default function Footer({ lang, onAdminClick }) {
             <ul className="footer-links-list">
               <li><a href="#hero">{isMr ? 'मुख्य पृष्ठ' : 'Home'}</a></li>
               <li><a href="#benefits">{isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}</a></li>
-              <li><a href="#services">{isMr ? 'आमच्या प्रमुख सेवा' : 'Our Services'}</a></li>
               <li><a href="#register">{isMr ? 'नोंदणी अर्ज (Apply)' : 'Register Online'}</a></li>
               <li>
                 <button type="button" className="footer-admin-link" onClick={onAdminClick}>

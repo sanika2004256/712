@@ -61,13 +61,6 @@ export default function Navbar({
           <button 
             type="button" 
             className="nav-link-btn"
-            onClick={() => handleNavClick('services')}
-          >
-            {isMr ? 'प्रमुख सेवा' : 'Services'}
-          </button>
-          <button 
-            type="button" 
-            className="nav-link-btn"
             onClick={() => handleNavClick('register')}
           >
             {isMr ? 'नोंदणी अर्ज' : 'Apply'}
@@ -142,13 +135,6 @@ export default function Navbar({
             onClick={() => handleNavClick('benefits')}
           >
             {isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}
-          </button>
-          <button 
-            type="button" 
-            className="mobile-nav-item"
-            onClick={() => handleNavClick('services')}
-          >
-            {isMr ? 'आमच्या प्रमुख सेवा' : 'Our Services'}
           </button>
           <button 
             type="button" 
