@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
-import ProfitCalculator from './components/ProfitCalculator';
 import ServicesSection from './components/ServicesSection';
 import RegistrationSection from './components/RegistrationSection';
 import Footer from './components/Footer';
@@ -91,16 +90,6 @@ export default function App() {
             <BenefitsSection
               lang={lang}
             />
-
-            {/* Interactive Live Earnings & ROI Calculator (फक्त ₹10,000 भांडवल -> मासिक ₹12,000-₹15,000) */}
-            <section className="calculator-section-wrap">
-              <div className="section-container">
-                <ProfitCalculator
-                  lang={lang}
-                  onApplyClick={scrollToRegistration}
-                />
-              </div>
-            </section>
 
             {/* Services Showcase (Poster-Style Checklist Card) */}
             <ServicesSection

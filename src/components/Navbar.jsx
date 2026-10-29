@@ -61,13 +61,6 @@ export default function Navbar({
           <button 
             type="button" 
             className="nav-link-btn"
-            onClick={() => handleNavClick('calculator')}
-          >
-            {isMr ? 'उत्पन्न कॅल्क्युलेटर' : 'Calculator'}
-          </button>
-          <button 
-            type="button" 
-            className="nav-link-btn"
             onClick={() => handleNavClick('services')}
           >
             {isMr ? 'प्रमुख सेवा' : 'Services'}
@@ -149,13 +142,6 @@ export default function Navbar({
             onClick={() => handleNavClick('benefits')}
           >
             {isMr ? 'गाव प्रतिनिधीचे फायदे' : 'Benefits'}
-          </button>
-          <button 
-            type="button" 
-            className="mobile-nav-item"
-            onClick={() => handleNavClick('calculator')}
-          >
-            {isMr ? 'उत्पन्न कॅल्क्युलेटर 📊' : 'Income Calculator 📊'}
           </button>
           <button 
             type="button" 
