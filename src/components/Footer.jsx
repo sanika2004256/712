@@ -42,8 +42,8 @@ export default function Footer({ lang, onAdminClick }) {
             <InodayamLogo variant="white" size={48} />
             <p className="footer-desc-text mt-4">
               {isMr 
-                ? 'महाराष्ट्रातील ४४,००० गावांमध्ये डिजिटल सेवा केंद्र स्थापन करून स्थानिक रोजगार आणि महिला सक्षमीकरणास हातभार लावणारे अग्रेसर व्यासपीठ.' 
-                : 'Pioneering digital empowerment across 44,000 villages in Maharashtra through localized entrepreneurship and women self-reliance.'}
+                ? 'महाराष्ट्रातील गावांमध्ये डिजिटल सेवा व सॅनिटरी पॅड वितरणाद्वारे महिला स्वावलंबन आणि स्थानिक रोजगारास चालना देणारे व्यासपीठ.' 
+                : 'Empowering Maharashtra villages through localized entrepreneurship and women self-reliance.'}
             </p>
             <div className="footer-badge-tag mt-3">
               Digital Platform for a Better Tomorrow

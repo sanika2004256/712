@@ -22,28 +22,26 @@ const POSTER_SERVICES = [
     color: '#2563eb',
     bgColor: '#eff6ff',
     featuresMr: [
-      'विद्यार्थी दैनिक बायोमेट्रिक/ॲप हजेरी',
+      'विद्यार्थी व शिक्षकांची डिजिटल हजेरी',
       'परीक्षा निकाल व प्रगतीपुस्तक निर्मिती',
-      'ऑनलाईन फी संकलन व पावती व्यवस्था',
-      'पालक-शिक्षक मेसेजिंग व सूचना ॲप'
+      'ऑनलाईन फी संकलन व पालक सूचना मेसेजिंग'
     ],
-    repBenefitMr: 'प्रत्येक शाळेच्या वार्षिक सबस्क्रिप्शनवर दरमहा खात्रीशीर कमिशन.'
+    repBenefitMr: 'शाळांच्या वार्षिक सबस्क्रिप्शनवर दरमहा खात्रीशीर कमिशन.'
   },
   {
     id: 'coaching_classes',
     titleMr: 'CET / JEE / NEET ऑनलाईन क्लासेस',
     titleEn: 'CET / JEE / NEET Online Coaching',
-    taglineMr: 'गावातील विद्यार्थ्यांना उच्च दर्जाचे दर्जेदार ऑनलाइन शिक्षण',
+    taglineMr: 'गावातील विद्यार्थ्यांना उच्च दर्जाचे ऑनलाइन शिक्षण',
     icon: GraduationCap,
     color: '#0284c7',
     bgColor: '#f0f9ff',
     featuresMr: [
-      'महाराष्ट्रातील तज्ज्ञ प्राध्यापकांचे लाइव्ह व रेकॉर्डेड लेक्चर्स',
-      'मॉक टेस्ट सिरीज व ऑल-महाराष्ट्र रँकिंग',
-      'शंकेचे निरसन (Doubt Clearing Sessions)',
+      'तज्ज्ञ प्राध्यापकांचे लाइव्ह व रेकॉर्डेड लेक्चर्स',
+      'मॉक टेस्ट सिरीज व शंका निरसन सेशन्स',
       'अत्यंत माफक व परवडणाऱ्या शुल्कात प्रवेश'
     ],
-    repBenefitMr: 'प्रत्येक विद्यार्थी प्रवेशावर थेट ₹500 ते ₹1,500 चे आकर्षक कमिशन.'
+    repBenefitMr: 'प्रत्येक विद्यार्थी प्रवेशावर थेट ₹500 ते ₹1,500 चे कमिशन.'
   },
   {
     id: 'astitva_realty',
@@ -55,59 +53,55 @@ const POSTER_SERVICES = [
     bgColor: '#ecfdf5',
     featuresMr: [
       'शेतजमीन, प्लॉट व घरांची स्थानिक डिजिटल नोंदणी',
-      '७/१२ उतारा, फेरफार व नकाशा सहाय्य',
-      'विश्वसनीय खरेदीदार व विक्रेत्यांचा थेट संपर्क',
-      'स्थानिक दलाली शुल्कापासून संरक्षण'
+      '७/१२ उतारा व फेरफार नोंदणी सहाय्य',
+      'स्थानिक खरेदीदार व विक्रेत्यांचा थेट संपर्क'
     ],
-    repBenefitMr: 'प्रत्येक जमीन/घर सौद्यावर ०.५% ते १% पर्यंत मोठी कमाई.'
+    repBenefitMr: 'प्रत्येक यशस्वी जमीन/घर व्यवहारावर आकर्षक कमाई.'
   },
   {
     id: 'filmy_adda',
     titleMr: 'फिल्मी अड्डा (Film Production App)',
     titleEn: 'Filmy Adda (Film Production App)',
-    taglineMr: 'ग्रामीण भागातील तरुण कलाकारांसाठी चित्रपट व मनोरंजन मंच',
+    taglineMr: 'स्थानिक कलाकारांसाठी अभिनय व मनोरंजन मंच',
     icon: Film,
     color: '#4f46e5',
     bgColor: '#eef2ff',
     featuresMr: [
       'स्थानिक कलाकारांची ऑडिशन नोंदणी',
-      'लघुपट (Short Films) व संगीत अल्बम निर्मिती',
-      'ग्रामीण कथा व संस्कृतीचे प्रमोशन',
-      'कलाकारांना अभिनय व निर्मितीच्या संधी'
+      'लघुपट व संगीत अल्बम निर्मितीच्या संधी',
+      'ग्रामीण कथा व स्थानिक संस्कृतीचे प्रमोशन'
     ],
-    repBenefitMr: 'कलाकार नोंदणी व स्थानिक इव्हेंट आयोजनातून अतिरिक्त उत्पन्न.'
+    repBenefitMr: 'कलाकार नोंदणी व स्थानिक उपक्रमांतून अतिरिक्त उत्पन्न.'
   },
   {
     id: 'astitva_mart',
-    titleMr: 'अस्तित्व मार्ट (Online Shopping & Sanitary Pads)',
-    titleEn: 'Astitva Mart (Online Shopping & Sanitary Pads)',
-    taglineMr: 'सॅनिटरी नॅपकिन्स व दैनंदिन गृहोपयोगी वस्तूंचे वितरण',
+    titleMr: 'अस्तित्व मार्ट (सॅनिटरी पॅड्स व शॉपिंग)',
+    titleEn: 'Astitva Mart (Sanitary Pads & Shopping)',
+    taglineMr: 'सॅनिटरी नॅपकिन्स व दैनंदिन वस्तूंचे घरपोच वितरण',
     icon: ShoppingBag,
     color: '#2563eb',
     bgColor: '#eff6ff',
     featuresMr: [
       'महिलांसाठी उच्च दर्जाचे, ॲनायन चिपयुक्त सॅनिटरी पॅड्स',
-      'अत्यंत वाजवी दरात थेट गावात घरपोच वितरण',
-      'महिला बचत गटांच्या उत्पादनांचे ऑनलाइन मार्केट',
-      'किराणा व अत्यावश्यक घरगुती वस्तू'
+      'वाजवी दरात गावात थेट घरपोच वितरण',
+      'महिला बचत गटांच्या उत्पादनांना ऑनलाइन बाजारपेठ'
     ],
-    repBenefitMr: 'नियमित मासिक ग्राहकांमुळे दरमहा ₹4,000 ते ₹7,000 चे स्थिर उत्पन्न.'
+    repBenefitMr: 'नियमित ग्राहकांमुळे दरमहा ₹4,000 ते ₹7,000 स्थिर उत्पन्न.'
   },
   {
     id: 'all_digital_services',
-    titleMr: 'आणि अनेक डिजिटल सेवा...',
-    titleEn: 'And Many More Digital Services...',
-    taglineMr: 'गावातील सर्व शासकीय व खाजगी ऑनलाइन सेवांचे केंद्र',
+    titleMr: 'इतर सर्व शासकीय व डिजिटल सेवा...',
+    titleEn: 'All Government & Digital Services...',
+    taglineMr: 'गावातील सर्व ऑनलाइन सेवांचे एकाच छताखाली केंद्र',
     icon: Layers,
     color: '#0d9488',
     bgColor: '#f0fdfa',
     featuresMr: [
       '७/१२, ८-अ, फेरफार उतारे डाउनलोड व प्रिंट',
-      'पॅन कार्ड, आधार कार्ड अपडेट सहाय्य',
-      'शासकीय योजनांचे अर्ज (लाडकी बहीण, शेतकरी योजना)',
-      'मोबाईल व डीटीएच रिचार्ज, वीज बिल भरणा'
+      'पॅन कार्ड, आधार अपडेट व शासकीय योजना अर्ज',
+      'मोबाईल रिचार्ज व वीज बिल भरणा'
     ],
-    repBenefitMr: 'दररोजच्या १० ते ३० ग्राहकांकडून दैनंदिन रोख उत्पन्न.'
+    repBenefitMr: 'दैनंदिन ग्राहकांकडून नियमित रोख उत्पन्न.'
   }
 ];
 
@@ -155,9 +149,9 @@ export default function ServicesSection({ lang, onApplyClick }) {
                     className={`checklist-item-btn ${isSelected ? 'selected' : ''}`}
                     onClick={() => setActiveServiceId(srv.id)}
                   >
-                    <div style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
-                      <div className="check-box-icon">
-                        <CheckCircle2 size={18} className="check-icon-svg" />
+                    <div style={{display:'flex',alignItems:'center',gap:'0.55rem'}}>
+                      <div className="check-box-icon" style={{ display: 'flex', alignItems: 'center' }}>
+                        <IconComp size={16} className="check-icon-svg" />
                       </div>
                       <span className="checklist-item-title">
                         {isMr ? srv.titleMr : srv.titleEn}

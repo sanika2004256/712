@@ -17,25 +17,25 @@ const REPRESENTATIVE_ROLES = [
     titleEn: 'Self-Reliant Village Leader',
     badgeMr: 'महिला सबलीकरण',
     icon: '👩‍💼',
-    descMr: 'गावातच राहून स्वतःचा स्वाभिमानी व्यवसाय सांभाळा. मासिक किमान ₹12,000 - ₹15,000 उत्पन्न.',
+    descMr: 'गावातच राहून स्वतःचा स्वाभिमानी व्यवसाय सांभाळा व दरमहा ₹12,000 - ₹15,000+ नियमित उत्पन्न मिळवा.',
     color: '#2563eb'
   },
   {
     id: 'health',
-    titleMr: 'आरोग्य व सॅनिटरी सखी (Astitva Mart)',
-    titleEn: 'Health & Sanitary Hygiene Sakhi',
+    titleMr: 'आरोग्य व सॅनिटरी सखी',
+    titleEn: 'Health & Sanitary Sakhi',
     badgeMr: 'महिला आरोग्य',
     icon: '🌸',
-    descMr: 'अस्तित्व मार्टच्या माध्यमातून उच्च गुणवत्तेचे सॅनिटरी पॅड्स व महिला आरोग्य उत्पादने गावातील प्रत्येक घरात पोहोचवा.',
+    descMr: 'अस्तित्व सॅनिटरी पॅड्स व महिला आरोग्य उत्पादने गावातील प्रत्येक घरापर्यंत पोहोचवा.',
     color: '#0284c7'
   },
   {
     id: 'education',
-    titleMr: 'शिक्षण समन्वयक (Edu Coordinator)',
+    titleMr: 'शिक्षण समन्वयक',
     titleEn: 'Education Ambassador',
     badgeMr: 'डिजिटल शिक्षण',
     icon: '👩‍🏫',
-    descMr: 'शाळा ERP व्यवस्थापन आणि CET / JEE / NEET ऑनलाईन क्लासेसचे गावातील विद्यार्थ्यांसाठी समन्वयक बना.',
+    descMr: 'शाळा ERP व्यवस्थापन आणि CET / NEET ऑनलाईन क्लासेसचे गावातील विद्यार्थ्यांना मार्गदर्शन द्या.',
     color: '#059669'
   },
   {
@@ -44,7 +44,7 @@ const REPRESENTATIVE_ROLES = [
     titleEn: 'Digital & Realty Advisor',
     badgeMr: 'स्थानिक सेवा',
     icon: '🏡',
-    descMr: 'अस्तित्व रियल्टी ॲपद्वारे शेतजमीन, घरे व दुकानांची स्थानिक खरेदी-विक्री नोंदणी व इतर शासकीय डिजिटल सेवा.',
+    descMr: 'शेतजमीन, घरे खरेदी-विक्री नोंदणी व इतर शासकीय डिजिटल सेवांचे गावातील केंद्र चालवा.',
     color: '#4f46e5'
   }
 ];
@@ -74,15 +74,11 @@ export default function HeroSection({ lang, onApplyClick }) {
           </div>
         </div>
 
-        {/* 4 Professional Feature Pills */}
+        {/* 3 Clean Feature Pills */}
         <div className="poster-pillars-container">
           <div className="pro-pillar-pill">
             <CheckCircle2 size={14} className="pro-pillar-icon" />
-            <span>{isMr ? 'एक गाव एक प्रतिनिधी' : 'One Village One Rep'}</span>
-          </div>
-          <div className="pro-pillar-pill">
-            <CheckCircle2 size={14} className="pro-pillar-icon" />
-            <span>{isMr ? 'गावाचा सर्वांगीण विकास' : 'Village Development'}</span>
+            <span>{isMr ? '१ गाव १ प्रतिनिधी' : '1 Village 1 Rep'}</span>
           </div>
           <div className="pro-pillar-pill">
             <CheckCircle2 size={14} className="pro-pillar-icon" />
@@ -90,7 +86,7 @@ export default function HeroSection({ lang, onApplyClick }) {
           </div>
           <div className="pro-pillar-pill">
             <CheckCircle2 size={14} className="pro-pillar-icon" />
-            <span>{isMr ? '१००% डिजिटल सपोर्ट' : '100% Digital Support'}</span>
+            <span>{isMr ? '१००% मोफत प्रशिक्षण' : '100% Free Training'}</span>
           </div>
         </div>
 
@@ -99,7 +95,7 @@ export default function HeroSection({ lang, onApplyClick }) {
           {/* Left Column: Headlines & Callout Cards */}
           <div className="poster-hero-left">
             <div className="pro-tag-badge">
-              <Award size={16} />
+              <Award size={15} />
               <span>{isMr ? 'अधिकृत गाव प्रतिनिधी नियुक्ती' : 'Official Village Representative'}</span>
             </div>
 
@@ -107,7 +103,7 @@ export default function HeroSection({ lang, onApplyClick }) {
             <h1 className="poster-main-subheading">
               {isMr ? (
                 <>
-                  स्वतःचा व्यवसाय सुरु करा आणि <span className="text-pro-accent">आपल्या गावाचा विकास</span> साधा !
+                  स्वतःचा व्यवसाय सुरू करा आणि <span className="text-pro-accent">आपल्या गावाचा विकास</span> साधा!
                 </>
               ) : (
                 'Start your own business and drive village development!'
@@ -116,8 +112,8 @@ export default function HeroSection({ lang, onApplyClick }) {
 
             <p className="poster-subtext-para">
               {isMr 
-                ? 'Inodayam Tech Private Limited च्या माध्यमातून आपल्या गावातच उच्च प्रतीचे सॅनिटरी पॅड्स, डिजिटल सेवा, शाळा ERP आणि मालमत्ता सेवा केंद्र सुरू करा. महिलांसाठी विशेष स्वावलंबनाची सुवर्णसंधी.' 
-                : 'Empower your village with digital services, sanitary hygiene, education ERP, and real estate solutions with Inodayam Tech Private Limited.'}
+                ? 'इनोदयम टेक (Inodayam Tech) सोबत आपल्या गावातच सुरू करा सॅनिटरी पॅड्स, डिजिटल सेवा, शाळा ERP आणि मालमत्ता सल्लागार केंद्र.' 
+                : 'Empower your village with digital services, sanitary hygiene, education ERP, and real estate solutions with Inodayam Tech.'}
             </p>
 
             {/* Clean Professional Financial Offer Cards */}
@@ -136,7 +132,7 @@ export default function HeroSection({ lang, onApplyClick }) {
                   </div>
                 </div>
                 <p className="pro-offer-desc">
-                  {isMr ? 'कमी गुंतवणुकीत स्वतःचा खात्रीशीर व्यवसाय सुरू करा' : 'Start your own business with low investment'}
+                  {isMr ? 'कमी गुंतवणुकीत खात्रीशीर सुरुवात' : 'Start with low investment'}
                 </p>
               </div>
 
@@ -154,28 +150,22 @@ export default function HeroSection({ lang, onApplyClick }) {
                   </div>
                 </div>
                 <p className="pro-offer-desc">
-                  {isMr ? 'दरमहा थेट बँक खात्यात नियमित कमिशन व उत्पन्न' : 'Guaranteed regular monthly commission'}
+                  {isMr ? 'दरमहा थेट नियमित उत्पन्न' : 'Guaranteed regular monthly income'}
                 </p>
               </div>
             </div>
 
-            {/* Action CTA Buttons */}
-            <div className="poster-cta-group">
+            {/* Single Centered Animated Apply CTA Button */}
+            <div className="hero-single-apply-wrapper">
               <button 
                 type="button" 
-                className="poster-apply-btn"
+                className="animated-hero-apply-btn"
                 onClick={onApplyClick}
               >
-                <span>{isMr ? 'आताच आपल्या गावाची जागा आरक्षित करा' : 'Reserve Your Village Seat Now'}</span>
-                <ArrowRight size={18} />
+                <span className="apply-btn-sparkle" aria-hidden="true">✨</span>
+                <span className="apply-btn-text">Apply</span>
+                <ArrowRight size={20} className="apply-btn-arrow" />
               </button>
-
-              <a 
-                href="#calculator" 
-                className="poster-calc-btn"
-              >
-                <span>{isMr ? 'उत्पन्न कॅल्क्युलेटर पहा 📊' : 'View Earnings Calculator 📊'}</span>
-              </a>
             </div>
           </div>
 
@@ -240,12 +230,12 @@ export default function HeroSection({ lang, onApplyClick }) {
               <div className="quick-vacancy-box">
                 <div className="vacancy-title-row">
                   <MapPin size={16} className="text-emerald-600" />
-                  <strong>{isMr ? 'तुमच्या गावातील जागा रिक्त आहे का?' : 'Check Village Vacancy Status:'}</strong>
+                  <strong>{isMr ? 'गावातील जागा रिक्त आहे का?' : 'Check Village Vacancy:'}</strong>
                 </div>
                 <p className="vacancy-note">
                   {isMr 
-                    ? 'महाराष्ट्रातील ४४,००० गावांमध्ये प्रत्येकी फक्त १ प्रतिनिधी निवडला जाणार आहे. जागा भरण्यापूर्वी लगेच अर्ज करा!' 
-                    : 'Only 1 representative per village across 44,000 villages in Maharashtra. Reserve early!'}
+                    ? 'महाराष्ट्रातील ४४,००० गावांत प्रत्येकी फक्त १ प्रतिनिधी निवडला जाईल.' 
+                    : 'Only 1 representative per village across Maharashtra.'}
                 </p>
                 <button 
                   type="button" 
@@ -253,7 +243,7 @@ export default function HeroSection({ lang, onApplyClick }) {
                   onClick={onApplyClick}
                 >
                   <Search size={15} />
-                  <span>{isMr ? 'जिल्हा व गाव निवडून जागा तपासा ➔' : 'Select Village & Check ➔'}</span>
+                  <span>{isMr ? 'गाव निवडून जागा तपासा ➔' : 'Check Village Status ➔'}</span>
                 </button>
               </div>
             </div>

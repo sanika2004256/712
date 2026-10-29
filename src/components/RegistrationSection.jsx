@@ -30,7 +30,7 @@ const FRANCHISE_MODELS = [
     titleMr: 'ग्रामपंचायत / गाव पातळी केंद्र',
     titleEn: 'Village / Gram Panchayat Kendra',
     investment: '₹१०,००० ते २५,०००',
-    descMr: 'गावातील महिलांसाठी घरातून किंवा छोट्या दुकानातून सॅनिटरी पॅड वितरण व विक्री केंद्र.',
+    descMr: 'घरातून किंवा दुकानातून सॅनिटरी पॅड व डिजिटल सेवा केंद्र.',
     badge: 'सर्वात लोकप्रिय'
   },
   {
@@ -38,7 +38,7 @@ const FRANCHISE_MODELS = [
     titleMr: 'तालुका मुख्य वितरक फ्रँचायझी',
     titleEn: 'Taluka Main Distributor',
     investment: '₹५०,००० ते १,००,०००',
-    descMr: 'संपूर्ण तालुक्यातील सर्व गावे, मेडिकल आणि दुकानांना सॅनिटरी पॅडचा अधिकृत पुरवठा.',
+    descMr: 'संपूर्ण तालुक्यातील गावे व दुकानांना अधिकृत पॅड पुरवठा.',
     badge: 'उच्च नफा'
   },
   {
@@ -46,7 +46,7 @@ const FRANCHISE_MODELS = [
     titleMr: 'महिला बचत गट विशेष मॉडेल',
     titleEn: 'Women Self Help Group (SHG)',
     investment: '₹१५,००० ते २०,०००',
-    descMr: 'बचत गटातील महिलांना रोजगार मिळवून देणारे खास सवलतीचे व सामूहिक विक्री मॉडेल.',
+    descMr: 'महिला बचत गटांसाठी खास सवलतीचे सामूहिक विक्री मॉडेल.',
     badge: 'महिला सक्षमीकरण'
   },
   {
@@ -54,7 +54,7 @@ const FRANCHISE_MODELS = [
     titleMr: 'दुकान / रिटेल फ्रँचायझी',
     titleEn: 'Retail Store / Super Shop',
     investment: '₹३०,००० ते ५०,०००',
-    descMr: 'अस्तित्व ब्रँडचे अधिकृत सॅनिटरी पॅड काउंटर तुमच्या चालू असलेल्या दुकानात सुरू करा.',
+    descMr: 'चालू दुकानात अधिकृत इनोदयम सॅनिटरी पॅड काउंटर.',
     badge: 'अतिरिक्त उत्पन्न'
   }
 ];
@@ -426,7 +426,7 @@ export default function RegistrationSection({ lang, onApplicationSuccess }) {
             </h2>
             <p className="sweet-hero-subtitle">
               {isMr 
-                ? 'कमी भांडवल, खात्रीशीर नफा आणि स्वतःचा सन्मानजनक व्यवसाय! खालील माहिती भरून अधिकृत अर्ज दाखल करा:' 
+                ? 'कमी भांडवलात स्वतःचा सन्मानजनक व्यवसाय सुरू करण्यासाठी खालील माहिती भरा:' 
                 : 'Start your own Sanitary Pad and Village Representative Kendra in your village:'}
             </p>
           </div>

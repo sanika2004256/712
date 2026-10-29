@@ -36,12 +36,12 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
       <div className="calc-headline-row">
         <div>
           <h3 className="calc-title">
-            {isMr ? 'तुमच्या गावातील अंदाजित मासिक कमाई' : 'Estimate Your Village Monthly Earnings'}
+            {isMr ? 'तुमच्या गावातील संभाव्य मासिक कमाई' : 'Estimate Your Village Monthly Earnings'}
           </h3>
           <p className="calc-subtitle">
             {isMr 
-              ? 'फक्त ₹10,000 भांडवलात Inodayam Tech चे प्रतिनिधी बनून दरमहा किमान ₹12,000 – ₹15,000+ कसे कमवाल ते पाहा:' 
-              : 'See how you can easily earn ₹12,000 – ₹15,000+ monthly with just ₹10,000 capital:'}
+              ? 'फक्त ₹10,000 भांडवलात दरमहा किमान ₹12,000 – ₹15,000+ कसे कमवाल ते पाहा:' 
+              : 'See how you can earn ₹12,000 – ₹15,000+ monthly with just ₹10,000 capital:'}
           </p>
         </div>
         <div className="investment-guarantee-pill">
@@ -57,7 +57,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           <div className="slider-label-row">
             <span className="slider-title">
               <ShoppingBag size={16} className="text-blue-600" />
-              {isMr ? 'अस्तित्व मार्ट (सॅनिटरी पॅड्स व गृहोपयोगी ग्राहक)' : 'Astitva Mart & Sanitary Pad Families'}
+              {isMr ? 'अस्तित्व मार्ट (सॅनिटरी पॅड्स ग्राहक)' : 'Astitva Mart & Sanitary Pad Families'}
             </span>
             <span className="slider-val-badge">{households} {isMr ? 'कुटुंबे' : 'families'}</span>
           </div>
@@ -81,7 +81,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           <div className="slider-label-row">
             <span className="slider-title">
               <GraduationCap size={16} className="text-indigo-600" />
-              {isMr ? 'शाळा ERP व CET/NEET विद्यार्थी' : 'School ERP & Coaching Students'}
+              {isMr ? 'शाळा ERP व कोचिंग विद्यार्थी' : 'School ERP & Coaching Students'}
             </span>
             <span className="slider-val-badge">{students} {isMr ? 'विद्यार्थी' : 'students'}</span>
           </div>
@@ -105,7 +105,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           <div className="slider-label-row">
             <span className="slider-title">
               <Building2 size={16} className="text-emerald-600" />
-              {isMr ? 'अस्तित्व रियल्टी व इतर डिजिटल सेवा व्यवहार' : 'Realty & Digital Transactions'}
+              {isMr ? 'डिजिटल सेवा व मालमत्ता व्यवहार' : 'Realty & Digital Transactions'}
             </span>
             <span className="slider-val-badge">{digitalServices} {isMr ? 'व्यवहार' : 'trans'}</span>
           </div>
@@ -141,7 +141,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
           <div className="calc-breakdown-tags">
             <span className="break-tag">🌸 {isMr ? 'सॅनिटरी मार्ट:' : 'Mart:'} ₹{martIncome.toLocaleString('en-IN')}</span>
             <span className="break-tag">📚 {isMr ? 'शिक्षण:' : 'Edu:'} ₹{educationIncome.toLocaleString('en-IN')}</span>
-            <span className="break-tag">🏢 {isMr ? 'रियल्टी:' : 'Realty:'} ₹{digitalIncome.toLocaleString('en-IN')}</span>
+            <span className="break-tag">🏢 {isMr ? 'डिजिटल/मालमत्ता:' : 'Realty:'} ₹{digitalIncome.toLocaleString('en-IN')}</span>
           </div>
         </div>
 
@@ -150,7 +150,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
             <TrendingUp size={20} className="text-emerald-300" />
             <div>
               <strong>{isMr ? `अवघ्या ${roiDays} दिवसांत भांडवल वसूल!` : `Capital Recovered in ${roiDays} Days!`}</strong>
-              <span>{isMr ? '₹10,000 ची गुंतवणूक पहिल्याच महिन्यात सुरक्षितपणे परत' : '₹10,000 capital recovered in 1st month'}</span>
+              <span>{isMr ? '₹10,000 चे भांडवल पहिल्याच महिन्यात सुरक्षितपणे वसूल' : '₹10,000 capital recovered in 1st month'}</span>
             </div>
           </div>
 
@@ -159,7 +159,7 @@ export default function ProfitCalculator({ lang, onApplyClick }) {
             className="calc-apply-now-btn"
             onClick={onApplyClick}
           >
-            <span>{isMr ? 'हे उत्पन्न मिळवण्यासाठी अर्ज करा' : 'Apply to Start Earning'}</span>
+            <span>{isMr ? 'उत्पन्न सुरू करण्यासाठी अर्ज करा' : 'Apply to Start Earning'}</span>
             <ArrowRight size={18} />
           </button>
         </div>
