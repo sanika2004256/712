@@ -94,6 +94,7 @@ export default function App() {
             {/* Poster-Style 6 Benefits Strip (गाव प्रतिनिधीचे फायदे) */}
             <BenefitsSection
               lang={lang}
+              onApplyClick={handleOpenApplyPage}
             />
 
             {/* Clean Professional Bottom Call-To-Action Banner */}

@@ -6,212 +6,325 @@ import {
   Smartphone, 
   MapPin, 
   Users, 
-  CheckCircle2, 
-  X,
+  Check, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  Heart
 } from 'lucide-react';
 
 const POSTER_BENEFITS = [
   {
     id: 1,
-    titleMr: 'महिला स्वावलंबनाची संधी',
+    category: 'women',
+    emoji: '👩‍💼',
+    titleMr: 'महिला स्वावलंबनाची सुवर्णसंधी',
     titleEn: 'Women Self-Reliance Opportunity',
-    descMr: 'गावात राहून स्वाभिमानाने स्वतःचा व्यवसाय सुरू करा आणि कुटुंबाला आर्थिक हातभार लावा.',
+    descMr: 'गावातच राहून स्वाभिमानाने स्वतःचा व्यवसाय सुरू करा आणि कुटुंबाला आर्थिक हातभार लावा.',
     icon: UserCheck,
-    color: '#2563eb',
-    bgColor: '#eff6ff',
-    pillText: 'स्वावलंबन'
+    color: '#e11d48',
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #fff1f2 50%, #ffe4e6 100%)',
+    borderColor: '#fecdd3',
+    pillText: 'महिला स्वावलंबन',
+    pillBg: '#ffe4e6',
+    pillColor: '#9f1239',
+    perksMr: [
+      'गावातच राहून स्वतःचा स्वाभिमानी व्यवसाय',
+      'कुटुंबाला नियमित आर्थिक हातभार',
+      'गावातील इतर महिलांना रोजगाराची प्रेरणा'
+    ],
+    metricMr: '१००% स्वाभिमान'
   },
   {
     id: 2,
-    titleMr: 'स्थिर व नियमित उत्पन्न',
-    titleEn: 'Stable & Regular Income',
-    descMr: 'फक्त ₹१०,००० भांडवलात दरमहा किमान ₹१२,००० ते ₹१५,००० खात्रीशीर उत्पन्न मिळवा.',
+    category: 'income',
+    emoji: '💰',
+    titleMr: 'स्थिर व नियमित दरमहा उत्पन्न',
+    titleEn: 'Stable & Regular Monthly Income',
+    descMr: 'फक्त ₹१०,००० भांडवलात दरमहा किमान ₹१२,००० ते ₹१५,०००+ खात्रीशीर उत्पन्न मिळवा.',
     icon: TrendingUp,
     color: '#059669',
-    bgColor: '#ecfdf5',
-    pillText: 'दरमहा उत्पन्न'
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #ecfdf5 50%, #d1fae5 100%)',
+    borderColor: '#a7f3d0',
+    pillText: 'दरमहा उत्पन्न',
+    pillBg: '#d1fae5',
+    pillColor: '#065f46',
+    perksMr: [
+      'दरमहा थेट बँक खात्यात सुरक्षित कमिशन जमा',
+      'उत्पादनांवर १०% ते २०% भरघोस नफा मार्जिन',
+      'उत्कृष्ट कामगिरीवर विशेष मासिक बोनस'
+    ],
+    metricMr: '₹१२,००० - ₹१५,०००+'
   },
   {
     id: 3,
-    titleMr: 'पूर्ण प्रशिक्षण व मार्गदर्शन',
-    titleEn: 'Full Training & Guidance',
+    category: 'support',
+    emoji: '🎓',
+    titleMr: 'पूर्ण मोफत प्रशिक्षण व किट',
+    titleEn: '100% Free Training & Starter Kit',
     descMr: 'ॲप वापरणे, उत्पादनांची माहिती आणि व्यवसाय वाढीचे इनोदयमतर्फे १००% मोफत प्रशिक्षण.',
     icon: Handshake,
-    color: '#0284c7',
-    bgColor: '#f0f9ff',
-    pillText: 'मोफत प्रशिक्षण'
+    color: '#d97706',
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #fffbeb 50%, #fef3c7 100%)',
+    borderColor: '#fde68a',
+    pillText: 'मोफत प्रशिक्षण',
+    pillBg: '#fef3c7',
+    pillColor: '#92400e',
+    perksMr: [
+      'मोबाईल ॲप वापरण्याचे मराठीत सोपे प्रशिक्षण',
+      'विनामूल्य व्यवसाय किट व मार्केटिंग साहित्य',
+      'कंपनीच्या तज्ज्ञांकडून निरंतर मार्गदर्शन'
+    ],
+    metricMr: '१००% मोफत'
   },
   {
     id: 4,
-    titleMr: 'डिजिटल प्लॅटफॉर्म सपोर्ट',
+    category: 'support',
+    emoji: '📱',
+    titleMr: 'हाय-टेक डिजिटल प्लॅटफॉर्म',
     titleEn: '100% Digital Platform Support',
     descMr: 'मोबाईल ॲपद्वारे सर्व सेवांचे सहज व्यवस्थापन आणि २४/७ कंपनी सहाय्य उपलब्ध.',
     icon: Smartphone,
-    color: '#4f46e5',
-    bgColor: '#eef2ff',
-    pillText: 'हाय-टेक प्लॅटफॉर्म'
+    color: '#0284c7',
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #eff6ff 50%, #dbeafe 100%)',
+    borderColor: '#bfdbfe',
+    pillText: 'डिजिटल ॲप',
+    pillBg: '#dbeafe',
+    pillColor: '#1e40af',
+    perksMr: [
+      'एका क्लिकवर सर्व सेवा व स्टॉक व्यवस्थापन',
+      'ग्राहकांच्या नोंदी व ऑर्डर ट्रॅकिंग सोपे',
+      '२४/७ कंपनी कस्टमर केअर सहाय्य'
+    ],
+    metricMr: '२४/७ सपोर्ट'
   },
   {
     id: 5,
-    titleMr: 'आपल्या गावातच काम',
-    titleEn: 'Work in Your Own Village',
-    descMr: 'शहरात न जाता आपल्या घरातून किंवा गावातूनच केंद्र चालवण्याची सोय.',
+    category: 'income',
+    emoji: '🏡',
+    titleMr: 'आपल्या गावातच घरबसल्या काम',
+    titleEn: 'Work From Your Own Village',
+    descMr: 'शहरात जाण्याची गरज नाही; आपल्या गावातून किंवा घरातूनच सन्मानपूर्वक केंद्र चालवा.',
     icon: MapPin,
-    color: '#0d9488',
-    bgColor: '#f0fdfa',
-    pillText: 'आपल्या गावात'
+    color: '#7c3aed',
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #f5f3ff 50%, #ede9fe 100%)',
+    borderColor: '#ddd6fe',
+    pillText: 'गावातच काम',
+    pillBg: '#ede9fe',
+    pillColor: '#5b21b6',
+    perksMr: [
+      'प्रवासाचा वेळ आणि खर्च १००% वाचतो',
+      'घरातील कामे सांभाळून व्यवसाय सुरू ठेवण्याची सोय',
+      'स्थानिक नागरिकांशी थेट ओळखीचा फायदा'
+    ],
+    metricMr: '० प्रवास खर्च'
   },
   {
     id: 6,
-    titleMr: 'समाजात मान व ओळख',
-    titleEn: 'Respect & Social Identity',
+    category: 'women',
+    emoji: '🎖️',
+    titleMr: 'समाजात मान व अधिकृत ओळख',
+    titleEn: 'Respect & Official Identity',
     descMr: 'गावात इनोदयम टेकचे अधिकृत प्रतिनिधी म्हणून सन्मानजनक ओळख आणि आदर.',
     icon: Users,
-    color: '#1e293b',
-    bgColor: '#f8fafc',
-    pillText: 'प्रतिष्ठा व मान'
+    color: '#0d9488',
+    gradientBg: 'linear-gradient(145deg, #ffffff 0%, #f0fdfa 50%, #ccfbf1 100%)',
+    borderColor: '#99f6e4',
+    pillText: 'प्रतिष्ठा व मान',
+    pillBg: '#ccfbf1',
+    pillColor: '#115e59',
+    perksMr: [
+      'इनोदयम कंपनीचे अधिकृत ओळखपत्र (ID Card)',
+      'गावातील विकास कामांत सन्माननीय सहभाग',
+      'सामाजिक आदर व स्वतःचे स्वतंत्र व्यक्तिमत्त्व'
+    ],
+    metricMr: 'अधिकृत ID कार्ड'
   }
 ];
 
-export default function BenefitsSection({ lang }) {
+const CATEGORIES = [
+  { id: 'all', labelMr: '✨ सर्व ६ फायदे', labelEn: 'All Benefits' },
+  { id: 'income', labelMr: '💰 उत्पन्न व व्यवसाय', labelEn: 'Income & Business' },
+  { id: 'women', labelMr: '👩‍💼 महिला व सन्मान', labelEn: 'Women & Respect' },
+  { id: 'support', labelMr: '🎓 प्रशिक्षण व सपोर्ट', labelEn: 'Training & Support' }
+];
+
+export default function BenefitsSection({ lang, onApplyClick }) {
   const isMr = lang === 'mr';
-  const [selectedBenefit, setSelectedBenefit] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [expandedCardId, setExpandedCardId] = useState(1); // default expand first card for preview
+
+  const toggleExpand = (id) => {
+    setExpandedCardId(prev => (prev === id ? null : id));
+  };
+
+  const filteredBenefits = activeCategory === 'all' 
+    ? POSTER_BENEFITS 
+    : POSTER_BENEFITS.filter(b => b.category === activeCategory);
 
   return (
     <section className="benefits-poster-section" id="benefits">
       <div className="section-container">
-        {/* Section Header */}
-        <div className="pro-section-header">
-          <div className="pro-pill-badge">
-            <Sparkles size={14} className="text-blue-600" />
-            <span>{isMr ? 'प्रमुख फायदे' : 'Core Benefits'}</span>
+        {/* Sweet Section Header */}
+        <div className="sweet-benefits-header">
+          <div className="sweet-badge-pill">
+            <Sparkles size={14} className="text-emerald" />
+            <span>{isMr ? 'खास आपल्यासाठी • मोठे फायदे' : 'Special For You • Core Benefits'}</span>
           </div>
-          <h2 className="pro-section-title">
-            {isMr ? 'गाव प्रतिनिधी बनण्याचे ६ मोठे फायदे' : '6 Core Benefits of Becoming Village Representative'}
+
+          <h2 className="sweet-section-title">
+            {isMr ? (
+              <>
+                गाव प्रतिनिधी बनण्याचे <span className="fresh-gradient-text">६ मोठे फायदे</span>
+              </>
+            ) : (
+              <>
+                6 Key Benefits of Becoming a <span className="fresh-gradient-text">Village Representative</span>
+              </>
+            )}
           </h2>
-          <p className="pro-section-subtitle">
+
+          <p className="sweet-section-subtitle">
             {isMr 
-              ? 'स्थानिक महिला सबलीकरण, खात्रीशीर दरमहा कमिशन आणि गावातच अधिकृत प्रतिष्ठा.' 
-              : 'Local empowerment, regular monthly income, and village-wide respect.'}
+              ? 'स्थानिक महिला सबलीकरण, खात्रीशीर दरमहा कमिशन आणि गावातच अधिकृत मान-सन्मान.' 
+              : 'Local empowerment, guaranteed monthly earnings, and village-wide respect.'}
           </p>
+
+          {/* Interactive Filter Pills */}
+          <div className="sweet-filter-pills-row">
+            {CATEGORIES.map(cat => (
+              <button
+                key={cat.id}
+                type="button"
+                className={`sweet-filter-pill ${activeCategory === cat.id ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat.id)}
+              >
+                <span>{isMr ? cat.labelMr : cat.labelEn}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* 6 Clean Benefit Cards Grid */}
-        <div className="pro-benefits-grid">
-          {POSTER_BENEFITS.map((item) => {
+        {/* Sweet Interactive Bento Grid */}
+        <div className="sweet-benefits-grid">
+          {filteredBenefits.map((item) => {
             const IconComp = item.icon;
+            const isExpanded = expandedCardId === item.id;
+
             return (
               <div 
                 key={item.id} 
-                className="pro-benefit-card"
-                onClick={() => setSelectedBenefit(item)}
+                className={`sweet-benefit-card ${isExpanded ? 'card-expanded' : ''}`}
+                style={{
+                  background: item.gradientBg,
+                  borderColor: isExpanded ? item.color : item.borderColor
+                }}
+                onClick={() => toggleExpand(item.id)}
               >
-                <div className="pro-benefit-top-row">
+                {/* Card Top Row */}
+                <div className="sweet-card-top">
                   <div 
-                    className="pro-benefit-icon-box"
-                    style={{ backgroundColor: item.bgColor, color: item.color }}
+                    className="sweet-icon-avatar"
+                    style={{ 
+                      backgroundColor: '#ffffff', 
+                      color: item.color,
+                      boxShadow: `0 4px 12px ${item.color}25`
+                    }}
                   >
-                    <IconComp size={24} />
+                    <IconComp size={22} />
                   </div>
-                  <span className="pro-benefit-pill">
-                    {item.pillText}
-                  </span>
+
+                  <div className="sweet-card-badges-group">
+                    <span 
+                      className="sweet-metric-chip"
+                      style={{ 
+                        backgroundColor: '#ffffff',
+                        borderColor: item.borderColor,
+                        color: item.color
+                      }}
+                    >
+                      {item.metricMr}
+                    </span>
+
+                    <span 
+                      className="sweet-category-chip"
+                      style={{ 
+                        backgroundColor: item.pillBg, 
+                        color: item.pillColor 
+                      }}
+                    >
+                      {item.pillText}
+                    </span>
+                  </div>
                 </div>
 
-                <h3 className="pro-benefit-title">
-                  {isMr ? item.titleMr : item.titleEn}
+                {/* Card Headline */}
+                <h3 className="sweet-card-title">
+                  <span className="sweet-card-emoji">{item.emoji}</span>
+                  <span>{isMr ? item.titleMr : item.titleEn}</span>
                 </h3>
 
-                <p className="pro-benefit-desc">
+                {/* Card Short Description */}
+                <p className="sweet-card-desc">
                   {isMr ? item.descMr : item.descMr}
                 </p>
 
-                <div className="pro-benefit-footer">
-                  <span className="pro-learn-more-text">
-                    {isMr ? 'सविस्तर वाचा' : 'Read details'}
+                {/* Interactive Toggle Button */}
+                <div className="sweet-card-toggle-row">
+                  <span className="sweet-toggle-label" style={{ color: item.color }}>
+                    {isExpanded ? (isMr ? 'माहिती लपवा' : 'Hide details') : (isMr ? 'अधिक सविस्तर पहा' : 'View perks')}
                   </span>
-                  <ArrowRight size={14} className="pro-arrow" />
+                  <div 
+                    className="sweet-toggle-circle"
+                    style={{ 
+                      backgroundColor: isExpanded ? item.color : '#ffffff',
+                      color: isExpanded ? '#ffffff' : item.color,
+                      borderColor: item.borderColor
+                    }}
+                  >
+                    {isExpanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+                  </div>
                 </div>
+
+                {/* Expandable Perks Section */}
+                {isExpanded && (
+                  <div className="sweet-expanded-content" onClick={(e) => e.stopPropagation()}>
+                    <div className="sweet-perks-list">
+                      {item.perksMr.map((perk, pIdx) => (
+                        <div key={pIdx} className="sweet-perk-item">
+                          <div 
+                            className="perk-check-icon"
+                            style={{ backgroundColor: item.pillBg, color: item.color }}
+                          >
+                            <Check size={12} strokeWidth={3} />
+                          </div>
+                          <span>{perk}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Sweet Action Button */}
+                    {onApplyClick && (
+                      <button 
+                        type="button" 
+                        className="sweet-apply-cta-btn"
+                        style={{ backgroundColor: item.color }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onApplyClick();
+                        }}
+                      >
+                        <span>{isMr ? 'हा फायदा मिळवा — अर्ज करा' : 'Claim This Benefit — Apply'}</span>
+                        <ArrowRight size={15} />
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
-
-        {/* Interactive Benefit Details Modal */}
-        {selectedBenefit && (
-          <div className="benefit-modal-overlay" onClick={() => setSelectedBenefit(null)}>
-            <div className="benefit-modal-card" onClick={(e) => e.stopPropagation()}>
-              <button 
-                type="button" 
-                className="benefit-modal-close"
-                onClick={() => setSelectedBenefit(null)}
-              >
-                <X size={18} />
-              </button>
-
-              <div style={{display:'flex',alignItems:'center',gap:'1rem',marginBottom:'1.25rem'}}>
-                <div 
-                  style={{
-                    width:'52px',
-                    height:'52px',
-                    borderRadius:'14px',
-                    display:'flex',
-                    alignItems:'center',
-                    justifyContent:'center',
-                    backgroundColor: selectedBenefit.bgColor,
-                    color: selectedBenefit.color
-                  }}
-                >
-                  <selectedBenefit.icon size={26} />
-                </div>
-                <div>
-                  <span style={{fontSize:'0.75rem',fontWeight:'700',color:'#64748b',textTransform:'uppercase',letterSpacing:'0.05em'}}>
-                    {selectedBenefit.pillText}
-                  </span>
-                  <h3 style={{fontSize:'1.2rem',fontWeight:'800',color:'#0f172a',margin:'0.2rem 0 0'}}>
-                    {isMr ? selectedBenefit.titleMr : selectedBenefit.titleEn}
-                  </h3>
-                </div>
-              </div>
-
-              <p style={{fontSize:'0.95rem',color:'#475569',lineHeight:'1.6',marginBottom:'1.5rem'}}>
-                {isMr ? selectedBenefit.descMr : selectedBenefit.descMr}
-              </p>
-
-              <div style={{background:'#f8fafc',borderRadius:'12px',padding:'1rem',border:'1px solid #e2e8f0',marginBottom:'1.25rem'}}>
-                <div style={{display:'flex',alignItems:'center',gap:'0.5rem',color:'#059669',fontWeight:'700',fontSize:'0.88rem',marginBottom:'0.35rem'}}>
-                  <CheckCircle2 size={16} />
-                  <span>{isMr ? 'कंपनीकडून मिळणारे सहकार्य:' : 'Support from Inodayam Tech:'}</span>
-                </div>
-                <p style={{fontSize:'0.85rem',color:'#64748b',margin:0,lineHeight:'1.5'}}>
-                  {isMr 
-                    ? 'प्रत्येक प्रतिनिधीला अधिकृत ओळखपत्र, ॲप प्रशिक्षण, मार्केटिंग साहित्य आणि २४/७ ग्राहक सहाय्य दिले जाते.' 
-                    : 'Official ID, training, marketing collateral, and round-the-clock support.'}
-                </p>
-              </div>
-
-              <button 
-                type="button" 
-                style={{
-                  width:'100%',
-                  background:'#0f172a',
-                  color:'#ffffff',
-                  border:'none',
-                  padding:'0.75rem',
-                  borderRadius:'10px',
-                  fontWeight:'700',
-                  fontSize:'0.92rem',
-                  cursor:'pointer'
-                }}
-                onClick={() => setSelectedBenefit(null)}
-              >
-                {isMr ? 'समजले' : 'Close'}
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
